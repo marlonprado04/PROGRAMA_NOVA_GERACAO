@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Poppins:wght@500&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /*Removendo margem padrão do navegador*/
+    padding: 0; /*Removendo padding padrão do navegador*/
 }
 
 body {
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: #000000;
-    color: #F6F6F6;
+    height: 100vh; /*Informando o que o viewpoint será 100% da página em vertical*/
+    box-sizing: border-box; /*Informando o comportamento do tamanho da caixa para nada sair dela*/
+    background-color: #000000; /*Definindo cor de fundo do body*/
+    color: #F6F6F6; /*Atribuindo a cor padrão dos textos dentro do body para branco*/
 
 }
 
 .titulo-destaque {
-    color: #22D4FD;
+    color: #22D4FD; /*Dando destaque na coloração da tag STRONG*/
 }
 
 
 .apresentacao {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10% 15%; 
-    gap: 10px;
+    display: flex; /*Atribuindo a disposição dos elementos dentro do main como flex*/
+    align-items: center; /*Informando o alinhamento dentro do main para centralizar*/
+    justify-content: space-between; /*Justificando os elementos com espaço entre eles*/
+    margin: 10% 15%; /*Atribuindo margem para os elementos. Primeiro se refere ao espaço vertical, segundo ao horizontal.*/
+    gap: 10px; /*Atribuindo espaçamento entre os elementos do mesmo tipo*/
 }
 
 .apresentacao__conteudo{
@@ -46,20 +46,35 @@ body {
 
 .apresentacao__links{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 12px;
+    gap: 32px;
+    align-items: center;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .apresentacao__links_link{
-    background-color: #22D4FD;
-    width: 280px;
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    
+    width: 378px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 8px;
+    border: 2px solid #22D4FD;
+    padding: 16.5px 0;
+
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
-    padding: 16.5px 0;
+
     text-decoration: none;
-    color: #000000;
+    color: #F6F6F6;
 
 }
