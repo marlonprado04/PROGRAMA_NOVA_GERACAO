@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #F6F6F6;
+
+}
+
+.titulo-destaque {
+    color: #22D4FD;
+}
+
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10% 15%; 
+    gap: 10px;
+}
+
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.apresentacao__links_link{
+    background-color: #22D4FD;
+    width: 280px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    padding: 16.5px 0;
+    text-decoration: none;
+    color: #000000;
+
+}
