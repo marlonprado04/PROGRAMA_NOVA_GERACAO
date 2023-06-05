@@ -6,7 +6,7 @@
 }
 
 body {
-    height: 100vh; /*Informando o que o viewpoint será 100% da página em vertical*/
+    /* height: 100vh; Informando o que o viewpoint será 100% da página em vertical */
     box-sizing: border-box; /*Informando o comportamento do tamanho da caixa para nada sair dela*/
     background-color: #000000; /*Definindo cor de fundo do body*/
     color: #F6F6F6; /*Atribuindo a cor padrão dos textos dentro do body para branco*/
@@ -22,7 +22,7 @@ body {
     display: flex; /*Atribuindo a disposição dos elementos dentro do main como flex*/
     align-items: center; /*Informando o alinhamento dentro do main para centralizar*/
     justify-content: space-between; /*Justificando os elementos com espaço entre eles*/
-    margin: 10% 15%; /*Atribuindo margem para os elementos. Primeiro se refere ao espaço vertical, segundo ao horizontal.*/
+    padding: 9% 15%; /*Atribuindo padding para os elementos. Primeiro se refere ao espaço vertical, segundo ao horizontal.*/
     gap: 10px; /*Atribuindo espaçamento entre os elementos do mesmo tipo*/
 }
 
@@ -76,5 +76,22 @@ body {
 
     text-decoration: none;
     color: #F6F6F6;
+
+}
+
+.apresentacao__links_link:hover{
+    background-color: #272727;
+
+}
+
+
+.rodape{
+    color: #000000;
+    background-color: #22D4FD;
+    padding: 24px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
 
 }
