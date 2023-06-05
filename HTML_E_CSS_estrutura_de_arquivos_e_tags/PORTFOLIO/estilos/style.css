@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Poppins:wght@500&display=swap');
 
 :root{
-    --cor-primaria: #1A120B;
-    --cor-secundaria: #E5E5CB;
-    --cor-terciaria: #D5CEA3;
-    --cor-hover: #3C2A21;
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
 
     --fonte-primaria: 'Poppins', sans-serif;
     --fonte-secundaria: 'Inter', sans-serif;
