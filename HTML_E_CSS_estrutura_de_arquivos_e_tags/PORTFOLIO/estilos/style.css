@@ -5,6 +5,7 @@
     padding: 0; /*Removendo padding padrão do navegador*/
 }
 
+
 body {
     /* height: 100vh; Informando o que o viewpoint será 100% da página em vertical */
     box-sizing: border-box; /*Informando o comportamento do tamanho da caixa para nada sair dela*/
@@ -13,9 +14,23 @@ body {
 
 }
 
-.titulo-destaque {
-    color: #22D4FD; /*Dando destaque na coloração da tag STRONG*/
+.cabecalho{
+    padding: 2% 0% 0% 15%; /*Criando um padding para o cabeçalho. Ordem: cima, direita, baixo, esquerda*/
 }
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #22D4FD;
+    text-decoration: none;
+}
+
 
 
 .apresentacao {
@@ -37,6 +52,10 @@ body {
     font-size: 36px;
     font-family: 'Poppins', sans-serif;
 
+}
+
+.titulo-destaque {
+    color: #22D4FD; /*Dando destaque na coloração da tag STRONG*/
 }
 
 .apresentacao__conteudo__texto{
