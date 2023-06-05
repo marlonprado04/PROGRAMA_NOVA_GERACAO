@@ -17,7 +17,6 @@
 
 
 body {
-    /* height: 100vh; Informando o que o viewpoint será 100% da página em vertical */
     box-sizing: border-box; /*Informando o comportamento do tamanho da caixa para nada sair dela*/
     background-color: var(--cor-primaria); /*Definindo cor de fundo do body*/
     color: var(--cor-secundaria); /*Atribuindo a cor padrão dos textos dentro do body para branco*/
@@ -88,7 +87,6 @@ body {
 }
 
 .apresentacao__links_link{
-    /* background-color: var(--fonte-terciaria); */
     display: flex;
     justify-content: center;
     gap: 16px;
