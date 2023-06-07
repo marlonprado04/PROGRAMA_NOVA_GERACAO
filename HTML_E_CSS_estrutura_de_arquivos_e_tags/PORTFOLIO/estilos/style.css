@@ -140,6 +140,12 @@ body {
 
     .apresentacao{
         flex-direction: column-reverse;
+        padding: 5%; /*Diminuindo o espaçamento lateral para 5%, já que o superior e inferior já estavam esse valor, não é necessário atribuir 2 valores*/
+    }
+
+    .apresentacao__conteudo {
+        width: auto; /*Atribuindo valor automático para a "seção" de apresentação de conteúdo*/
+
     }
 
 }

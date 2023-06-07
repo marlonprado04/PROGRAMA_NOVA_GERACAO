@@ -52,7 +52,7 @@ Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os eleme
 ````
 ... Resto do código... 
 
-  .cabecalho{
+    .cabecalho{
         padding: 10%; /*Atribuindo padding para separar os botões de navegação*/
 
     }
@@ -64,3 +64,31 @@ Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os eleme
 
 ... Resto do código...
 ````
+
+## Responsividade e GitHub
+
+### Conteúdo responsivo
+
+Para deixar o conteúdo responsivo é necessário diminuir o __espaçamento lateral entre o conteúdo e a borda da seção completa__ e depois atribuir alguma propriedade que faça a seção de conteúdo (dentro da seção completa) __consumir 100% do valor restante que não estiver sendo usado__.
+
+Ou seja, atribuir um padding menor para o conteúdo pai e fazer o conteúdo filho consumir esse padding que foi diminuído e ficou sem uso.
+
+Dessa forma, o código fica assim:
+
+````
+... Restante do código... 
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%; /*Diminuindo o espaçamento lateral para 5%, já que o superior e inferior já estavam esse valor, não é necessário atribuir 2 valores*/
+    }
+
+    .apresentacao__conteudo {
+        width: auto; /*Atribuindo valor automático para a "seção" de apresentação de conteúdo*/
+
+    }
+
+... Restante do código...
+
+````
+
