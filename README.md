@@ -10,3 +10,7 @@ O CSS permite vários tipos de medidas que são divididas em 2 grupos: medidas r
 As medidas interessantes de se usar são medidas relativas, pois se adaptam de acorco com as configurações do usuário.
 
 Nesse caso vamos usar a escala de REM, que equivale a 16 pixels. Ou seja, 1 rem = 16 pixel.
+
+## 04 Aplicando o REM
+
+Nessa aula vamos alterar todas as medidas de fonte que usamos pixels para rem.
