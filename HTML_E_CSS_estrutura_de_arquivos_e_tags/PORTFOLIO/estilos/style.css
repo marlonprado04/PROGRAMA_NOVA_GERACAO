@@ -47,7 +47,7 @@ body {
     align-items: center; /*Informando o alinhamento dentro do main para centralizar*/
     justify-content: space-between; /*Justificando os elementos com espaço entre eles*/
     padding: 9% 15%; /*Atribuindo padding para os elementos. Primeiro se refere ao espaço vertical, segundo ao horizontal.*/
-    gap: 10px; /*Atribuindo espaçamento entre os elementos do mesmo tipo*/
+    gap: 82px; /*Atribuindo espaçamento entre os elementos do mesmo tipo*/
 }
 
 .apresentacao__conteudo{
@@ -124,4 +124,11 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+@media (max-width: 1200px){
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+
 }
