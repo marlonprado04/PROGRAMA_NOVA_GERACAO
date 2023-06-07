@@ -1,4 +1,8 @@
 # PROJETO_CALDEIRA
+
+- [Curso 4:  HTML e CSS: trabalhando com responsividade e publicação de projetos](# Curso 4:  HTML e CSS: trabalhando com responsividade e publicação de projetos)
+
+
  Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
 
 
@@ -76,7 +80,6 @@ Ou seja, atribuir um padding menor para o conteúdo pai e fazer o conteúdo filh
 Dessa forma, o código fica assim:
 
 ````
-~~~css
 ... Restante do código... 
 
     .apresentacao{
@@ -91,7 +94,6 @@ Dessa forma, o código fica assim:
 
 ... Restante do código...
 
-~~~
 
 ````
 
