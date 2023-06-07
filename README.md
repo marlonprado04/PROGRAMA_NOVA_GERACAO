@@ -11,7 +11,11 @@
     - [Aplicando o REM](#aplicando-o-rem)
   - [Adaptando elementos](#adaptando-elementos)
     - [Descubra a super unidade de medida](#descubra-a-super-unidade-de-medida)
-
+- [Responsividade](#responsividade)
+  - [Media Queries](#media-queries)
+  - [Cabeçalho responsivo](#cabeçalho-responsivo)
+  - [Responsividade e GitHub](#responsividade-e-github)
+    - [Conteúdo responsivo](#conteúdo-responsivo
 
  # Curso 4:  HTML e CSS: trabalhando com responsividade e publicação de projetos
 
