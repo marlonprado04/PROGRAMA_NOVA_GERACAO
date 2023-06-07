@@ -76,6 +76,7 @@ Ou seja, atribuir um padding menor para o conteúdo pai e fazer o conteúdo filh
 Dessa forma, o código fica assim:
 
 ````
+~~~css
 ... Restante do código... 
 
     .apresentacao{
@@ -89,6 +90,8 @@ Dessa forma, o código fica assim:
     }
 
 ... Restante do código...
+
+~~~
 
 ````
 
