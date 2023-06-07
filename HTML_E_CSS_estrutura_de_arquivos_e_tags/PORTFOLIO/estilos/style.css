@@ -127,6 +127,17 @@ body {
 }
 
 @media (max-width: 1200px){
+
+    .cabecalho{
+        padding: 10%; /*Atribuindo padding para separar os botões de navegação*/
+
+    }
+
+    .cabecalho__menu{
+        justify-content: center; /*Centralizando menu de navegação*/
+
+    }
+
     .apresentacao{
         flex-direction: column-reverse;
     }

@@ -43,3 +43,24 @@ Exemplo: Dentro do CSS atribuindo certos valores se a tela tiver um max-width de
 
 }
 ````
+
+### Cabeçalho responsivo
+
+Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os elementos e depois centralizando o menu.
+
+
+````
+... Resto do código... 
+
+  .cabecalho{
+        padding: 10%; /*Atribuindo padding para separar os botões de navegação*/
+
+    }
+
+    .cabecalho__menu{
+        justify-content: center; /*Centralizando menu de navegação*/
+
+    }
+
+... Resto do código...
+````
