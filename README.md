@@ -35,11 +35,11 @@ https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_q
 
 Exemplo: Dentro do CSS atribuindo certos valores se a tela tiver um max-width de 1200px.
 
-''''
+````
 @media (max-width: 1200px){
     .apresentacao{
         flex-direction: column-reverse;
     }
 
 }
-''''
+````
