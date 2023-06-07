@@ -15,7 +15,7 @@
   - [Media Queries](#media-queries)
   - [Cabeçalho responsivo](#cabeçalho-responsivo)
   - [Responsividade e GitHub](#responsividade-e-github)
-    - [Conteúdo responsivo](#conteúdo-responsivo
+    - [Conteúdo responsivo](#conteúdo-responsivo)
 
  # Curso 4:  HTML e CSS: trabalhando com responsividade e publicação de projetos
 
