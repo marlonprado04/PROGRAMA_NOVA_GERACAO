@@ -117,3 +117,12 @@ Dessa forma, o código fica assim:
 Link: https://www.youtube.com/watch?v=UBAX-13g8OM
 
 Link do meu repositório: https://github.com/marlonprado04/testando_git
+
+
+### Colocando o projeto no ar
+
+Para colocar o projeot no ar podemos usar o site Vercel que permite hospedar repositórios do GitHub de forma gratuita.
+
+OBS: Necessário que os arquivos do respositório estejam na pasta raiz para que o site funcione corretamente, ou seja, pastas com vários projetos dentro não servirão.
+
+Link do vercel: https://vercel.com/
