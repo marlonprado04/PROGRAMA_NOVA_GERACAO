@@ -126,3 +126,9 @@ Para colocar o projeot no ar podemos usar o site Vercel que permite hospedar rep
 OBS: Necessário que os arquivos do respositório estejam na pasta raiz para que o site funcione corretamente, ou seja, pastas com vários projetos dentro não servirão.
 
 Link do vercel: https://vercel.com/
+
+# Artigos e links
+
+Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css
+
+Podcast Alura: https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-simples-hipsters-09-a577
