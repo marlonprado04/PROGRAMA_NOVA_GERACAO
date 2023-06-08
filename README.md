@@ -16,6 +16,9 @@
   - [Cabeçalho responsivo](#cabeçalho-responsivo)
   - [Responsividade e GitHub](#responsividade-e-github)
     - [Conteúdo responsivo](#conteúdo-responsivo)
+    - [Git e GitHub](#git-e-github)
+    - [Colocando o projeto no ar](#colocando-o-projeto-no-ar)
+- [Links e artigos](#links-e-artigos)
 
  # Curso 4:  HTML e CSS: trabalhando com responsividade e publicação de projetos
 
@@ -127,7 +130,7 @@ OBS: Necessário que os arquivos do respositório estejam na pasta raiz para que
 
 Link do vercel: https://vercel.com/
 
-# Artigos e links
+# Links e artigos
 
 Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css
 
