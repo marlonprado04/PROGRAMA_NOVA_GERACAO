@@ -130,8 +130,18 @@ OBS: Necessário que os arquivos do respositório estejam na pasta raiz para que
 
 Link do vercel: https://vercel.com/
 
+# Aprender a lógica de programação
+
+
+
+
+
 # Links e artigos
 
 Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css
 
 Podcast Alura: https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-simples-hipsters-09-a577
+
+5 dúvidas de quem quer começar com TI: https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao
+
+
