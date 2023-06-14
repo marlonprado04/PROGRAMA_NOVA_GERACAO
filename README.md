@@ -159,7 +159,24 @@ Sendo assim, um exemplo de código é:
 
 ```
 
-### Operações com textos e números
+### Tornando o programa dinâmico com variáveis
+
+Para declarar uma variável em JS fazemos conforme o código abaixo:
+
+```
+<meta charset="UTF-8">
+
+<script>    
+    var ano = 2020;
+
+    document.write("Mário tem " + (ano - 1997) + " anos.");
+    document.write("<br>");
+    document.write("Marcos tem " + (ano - 1989) + " anos.");
+    document.write("<br>");
+    document.write("Maria tem " + (ano - 1993) + " anos.");
+</script>
+
+```
 
 # Links e artigos
 
