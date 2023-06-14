@@ -178,6 +178,32 @@ Para declarar uma variável em JS fazemos conforme o código abaixo:
 
 ```
 
+Outro exemplo de uso para poupar código:
+
+```
+<meta charset="UTF-8">
+
+<script>    
+    var ano = 2023;
+
+    var idadeMario =  ano - 1997
+    var idadeMarcos = ano - 1989
+    var idadeMaria = ano - 1993
+
+    var media = (idadeMarcos + idadeMaria + idadeMario)/3
+
+    document.write("Mário tem " + idadeMario + " anos.");
+    document.write("<br>");
+    document.write("Marcos tem " + idadeMarcos + " anos.");
+    document.write("<br>");
+    document.write("Maria tem " + idadeMaria + " anos.");
+    document.write("<br>");
+    document.write("A média das idades é: " + Math.round(media));
+
+</script>
+
+```
+
 # Links e artigos
 
 Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css

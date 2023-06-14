@@ -1,11 +1,20 @@
 <meta charset="UTF-8">
 
 <script>    
-    var ano = 2020;
+    var ano = 2023;
 
-    document.write("Mário tem " + (ano - 1997) + " anos.");
+    var idadeMario =  ano - 1997
+    var idadeMarcos = ano - 1989
+    var idadeMaria = ano - 1993
+
+    var media = (idadeMarcos + idadeMaria + idadeMario)/3
+
+    document.write("Mário tem " + idadeMario + " anos.");
     document.write("<br>");
-    document.write("Marcos tem " + (ano - 1989) + " anos.");
+    document.write("Marcos tem " + idadeMarcos + " anos.");
     document.write("<br>");
-    document.write("Maria tem " + (ano - 1993) + " anos.");
+    document.write("Maria tem " + idadeMaria + " anos.");
+    document.write("<br>");
+    document.write("A média das idades é: " + Math.round(media));
+
 </script>
