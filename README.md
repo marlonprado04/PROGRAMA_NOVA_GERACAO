@@ -204,6 +204,8 @@ Outro exemplo de uso para poupar código:
 
 ```
 
+## Crie suas próprias funcionalidades
+
 # Links e artigos
 
 Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css
