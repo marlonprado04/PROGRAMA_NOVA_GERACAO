@@ -159,6 +159,8 @@ Sendo assim, um exemplo de código é:
 
 ```
 
+### Operações com textos e números
+
 # Links e artigos
 
 Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css
