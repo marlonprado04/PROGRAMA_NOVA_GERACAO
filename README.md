@@ -132,9 +132,32 @@ Link do vercel: https://vercel.com/
 
 # Aprender a lógica de programação
 
+## Comece a programar hoje
+
+Para começar a programar é necessário ter um programa que sirva de editor para o código.
+
+Alguns exemplos incluem o Sublime Text, Visual Studio Code ou mesmo o Notepad++.
+
+No curso de JavaScript vamos usar o Google Chrome para interpretar o código escrito, então não é necessário um compilador ou etc (algumas linguagens necessitam disso para funcionar).
+
+## Comunique-se com o usuário
+
+### Concatenação
+
+Antes de concatenar o texto do alert, foi substituido o comando alert do JavaScript pelo comando documento.write.
 
 
+Para concatenar no JavaScript usamos o operador +.
+A linguagem permite concatenar numeros inteiros com texto, pois ela faz a conversão do número para texto por baixo dos panos.
 
+Sendo assim, um exemplo de código é:
+
+```
+
+ // Concatenando 
+    document.write("A idade do Flávio é " + 18)
+
+```
 
 # Links e artigos
 
