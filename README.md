@@ -1,7 +1,6 @@
 # PROJETO_CALDEIRA
 
-
- Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
+Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
 
 # Índice
 
@@ -20,10 +19,12 @@
     - [Colocando o projeto no ar](#colocando-o-projeto-no-ar)
 - [Links e artigos](#links-e-artigos)
 
- # Curso 4:  HTML e CSS: trabalhando com responsividade e publicação de projetos
+# Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
 
 ## Unidades de medidas
+
 ### Unidade de Medida REM
+
 O CSS permite vários tipos de medidas que são divididas em 2 grupos: medidas relativas e medidas absolutas.
 
 As medidas interessantes de se usar são medidas relativas, pois se adaptam de acorco com as configurações do usuário.
@@ -35,11 +36,12 @@ Nesse caso vamos usar a escala de REM, que equivale a 16 pixels. Ou seja, 1 rem 
 Nessa aula vamos alterar todas as medidas de fonte que usamos pixels para rem.
 
 ## Adaptando elementos
+
 ### Descubra a super unidade de medida
+
 Podemos usar a unidade de medida de %, porém como diz no W3SCHOOL, a % é uma unidade relativa que respeita o tamanho do "pai".
 
 https://www.w3schools.com/cssref/css_units.php
-
 
 ## Responsividade
 
@@ -53,22 +55,21 @@ https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_q
 
 Exemplo: Dentro do CSS atribuindo certos valores se a tela tiver um max-width de 1200px.
 
-````
+```css
 @media (max-width: 1200px){
     .apresentacao{
         flex-direction: column-reverse;
     }
 
 }
-````
+```
 
 ### Cabeçalho responsivo
 
 Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os elementos e depois centralizando o menu.
 
-
-````
-... Resto do código... 
+```css
+... Resto do código...
 
     .cabecalho{
         padding: 10%; /*Atribuindo padding para separar os botões de navegação*/
@@ -81,20 +82,20 @@ Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os eleme
     }
 
 ... Resto do código...
-````
+```
 
 ## Responsividade e GitHub
 
 ### Conteúdo responsivo
 
-Para deixar o conteúdo responsivo é necessário diminuir o __espaçamento lateral entre o conteúdo e a borda da seção completa__ e depois atribuir alguma propriedade que faça a seção de conteúdo (dentro da seção completa) __consumir 100% do valor restante que não estiver sendo usado__.
+Para deixar o conteúdo responsivo é necessário diminuir o **espaçamento lateral entre o conteúdo e a borda da seção completa** e depois atribuir alguma propriedade que faça a seção de conteúdo (dentro da seção completa) **consumir 100% do valor restante que não estiver sendo usado**.
 
 Ou seja, atribuir um padding menor para o conteúdo pai e fazer o conteúdo filho consumir esse padding que foi diminuído e ficou sem uso.
 
 Dessa forma, o código fica assim:
 
-````
-... Restante do código... 
+```css
+... Restante do código...
 
     .apresentacao{
         flex-direction: column-reverse;
@@ -109,18 +110,13 @@ Dessa forma, o código fica assim:
 ... Restante do código...
 
 
-````
-
-
-
+```
 
 ### Git e GitHub
-
 
 Link: https://www.youtube.com/watch?v=UBAX-13g8OM
 
 Link do meu repositório: https://github.com/marlonprado04/testando_git
-
 
 ### Colocando o projeto no ar
 
@@ -146,15 +142,14 @@ No curso de JavaScript vamos usar o Google Chrome para interpretar o código esc
 
 Antes de concatenar o texto do alert, foi substituido o comando alert do JavaScript pelo comando documento.write.
 
-
 Para concatenar no JavaScript usamos o operador +.
 A linguagem permite concatenar numeros inteiros com texto, pois ela faz a conversão do número para texto por baixo dos panos.
 
 Sendo assim, um exemplo de código é:
 
-```
+```javascript
 
- // Concatenando 
+ // Concatenando
     document.write("A idade do Flávio é " + 18)
 
 ```
@@ -163,10 +158,10 @@ Sendo assim, um exemplo de código é:
 
 Para declarar uma variável em JS fazemos conforme o código abaixo:
 
-```
+```javascript
 <meta charset="UTF-8">
 
-<script>    
+<script>
     var ano = 2020;
 
     document.write("Mário tem " + (ano - 1997) + " anos.");
@@ -180,10 +175,10 @@ Para declarar uma variável em JS fazemos conforme o código abaixo:
 
 Outro exemplo de uso para poupar código:
 
-```
+```javascript
 <meta charset="UTF-8">
 
-<script>    
+<script>
     var ano = 2023;
 
     var idadeMario =  ano - 1997
@@ -206,6 +201,34 @@ Outro exemplo de uso para poupar código:
 
 ## Crie suas próprias funcionalidades
 
+### Melhorando a manutenção do código
+
+Para melhorar a manutenção do código podemos usar e abusar de recursos
+que as variáveis nos dão.
+
+Por exemplo, ao invés de colocar um document.write("<br>") para pular uma linha podemos criar uma variável que possua essa informação.
+
+Assim, sempre que necessário podemos pular quantas linhas quisermos ou aumentar o número de pulos que a variável dá.
+
+```javascript
+  // Ao invés disso:
+
+  document.write("Olá");
+  document.write("<br>");
+  document.write("Mundo");
+  document.write("<br>");
+
+  // Usar isso:
+
+  var pulaLinha = "<br>";
+
+  document.write("Olá");
+  document.write(pulaLinha);
+  document.write("Mundo");
+  document.write(pulaLinha);
+  
+```
+
 # Links e artigos
 
 Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css
@@ -215,3 +238,4 @@ Podcast Alura: https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-
 5 dúvidas de quem quer começar com TI: https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao
 
 
+```
