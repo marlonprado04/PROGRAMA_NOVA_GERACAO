@@ -249,7 +249,7 @@ function pulaLinha(){
 }
 ```
 
-### Funções com parâmetros exemploooooooo
+### Funções com parâmetros
 
 É possível criar funções que recebem parâmetros e trabalham com eles dentro da área de função.
 
