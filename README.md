@@ -26,6 +26,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Tornando o programa dinâmico com variáveis](#tornando-o-programa-dinâmico-com-variáveis)
   - [Crie suas próprias funcionalidades](#crie-suas-próprias-funcionalidades)
     - [Melhorando a manutenção do código](#melhorando-a-manutenção-do-código)
+    - [Funções](#funções)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -235,6 +236,16 @@ Assim, sempre que necessário, podemos pular quantas linhas quisermos ou aumenta
   document.write("Mundo");
   document.write(pulaLinha);
   
+```
+
+### Funções
+
+Para declarar funções no JS o código é parecido com a criação de variáveis:
+
+```javascript
+function pulaLinha(){
+  document.write("<br>");
+}
 ```
 
 # Links e artigos
