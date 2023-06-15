@@ -27,6 +27,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
   - [Crie suas próprias funcionalidades](#crie-suas-próprias-funcionalidades)
     - [Melhorando a manutenção do código](#melhorando-a-manutenção-do-código)
     - [Funções](#funções)
+    - [Funções com parâmetros](#funções-com-parâmetros)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -246,6 +247,35 @@ Para declarar funções no JS o código é parecido com a criação de variávei
 function pulaLinha(){
   document.write("<br>");
 }
+```
+
+### Funções com parâmetros
+
+É possível criar funções que recebem parâmetros e trabalham com eles dentro da área de função.
+
+Não é necessário criar a variável que será o passada como parâmetro para a função. Ela pode ser criada dentro da própria função, ou seja, será uma variável local dentro do escopo da função.
+
+Exemplo:
+
+```javascript
+
+<meta charset="UTF-8" />
+
+<script>
+    // Criando função com parâmetro para
+    // receber a mensagem quando chamada
+    function mostra(mensagem){
+    
+        // Printando mensagem passada
+        document.write(mensagem);
+        // Pulando a linha
+        document.write("<br>");
+    }
+
+    // Chamando a função e passando a mensagem necessária
+    mostra("Olá pessoas");
+</script>
+
 ```
 
 # Links e artigos
