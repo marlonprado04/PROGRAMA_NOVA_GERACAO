@@ -2,11 +2,37 @@
 
 Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
 
-## Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
+# Índice
 
-### Unidades de medidas
+- [PROJETO\_CALDEIRA](#projeto_caldeira)
+- [Índice](#índice)
+- [Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos](#curso-4-html-e-css-trabalhando-com-responsividade-e-publicação-de-projetos)
+  - [Unidades de medidas](#unidades-de-medidas)
+    - [Unidade de Medida REM](#unidade-de-medida-rem)
+    - [Aplicando o REM](#aplicando-o-rem)
+  - [Adaptando elementos](#adaptando-elementos)
+    - [Descubra a super unidade de medida](#descubra-a-super-unidade-de-medida)
+  - [Responsividade](#responsividade)
+    - [Media Queries](#media-queries)
+    - [Cabeçalho responsivo](#cabeçalho-responsivo)
+  - [Responsividade e GitHub](#responsividade-e-github)
+    - [Conteúdo responsivo](#conteúdo-responsivo)
+    - [Git e GitHub](#git-e-github)
+    - [Colocando o projeto no ar](#colocando-o-projeto-no-ar)
+- [Aprender a lógica de programação](#aprender-a-lógica-de-programação)
+  - [Comece a programar hoje](#comece-a-programar-hoje)
+  - [Comunique-se com o usuário](#comunique-se-com-o-usuário)
+    - [Concatenação](#concatenação)
+    - [Tornando o programa dinâmico com variáveis](#tornando-o-programa-dinâmico-com-variáveis)
+  - [Crie suas próprias funcionalidades](#crie-suas-próprias-funcionalidades)
+    - [Melhorando a manutenção do código](#melhorando-a-manutenção-do-código)
+- [Links e artigos](#links-e-artigos)
 
-#### Unidade de Medida REM
+# Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
+
+## Unidades de medidas
+
+### Unidade de Medida REM
 
 O CSS permite vários tipos de medidas que são divididas em 2 grupos: medidas relativas e medidas absolutas.
 
@@ -14,57 +40,62 @@ As medidas interessantes de se usar são medidas relativas, pois se adaptam de a
 
 Nesse caso vamos usar a escala de REM, que equivale a 16 pixels. Ou seja, 1 rem = 16 pixel.
 
-#### Aplicando o REM
+### Aplicando o REM
 
 Nessa aula vamos alterar todas as medidas de fonte que usamos pixels para rem.
 
-### Adaptando elementos
+## Adaptando elementos
 
-#### Descubra a super unidade de medida
+### Descubra a super unidade de medida
 
 Podemos usar a unidade de medida de %, porém como diz no W3SCHOOL, a % é uma unidade relativa que respeita o tamanho do "pai".
 
-<https://www.w3schools.com/cssref/css_units.php>
+https://www.w3schools.com/cssref/css_units.php
 
 ## Responsividade
 
-#### Media Queries
+### Media Queries
 
 Media queries serve para tornar o site mais responsivo e dinâmico, por exemplo, quando a imagem ocupa metade da tela sozinha em telas menores do que x pixels.
 
 O media querie permite manipular os elementos de acordo com certas informações.
 
-<https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries>
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries
 
 Exemplo: Dentro do CSS atribuindo certos valores se a tela tiver um max-width de 1200px.
 
 ```css
-@media (max-width: 1200px) {
-  .apresentacao {
-    flex-direction: column-reverse;
-  }
+@media (max-width: 1200px){
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+
 }
 ```
 
-#### Cabeçalho responsivo
+### Cabeçalho responsivo
 
 Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os elementos e depois centralizando o menu.
 
 ```css
-... Resto do código... .cabecalho {
-  padding: 10%; /*Atribuindo padding para separar os botões de navegação*/
-}
+... Resto do código...
 
-.cabecalho__menu {
-  justify-content: center; /*Centralizando menu de navegação*/
-}
+    .cabecalho{
+        padding: 10%; /*Atribuindo padding para separar os botões de navegação*/
 
-... Resto do código...;
+    }
+
+    .cabecalho__menu{
+        justify-content: center; /*Centralizando menu de navegação*/
+
+    }
+
+... Resto do código...
 ```
 
 ## Responsividade e GitHub
 
-#### Conteúdo responsivo
+### Conteúdo responsivo
 
 Para deixar o conteúdo responsivo é necessário diminuir o **espaçamento lateral entre o conteúdo e a borda da seção completa** e depois atribuir alguma propriedade que faça a seção de conteúdo (dentro da seção completa) **consumir 100% do valor restante que não estiver sendo usado**.
 
@@ -73,31 +104,36 @@ Ou seja, atribuir um padding menor para o conteúdo pai e fazer o conteúdo filh
 Dessa forma, o código fica assim:
 
 ```css
-... Restante do código... .apresentacao {
-  flex-direction: column-reverse;
-  padding: 5%; /*Diminuindo o espaçamento lateral para 5%, já que o superior e inferior já estavam esse valor, não é necessário atribuir 2 valores*/
-}
+... Restante do código...
 
-.apresentacao__conteudo {
-  width: auto; /*Atribuindo valor automático para a "seção" de apresentação de conteúdo*/
-}
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%; /*Diminuindo o espaçamento lateral para 5%, já que o superior e inferior já estavam esse valor, não é necessário atribuir 2 valores*/
+    }
 
-... Restante do código...;
+    .apresentacao__conteudo {
+        width: auto; /*Atribuindo valor automático para a "seção" de apresentação de conteúdo*/
+
+    }
+
+... Restante do código...
+
+
 ```
 
-#### Git e GitHub
+### Git e GitHub
 
-Link: <https://www.youtube.com/watch?v=UBAX-13g8OM>
+Link: https://www.youtube.com/watch?v=UBAX-13g8OM
 
-Link do meu repositório: <https://github.com/marlonprado04/testando_git>
+Link do meu repositório: https://github.com/marlonprado04/testando_git
 
-#### Colocando o projeto no ar
+### Colocando o projeto no ar
 
 Para colocar o projeot no ar podemos usar o site Vercel que permite hospedar repositórios do GitHub de forma gratuita.
 
 OBS: Necessário que os arquivos do respositório estejam na pasta raiz para que o site funcione corretamente, ou seja, pastas com vários projetos dentro não servirão.
 
-Link do vercel: <https://vercel.com/>
+Link do vercel: https://vercel.com/
 
 # Aprender a lógica de programação
 
@@ -111,7 +147,7 @@ No curso de JavaScript vamos usar o Google Chrome para interpretar o código esc
 
 ## Comunique-se com o usuário
 
-#### Concatenação
+### Concatenação
 
 Antes de concatenar o texto do alert, foi substituido o comando alert do JavaScript pelo comando documento.write.
 
@@ -121,11 +157,13 @@ A linguagem permite concatenar numeros inteiros com texto, pois ela faz a conver
 Sendo assim, um exemplo de código é:
 
 ```javascript
-// Concatenando
-document.write("A idade do Flávio é " + 18);
+
+ // Concatenando
+    document.write("A idade do Flávio é " + 18)
+
 ```
 
-#### Tornando o programa dinâmico com variáveis
+### Tornando o programa dinâmico com variáveis
 
 Para declarar uma variável em JS fazemos conforme o código abaixo:
 
@@ -170,9 +208,9 @@ Outro exemplo de uso para poupar código:
 
 ```
 
-### Crie suas próprias funcionalidades
+## Crie suas próprias funcionalidades
 
-#### Melhorando a manutenção do código
+### Melhorando a manutenção do código
 
 Para melhorar a manutenção do código podemos usar e abusar de recursos
 que as variáveis nos dão.
@@ -182,27 +220,28 @@ Por exemplo, ao invés de colocar um document.write("<br>") para pular uma linha
 Assim, sempre que necessário podemos pular quantas linhas quisermos ou aumentar o número de pulos que a variável dá.
 
 ```javascript
-// Ao invés disso:
+  // Ao invés disso:
 
-document.write("Olá");
-document.write("<br>");
-document.write("Mundo");
-document.write("<br>");
+  document.write("Olá");
+  document.write("<br>");
+  document.write("Mundo");
+  document.write("<br>");
 
-// Usar isso:
+  // Usar isso:
 
-var pulaLinha = "<br>";
+  var pulaLinha = "<br>";
 
-document.write("Olá");
-document.write(pulaLinha);
-document.write("Mundo");
-document.write(pulaLinha);
+  document.write("Olá");
+  document.write(pulaLinha);
+  document.write("Mundo");
+  document.write(pulaLinha);
+  
 ```
 
 # Links e artigos
 
-Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>
+Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css
 
-Podcast Alura: <https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-simples-hipsters-09-a577>
+Podcast Alura: https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-simples-hipsters-09-a577
 
-5 dúvidas de quem quer começar com TI: <https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao>
+5 dúvidas de quem quer começar com TI: https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao
