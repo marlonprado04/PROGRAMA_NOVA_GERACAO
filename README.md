@@ -50,7 +50,7 @@ Nessa aula vamos alterar todas as medidas de fonte que usamos pixels para rem.
 
 Podemos usar a unidade de medida de %, porém como diz no W3SCHOOL, a % é uma unidade relativa que respeita o tamanho do "pai".
 
-https://www.w3schools.com/cssref/css_units.php
+<https://www.w3schools.com/cssref/css_units.php>
 
 ## Responsividade
 
@@ -60,7 +60,7 @@ Media queries serve para tornar o site mais responsivo e dinâmico, por exemplo,
 
 O media querie permite manipular os elementos de acordo com certas informações.
 
-https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries
+<https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries>
 
 Exemplo: Dentro do CSS atribuindo certos valores se a tela tiver um max-width de 1200px.
 
@@ -123,9 +123,9 @@ Dessa forma, o código fica assim:
 
 ### Git e GitHub
 
-Link: https://www.youtube.com/watch?v=UBAX-13g8OM
+Link: <https://www.youtube.com/watch?v=UBAX-13g8OM>
 
-Link do meu repositório: https://github.com/marlonprado04/testando_git
+Link do meu repositório: <https://github.com/marlonprado04/testando_git>
 
 ### Colocando o projeto no ar
 
@@ -133,7 +133,7 @@ Para colocar o projeot no ar podemos usar o site Vercel que permite hospedar rep
 
 OBS: Necessário que os arquivos do respositório estejam na pasta raiz para que o site funcione corretamente, ou seja, pastas com vários projetos dentro não servirão.
 
-Link do vercel: https://vercel.com/
+Link do vercel: <https://vercel.com/>
 
 # Aprender a lógica de programação
 
@@ -212,12 +212,11 @@ Outro exemplo de uso para poupar código:
 
 ### Melhorando a manutenção do código
 
-Para melhorar a manutenção do código podemos usar e abusar de recursos
-que as variáveis nos dão.
+Para melhorar a manutenção do código, podemos usar e abusar de recursos que as variáveis nos dão.
 
-Por exemplo, ao invés de colocar um document.write("<br>") para pular uma linha podemos criar uma variável que possua essa informação.
+Por exemplo, ao invés de colocar `document.write("<br>")` para pular uma linha, podemos criar uma variável que possua essa informação.
 
-Assim, sempre que necessário podemos pular quantas linhas quisermos ou aumentar o número de pulos que a variável dá.
+Assim, sempre que necessário, podemos pular quantas linhas quisermos ou aumentar o número de pulos que a variável dá.
 
 ```javascript
   // Ao invés disso:
@@ -240,8 +239,8 @@ Assim, sempre que necessário podemos pular quantas linhas quisermos ou aumentar
 
 # Links e artigos
 
-Guia da Alura de unidades no CSS: https://www.alura.com.br/artigos/guia-de-unidades-no-css
+Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>
 
-Podcast Alura: https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-simples-hipsters-09-a577
+Podcast Alura: <https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-simples-hipsters-09-a577>
 
-5 dúvidas de quem quer começar com TI: https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao
+5 dúvidas de quem quer começar com TI: <https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao>
