@@ -2,37 +2,11 @@
 
 Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
 
-# Índice
+## Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
 
-- [PROJETO\_CALDEIRA](#projeto_caldeira)
-- [Índice](#índice)
-- [Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos](#curso-4-html-e-css-trabalhando-com-responsividade-e-publicação-de-projetos)
-  - [Unidades de medidas](#unidades-de-medidas)
-    - [Unidade de Medida REM](#unidade-de-medida-rem)
-    - [Aplicando o REM](#aplicando-o-rem)
-  - [Adaptando elementos](#adaptando-elementos)
-    - [Descubra a super unidade de medida](#descubra-a-super-unidade-de-medida)
-  - [Responsividade](#responsividade)
-    - [Media Queries](#media-queries)
-    - [Cabeçalho responsivo](#cabeçalho-responsivo)
-  - [Responsividade e GitHub](#responsividade-e-github)
-    - [Conteúdo responsivo](#conteúdo-responsivo)
-    - [Git e GitHub](#git-e-github)
-    - [Colocando o projeto no ar](#colocando-o-projeto-no-ar)
-- [Aprender a lógica de programação](#aprender-a-lógica-de-programação)
-  - [Comece a programar hoje](#comece-a-programar-hoje)
-  - [Comunique-se com o usuário](#comunique-se-com-o-usuário)
-    - [Concatenação](#concatenação)
-    - [Tornando o programa dinâmico com variáveis](#tornando-o-programa-dinâmico-com-variáveis)
-  - [Crie suas próprias funcionalidades](#crie-suas-próprias-funcionalidades)
-    - [Melhorando a manutenção do código](#melhorando-a-manutenção-do-código)
-- [Links e artigos](#links-e-artigos)
+### Unidades de medidas
 
-# Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
-
-## Unidades de medidas
-
-### Unidade de Medida REM
+#### Unidade de Medida REM
 
 O CSS permite vários tipos de medidas que são divididas em 2 grupos: medidas relativas e medidas absolutas.
 
@@ -40,13 +14,13 @@ As medidas interessantes de se usar são medidas relativas, pois se adaptam de a
 
 Nesse caso vamos usar a escala de REM, que equivale a 16 pixels. Ou seja, 1 rem = 16 pixel.
 
-### Aplicando o REM
+#### Aplicando o REM
 
 Nessa aula vamos alterar todas as medidas de fonte que usamos pixels para rem.
 
-## Adaptando elementos
+### Adaptando elementos
 
-### Descubra a super unidade de medida
+#### Descubra a super unidade de medida
 
 Podemos usar a unidade de medida de %, porém como diz no W3SCHOOL, a % é uma unidade relativa que respeita o tamanho do "pai".
 
@@ -54,7 +28,7 @@ Podemos usar a unidade de medida de %, porém como diz no W3SCHOOL, a % é uma u
 
 ## Responsividade
 
-### Media Queries
+#### Media Queries
 
 Media queries serve para tornar o site mais responsivo e dinâmico, por exemplo, quando a imagem ocupa metade da tela sozinha em telas menores do que x pixels.
 
@@ -72,7 +46,7 @@ Exemplo: Dentro do CSS atribuindo certos valores se a tela tiver um max-width de
 }
 ```
 
-### Cabeçalho responsivo
+#### Cabeçalho responsivo
 
 Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os elementos e depois centralizando o menu.
 
@@ -90,7 +64,7 @@ Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os eleme
 
 ## Responsividade e GitHub
 
-### Conteúdo responsivo
+#### Conteúdo responsivo
 
 Para deixar o conteúdo responsivo é necessário diminuir o **espaçamento lateral entre o conteúdo e a borda da seção completa** e depois atribuir alguma propriedade que faça a seção de conteúdo (dentro da seção completa) **consumir 100% do valor restante que não estiver sendo usado**.
 
@@ -111,13 +85,13 @@ Dessa forma, o código fica assim:
 ... Restante do código...;
 ```
 
-### Git e GitHub
+#### Git e GitHub
 
 Link: <https://www.youtube.com/watch?v=UBAX-13g8OM>
 
 Link do meu repositório: <https://github.com/marlonprado04/testando_git>
 
-### Colocando o projeto no ar
+#### Colocando o projeto no ar
 
 Para colocar o projeot no ar podemos usar o site Vercel que permite hospedar repositórios do GitHub de forma gratuita.
 
@@ -137,7 +111,7 @@ No curso de JavaScript vamos usar o Google Chrome para interpretar o código esc
 
 ## Comunique-se com o usuário
 
-### Concatenação
+#### Concatenação
 
 Antes de concatenar o texto do alert, foi substituido o comando alert do JavaScript pelo comando documento.write.
 
@@ -151,7 +125,7 @@ Sendo assim, um exemplo de código é:
 document.write("A idade do Flávio é " + 18);
 ```
 
-### Tornando o programa dinâmico com variáveis
+#### Tornando o programa dinâmico com variáveis
 
 Para declarar uma variável em JS fazemos conforme o código abaixo:
 
@@ -196,9 +170,9 @@ Outro exemplo de uso para poupar código:
 
 ```
 
-## Crie suas próprias funcionalidades
+### Crie suas próprias funcionalidades
 
-### Melhorando a manutenção do código
+#### Melhorando a manutenção do código
 
 Para melhorar a manutenção do código podemos usar e abusar de recursos
 que as variáveis nos dão.
