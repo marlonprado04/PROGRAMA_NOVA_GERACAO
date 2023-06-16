@@ -27,7 +27,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
   - [Crie suas próprias funcionalidades](#crie-suas-próprias-funcionalidades)
     - [Melhorando a manutenção do código](#melhorando-a-manutenção-do-código)
     - [Funções](#funções)
-    - [Funções com parâmetros exemploooooooo](#funções-com-parâmetros-exemploooooooo)
+    - [Funções com parâmetros](#funções-com-parâmetros)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
