@@ -40,6 +40,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Jogo de advinhação](#jogo-de-advinhação)
   - [Repita tarefas](#repita-tarefas)
     - [Repetir enquanto](#repetir-enquanto)
+    - [Outra forma de repetir](#outra-forma-de-repetir)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -703,6 +704,40 @@ Abaixo um programa que lista todos os anos em que houveram copa adicionando + 4 
   mostra("FIM");
  
 </script>
+```
+
+### Outra forma de repetir
+
+Uma alternativa ao `while` é o `for`, que funciona da mesma forma, porém não é necessário criar variáveis antes da excução.
+
+Abaixo um código que calcula a tabuada:
+
+```javascript
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Programa para calcular tabuada
+
+  // Criando laço de repetição com for
+
+  for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+
+    mostra("7*" + multiplicador + "=" + (7*multiplicador));
+  }
+</script>
+
 ```
 
 # Links e artigos
