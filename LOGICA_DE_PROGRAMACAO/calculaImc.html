@@ -19,13 +19,12 @@
     return peso / (altura * altura);
   }
 
-  // Criando uma variável para conter o IMC de cada pessoa
-  var imcFlavio = calculaImc(1.65, 77);
-  var imcMario = calculaImc(1.77, 89);
-  var totalImc = imcFlavio + imcMario;
+  // Criando uma variável para conter a altura e peso
+  var nome = prompt("Informe seu nome:");
+  var alturaInformada = prompt(nome + ", informe sua altura: ");
+  var pesoInformado = prompt(nome + ", informe seu peso: ");
+  var imc = calculaImc(alturaInformada, pesoInformado);
 
   // Mostrando o resultado atribuido em cada variável
-  mostra(imcFlavio);
-  mostra(imcMario);
-  mostra(totalImc);
+  mostra(nome + ", o seu IMC é:" + imc);
 </script>

@@ -32,6 +32,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Calculando o IMC](#calculando-o-imc)
     - [Retorno de funções](#retorno-de-funções)
     - [Entendendo a fundo o retorno de funções](#entendendo-a-fundo-o-retorno-de-funções)
+    - [Interagindo com o usuário](#interagindo-com-o-usuário)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -391,6 +392,46 @@ Abaixo a adaptação do código:
 </script>
 
 ```
+
+### Interagindo com o usuário
+
+Para deixar o código ainda mais funcional e dinâmico, nós podemos coletar informações passadas pelo usuário. Para isso existe a função `prompt()` do JS.
+
+Abaixo o código adaptado que recebe o nome, altura e peso do usuário e mostra o resultado do cálculo na tela:
+
+```javascript
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Criando função para calcular IMC
+  function calculaImc(altura, peso) {
+    // Retornando o cálculo de IMC quando a função for chamada
+    return peso / (altura * altura);
+  }
+
+  // Criando uma variável para conter a altura e peso
+  var nome = prompt("Informe seu nome:");
+  var alturaInformada = prompt(nome + ", informe sua altura: ");
+  var pesoInformado = prompt(nome + ", informe seu peso: ");
+  var imc = calculaImc(alturaInformada, pesoInformado);
+
+  // Mostrando o resultado atribuido em cada variável
+  mostra(nome + ", o seu IMC é:" + imc);
+</script>
+```
+
 
 # Links e artigos
 
