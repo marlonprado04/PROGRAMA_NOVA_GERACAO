@@ -41,6 +41,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
   - [Repita tarefas](#repita-tarefas)
     - [Repetir enquanto](#repetir-enquanto)
     - [Outra forma de repetir](#outra-forma-de-repetir)
+    - [Acumulando valores](#acumulando-valores)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -739,7 +740,54 @@ Abaixo um código que calcula a tabuada:
 </script>
 
 ```
+### Acumulando valores
 
+Podemos usar os laços de repetição para acumular valores e realizar operações de acordo.
+
+Por exemplo, perguntar para o usuário um numero de pessoas que ele deseja calcular a média de idades e criar um laço para pedir todas as idades e depois realizar o calculo da média.
+
+Abaixo o código de exemplo:
+
+```javascript
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Progrma para calcular a média das idades de acordo com o número de pessoas informado pelo usuário
+
+  // Criando variáveis
+  var totalPessoas = parseInt(prompt("Quantas pessoas? "));
+  var numero = 1;
+  var totalIdades = 0;
+  var mediaDasIdades = 0;
+
+  // Criando laço de repetição
+  while(numero <= totalPessoas){
+    var idade = parseInt(prompt("Informe a idade: "));
+    totalIdades = totalIdades + idade;
+    numero ++;
+  }
+
+  // Atribuindo cálculo de média das idades à variável
+  mediaDasIdades = totalIdades / totalPessoas;
+
+  // Mostrando mensagem na tela
+  mostra("A média das idades é: " + mediaDasIdades);
+
+</script>
+
+```
 # Links e artigos
 
 Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>

@@ -1,0 +1,37 @@
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Progrma para calcular a média das idades de acordo com o número de pessoas informado pelo usuário
+
+  // Criando variáveis
+  var totalPessoas = parseInt(prompt("Quantas pessoas? "));
+  var numero = 1;
+  var totalIdades = 0;
+  var mediaDasIdades = 0;
+
+  // Criando laço de repetição
+  while(numero <= totalPessoas){
+    var idade = parseInt(prompt("Informe a idade: "));
+    totalIdades = totalIdades + idade;
+    numero ++;
+  }
+
+  // Atribuindo cálculo de média das idades à variável
+  mediaDasIdades = totalIdades / totalPessoas;
+
+  // Mostrando mensagem na tela
+  mostra("A média das idades é: " + mediaDasIdades);
+
+</script>
