@@ -31,6 +31,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
   - [Pratique resolvendo problemas do seu dia a dia](#pratique-resolvendo-problemas-do-seu-dia-a-dia)
     - [Calculando o IMC](#calculando-o-imc)
     - [Retorno de funções](#retorno-de-funções)
+    - [Entendendo a fundo o retorno de funções](#entendendo-a-fundo-o-retorno-de-funções)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -345,6 +346,50 @@ Abaixo uma adaptação no código anterior incluindo essas alterações:
   // Mostrando o resultado atribuido em cada variável
   mostra(imcFlavio);
   mostra(imcMario);
+```
+
+### Entendendo a fundo o retorno de funções
+
+Uma outra forma de lidar com o retorno de funções é realizar o cálculo no próprio retorno.
+
+Por exemplo, ao invés de criar variáveis dentro da função e realizar o calculo para só então retornar o resultado do cálculo, podemos realizar todo o cálculo dentro do retorno da função.
+
+Abaixo a adaptação do código:
+
+```javascript
+
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Criando função para calcular IMC
+  function calculaImc(altura, peso) {
+    // Retornando o cálculo de IMC quando a função for chamada
+    return peso / (altura * altura);
+  }
+
+  // Criando uma variável para conter o IMC de cada pessoa
+  var imcFlavio = calculaImc(1.65, 77);
+  var imcMario = calculaImc(1.77, 89);
+  var totalImc = imcFlavio + imcMario;
+
+  // Mostrando o resultado atribuido em cada variável
+  mostra(imcFlavio);
+  mostra(imcMario);
+  mostra(totalImc);
+</script>
+
 ```
 
 # Links e artigos
