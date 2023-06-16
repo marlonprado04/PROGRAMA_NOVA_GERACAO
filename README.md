@@ -37,6 +37,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Convertendo texto em números](#convertendo-texto-em-números)
     - [Trabalhando com condições](#trabalhando-com-condições)
     - [Melhorando programa de IMC](#melhorando-programa-de-imc)
+    - [Jogo de advinhação](#jogo-de-advinhação)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -578,6 +579,43 @@ Abaixo o código alterado:
     mostra("Seu IMC está EXCELENTE!");
   }
 </script>
+```
+
+### Jogo de advinhação
+
+Com tudo aprendido até aqui podemos criar um jogo de adivinhação, conforme código abaixo:
+
+```javascript
+
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Criando variável que recebe um número aleatório gerado a partir das funções round() e random() da biblioteca Math
+  var numeroPensado = Math.round(Math.random() * 10);
+
+  // Criando variável para receber chute do usuário
+  var chute = parseInt(prompt("Digite um chute: "));
+
+  // Comparando chute com o número gerado
+  if (chute == numeroPensado) {
+    mostra("Você acertou!");
+  } else {
+    mostra("Você errou, o número pensado foi " + numeroPensado);
+  }
+</script>
+
 ```
 
 # Links e artigos
