@@ -30,6 +30,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Funções com parâmetros](#funções-com-parâmetros)
   - [Pratique resolvendo problemas do seu dia a dia](#pratique-resolvendo-problemas-do-seu-dia-a-dia)
     - [Calculando o IMC](#calculando-o-imc)
+    - [Retorno de funções](#retorno-de-funções)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -318,6 +319,33 @@ Dessa forma o cálculo fica dinâmico e poupa linhas de código:
 
 ```
 
+### Retorno de funções
+
+Para deixar o código ainda mais dinâmico, podemos criar retorno para as funções.
+
+Dessa forma, a função pode servir para realizar certas operações e após executar, retornar determinado valor.
+
+Abaixo uma adaptação no código anterior incluindo essas alterações:
+
+```javascript
+
+  // Criando função para calcular IMC
+  function calculaImc(altura, peso) {
+    // Criando variável para armazenar IMC calculado
+    var imc = peso / (altura * altura);
+
+    // Retornando o IMC quando a função for chamada
+    return imc;
+  }
+
+  // Criando uma variável para conter o IMC de cada pessoa
+  var imcFlavio = calculaImc(1.65, 77);
+  var imcMario = calculaImc(1.77, 89);
+
+  // Mostrando o resultado atribuido em cada variável
+  mostra(imcFlavio);
+  mostra(imcMario);
+```
 
 # Links e artigos
 
