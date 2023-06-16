@@ -621,6 +621,46 @@ Com tudo aprendido até aqui podemos criar um jogo de adivinhação, conforme c�
 > Desafio:
 >1 - Você pode criar uma função sorteia que recebe um número n e sorteia um número entre 0 a n, retornando esse valor. Dessa forma, em vez de escrever var numeroPensado = Math.round(Math.random() * n);, você escreveria var numeroPensado = sorteia(n);. Faça essa modificação, criando a nova função e utilize-a.
 
+```javascript
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Criano função para sortear número
+  function sorteia(n){
+    // Retornando número de acordo com sugestão do usuário
+    return Math.round(Math.random() * n);
+  }
+
+  // Criando variável para receber o número máximo de sorteio sugerido pelo usuário
+  var numeroMaximo = parseInt(prompt("Digite até que número deseja o sorteio: "));
+
+  // Criando variável de número sorteado
+  var numeroSorteado = sorteia(numeroMaximo);
+
+  // Criando variável para receber chute do usuário
+  var chute = parseInt(prompt("Digite um chute: "));
+  
+  // Comparando chute com o número gerado
+  if (chute == numeroSorteado) {
+    mostra("Você acertou!");
+  } else {
+    mostra("Você errou, o número pensado foi " + numeroSorteado);
+  }
+</script>
+
+```
 
 # Links e artigos
 
