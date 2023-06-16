@@ -1,0 +1,30 @@
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Programa para calcular o ano em que haverá copa
+
+  // Declarando variáveis
+  var anoCopa = 1930;
+  var dataLimite = parseInt(prompt("Digite a data limite: "));
+
+  // Criando laço de repetição para gerar alerta informando anos que houveram copa
+  while(anoCopa <= dataLimite){
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa+4;
+  }
+
+  mostra("FIM");
+ 
+</script>

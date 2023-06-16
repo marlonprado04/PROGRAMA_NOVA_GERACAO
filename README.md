@@ -38,6 +38,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Trabalhando com condições](#trabalhando-com-condições)
     - [Melhorando programa de IMC](#melhorando-programa-de-imc)
     - [Jogo de advinhação](#jogo-de-advinhação)
+  - [Repita tarefas](#repita-tarefas)
+    - [Repetir enquanto](#repetir-enquanto)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -660,6 +662,47 @@ Com tudo aprendido até aqui podemos criar um jogo de adivinhação, conforme c�
   }
 </script>
 
+```
+
+## Repita tarefas
+
+### Repetir enquanto
+
+Para repetir operações podemos usar o laço de repetição `while(){}`. Nele atribuimos uma condição e enquanto ela estiver sendo `true`, o código dentro dela permanece sendo executado.
+
+Abaixo um programa que lista todos os anos em que houveram copa adicionando + 4 a cada ano, de acordo com data limite que o usuário estipular:
+
+```javascript
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Programa para calcular o ano em que haverá copa
+
+  // Declarando variáveis
+  var anoCopa = 1930;
+  var dataLimite = parseInt(prompt("Digite a data limite: "));
+
+  // Criando laço de repetição para gerar alerta informando anos que houveram copa
+  while(anoCopa <= dataLimite){
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa+4;
+  }
+
+  mostra("FIM");
+ 
+</script>
 ```
 
 # Links e artigos
