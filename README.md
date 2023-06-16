@@ -466,8 +466,8 @@ Abaixo um exemplo de código com conversão:
   // Base do programa para calcular a pontuação de um time de futebol
 
   // Criando variáveis necessárias
-  var vitorias = parseInt(("Entre com o número de vitórias: "));
-  var empates = parseInt(("Entre com o número de empates: "));
+  var vitorias = parseInt(prompt("Entre com o número de vitórias: "));
+  var empates = parseInt(prompt("Entre com o número de empates: "));
   var pontos = (vitorias *3) + empates;
 
   // Mostrando mensagem com resultado
