@@ -33,6 +33,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Retorno de funções](#retorno-de-funções)
     - [Entendendo a fundo o retorno de funções](#entendendo-a-fundo-o-retorno-de-funções)
     - [Interagindo com o usuário](#interagindo-com-o-usuário)
+  - [Execute códigos diferentes dependendo da condição](#execute-códigos-diferentes-dependendo-da-condição)
+    - [Convertendo texto em números](#convertendo-texto-em-números)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -430,6 +432,49 @@ Abaixo o código adaptado que recebe o nome, altura e peso do usuário e mostra 
   // Mostrando o resultado atribuido em cada variável
   mostra(nome + ", o seu IMC é:" + imc);
 </script>
+```
+
+## Execute códigos diferentes dependendo da condição
+
+### Convertendo texto em números
+
+A função `prompt()` do JS por padrão retorna um texto. Sendo assim, é necessário converter a informação retornada para realizar operações matemáticas.
+
+OBS: Como o JS é uma linguagem com **variáveis dinâmicas**, as operações de **multiplicação e divisão** funcionam sem conversão, mas **ao somar os números eles acabam sendo _concatenados_**.
+
+Para converter um valor do tipo `string` para o tipo `int` podemos usar a função padrão do JS `parseInt()` onde colocamos o valor ou variável do tipo string como parâmetro na função.
+
+Abaixo um exemplo de código com conversão:
+
+```javascript
+
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Base do programa para calcular a pontuação de um time de futebol
+
+  // Criando variáveis necessárias
+  var vitorias = parseInt(("Entre com o número de vitórias: "));
+  var empates = parseInt(("Entre com o número de empates: "));
+  var pontos = (vitorias *3) + empates;
+
+  // Mostrando mensagem com resultado
+  mostra("Seu time tem " + pontos + " ponto(s).")
+   
+</script>
+
 ```
 
 # Links e artigos

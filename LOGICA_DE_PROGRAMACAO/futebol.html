@@ -1,0 +1,26 @@
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Base do programa para calcular a pontuação de um time de futebol
+
+  // Criando variáveis necessárias
+  var vitorias = parseInt(("Entre com o número de vitórias: "));
+  var empates = parseInt(("Entre com o número de empates: "));
+  var pontos = (vitorias *3) + empates;
+
+  // Mostrando mensagem com resultado
+  mostra("Seu time tem " + pontos + " ponto(s).")
+   
+</script>
