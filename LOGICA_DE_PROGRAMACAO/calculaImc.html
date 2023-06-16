@@ -27,4 +27,17 @@
 
   // Mostrando o resultado atribuido em cada variável
   mostra(nome + ", o seu IMC é:" + imc);
+
+  // Criando operador para comparar IMC do usuário com o ideal
+  if (imc < 18.5) {
+    mostra("Seu IMC está ABAIXO do recomendado!");
+  }
+
+  if (imc > 35) {
+    mostra("Seu IMC está ACIMA do recomendado!");
+  }
+
+  if (imc >= 18.5 && imc <= 35) {
+    mostra("Seu IMC está EXCELENTE!");
+  }
 </script>

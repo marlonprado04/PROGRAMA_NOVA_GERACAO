@@ -36,6 +36,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
   - [Execute códigos diferentes dependendo da condição](#execute-códigos-diferentes-dependendo-da-condição)
     - [Convertendo texto em números](#convertendo-texto-em-números)
     - [Trabalhando com condições](#trabalhando-com-condições)
+    - [Melhorando programa de IMC](#melhorando-programa-de-imc)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -525,6 +526,58 @@ Exemplo:
   }
 </script>
 
+```
+
+### Melhorando programa de IMC
+
+Para deixar o programa de cálculo de IMC criado anteriormente mais funcional, vamos incluir o conteúdo aprendido até então.
+
+Abaixo o código alterado:
+
+```javascript
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Criando função para calcular IMC
+  function calculaImc(altura, peso) {
+    // Retornando o cálculo de IMC quando a função for chamada
+    return peso / (altura * altura);
+  }
+
+  // Criando uma variável para conter a altura e peso
+  var nome = prompt("Informe seu nome:");
+  var alturaInformada = prompt(nome + ", informe sua altura: ");
+  var pesoInformado = prompt(nome + ", informe seu peso: ");
+  var imc = calculaImc(alturaInformada, pesoInformado);
+
+  // Mostrando o resultado atribuido em cada variável
+  mostra(nome + ", o seu IMC é:" + imc);
+
+  // Criando operador para comparar IMC do usuário com o ideal
+  if (imc < 18.5) {
+    mostra("Seu IMC está ABAIXO do recomendado!");
+  }
+
+  if (imc > 35) {
+    mostra("Seu IMC está ACIMA do recomendado!");
+  }
+
+  if (imc >= 18.5 && imc <= 35) {
+    mostra("Seu IMC está EXCELENTE!");
+  }
+</script>
 ```
 
 # Links e artigos
