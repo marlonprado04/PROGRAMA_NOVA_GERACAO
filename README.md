@@ -618,6 +618,10 @@ Com tudo aprendido até aqui podemos criar um jogo de adivinhação, conforme c�
 
 ```
 
+> Desafio:
+>1 - Você pode criar uma função sorteia que recebe um número n e sorteia um número entre 0 a n, retornando esse valor. Dessa forma, em vez de escrever var numeroPensado = Math.round(Math.random() * n);, você escreveria var numeroPensado = sorteia(n);. Faça essa modificação, criando a nova função e utilize-a.
+
+
 # Links e artigos
 
 Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>

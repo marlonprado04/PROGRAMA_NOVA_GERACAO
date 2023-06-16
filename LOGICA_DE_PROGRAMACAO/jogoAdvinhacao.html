@@ -13,16 +13,25 @@
     pulaLinha();
   }
 
-  // Criando variável que recebe um número aleatório gerado a partir das funções round() e random() da biblioteca Math
-  var numeroPensado = Math.round(Math.random() * 10);
+  // Criano função para sortear número
+  function sorteia(n){
+    // Retornando número de acordo com sugestão do usuário
+    return Math.round(Math.random() * n);
+  }
+
+  // Criando variável para receber o número máximo de sorteio sugerido pelo usuário
+  var numeroMaximo = parseInt(prompt("Digite até que número deseja o sorteio: "));
+
+  // Criando variável de número sorteado
+  var numeroSorteado = sorteia(numeroMaximo);
 
   // Criando variável para receber chute do usuário
   var chute = parseInt(prompt("Digite um chute: "));
-
+  
   // Comparando chute com o número gerado
-  if (chute == numeroPensado) {
+  if (chute == numeroSorteado) {
     mostra("Você acertou!");
   } else {
-    mostra("Você errou, o número pensado foi " + numeroPensado);
+    mostra("Você errou, o número pensado foi " + numeroSorteado);
   }
 </script>
