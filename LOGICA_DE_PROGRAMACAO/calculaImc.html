@@ -1,0 +1,26 @@
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+  }
+
+  // Criando função para calcular IMC
+  function calculaImc(altura, peso) {
+    // Criando variável para armazenar IMC calculado
+    var imc = peso / (altura * altura);
+
+    // Printando mensagem na tela
+    mostra("O IMC calculado é: " + imc);
+  }
+
+  // Executando função para calular IMC
+  calculaImc(1.65, 77);
+</script>

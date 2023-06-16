@@ -28,6 +28,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Melhorando a manutenção do código](#melhorando-a-manutenção-do-código)
     - [Funções](#funções)
     - [Funções com parâmetros](#funções-com-parâmetros)
+  - [Pratique resolvendo problemas do seu dia a dia](#pratique-resolvendo-problemas-do-seu-dia-a-dia)
+    - [Calculando o IMC](#calculando-o-imc)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -277,6 +279,45 @@ Exemplo:
 </script>
 
 ```
+
+## Pratique resolvendo problemas do seu dia a dia
+
+### Calculando o IMC
+
+Para calcular o IMC usando o que já foi aprendido, pode ser criada uma função que realiza a operação e aproveitar as funções anteriores para mostrar a mensagem em tela.
+
+Dessa forma o cálculo fica dinâmico e poupa linhas de código:
+
+```javascript
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+  }
+
+  // Criando função para calcular IMC
+  function calculaImc(altura, peso) {
+    // Criando variável para armazenar IMC calculado
+    var imc = peso / (altura * altura);
+
+    // Printando mensagem na tela
+    mostra("O IMC calculado é: " + imc);
+  }
+
+  // Executando função para calular IMC
+  calculaImc(1.65, 77);
+</script>
+
+```
+
 
 # Links e artigos
 
