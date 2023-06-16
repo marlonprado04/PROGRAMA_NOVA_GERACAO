@@ -35,6 +35,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Interagindo com o usuário](#interagindo-com-o-usuário)
   - [Execute códigos diferentes dependendo da condição](#execute-códigos-diferentes-dependendo-da-condição)
     - [Convertendo texto em números](#convertendo-texto-em-números)
+    - [Trabalhando com condições](#trabalhando-com-condições)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -476,6 +477,56 @@ Abaixo um exemplo de código com conversão:
 </script>
 
 ```
+
+### Trabalhando com condições
+
+Para criar condições e comparações dentro do JS usamos a função nativa `if(){}` onde passamos os parâmetros que desejamos comparar e após colocamos os cálculos desejados.
+
+Exemplo:
+
+```javascript
+
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Base do programa para calcular a pontuação de um time de futebol
+
+  // Criando variáveis necessárias
+  var vitorias = parseInt(prompt("Entre com o número de vitórias: "));
+  var empates = parseInt(prompt("Entre com o número de empates: "));
+  var pontos = vitorias * 3 + empates;
+
+  // Mostrando mensagem com resultado
+  mostra("Seu time tem " + pontos + " ponto(s).");
+
+
+  // Criando condições para mensagem
+  if (pontos > 28) {
+    mostra("Seu time está MELHOR que ano passado.");
+  }
+
+  if (pontos < 28) {
+    mostra("Seu time está PIOR que ano passado.");
+  }
+  if (pontos == 28) {
+    mostra("Seu time está IGUAL ao ano passado.");
+  }
+</script>
+
+```
+
 
 # Links e artigos
 
