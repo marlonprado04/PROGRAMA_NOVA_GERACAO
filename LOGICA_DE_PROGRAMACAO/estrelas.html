@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Programa para mostrar estrelas na tela
+
+  // Criando for para criar 3 linhas com estrelas na tela
+  for (var linha = 1; linha <= 3; linha++) {
+    // Criando for para mostrar 1 estrela na tela 10 vezes
+    for (var coluna = 1; coluna <= 10; coluna++) {
+      document.write("*");
+    }
+
+    //Pulando linha após printar a primeira linha de 10 estrelas
+    pulaLinha();
+  }
+</script>

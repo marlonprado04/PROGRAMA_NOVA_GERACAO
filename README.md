@@ -43,6 +43,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Outra forma de repetir](#outra-forma-de-repetir)
     - [Acumulando valores](#acumulando-valores)
     - [Interrompendo uma repetição](#interrompendo-uma-repetição)
+    - [Repetições aninhadas](#repetições-aninhadas)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -845,6 +846,69 @@ Abaixo o código do jogo de advinhação com o comando break que o torna mais fu
     }
 
     tentativas++;
+  }
+</script>
+
+```
+
+### Repetições aninhadas
+
+Podemos aproveitar laços de repetição e colocalos um dentro do outro. Dessa forma, tornamos o código um pouco mais dinâmico.
+
+Por exemplo, supondo que queremos imprimir 3 linhas na tela onde cada linha vai ter 10 asteriscos, ao invés do código abaixo:
+
+```javascript
+
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Programa para mostrar estrelas na tela
+  for (var linha = 1; linha <= 3; linha++) {
+    mostra("**********");
+  }
+</script>
+
+```
+
+Podemos substituir por:
+
+```javascript
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Programa para mostrar estrelas na tela
+
+  // Criando for para criar 3 linhas com estrelas na tela
+  for (var linha = 1; linha <= 3; linha++) {
+    // Criando for para mostrar 1 estrela na tela 10 vezes
+    for (var coluna = 1; coluna <= 10; coluna++) {
+      document.write("*");
+    }
+
+    //Pulando linha após printar a primeira linha de 10 estrelas
+    pulaLinha();
   }
 </script>
 
