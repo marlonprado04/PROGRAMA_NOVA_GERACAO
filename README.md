@@ -740,6 +740,7 @@ Abaixo um código que calcula a tabuada:
 </script>
 
 ```
+
 ### Acumulando valores
 
 Podemos usar os laços de repetição para acumular valores e realizar operações de acordo.
@@ -788,6 +789,7 @@ Abaixo o código de exemplo:
 </script>
 
 ```
+
 # Links e artigos
 
 Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>
