@@ -14,24 +14,33 @@
   }
 
   // Criano função para sortear número
-  function sorteia(n){
+  function sorteia(n) {
     // Retornando número de acordo com sugestão do usuário
     return Math.round(Math.random() * n);
   }
 
   // Criando variável para receber o número máximo de sorteio sugerido pelo usuário
-  var numeroMaximo = parseInt(prompt("Digite até que número deseja o sorteio: "));
+  var numeroMaximo = parseInt(
+    prompt("Você quer sortear um número de 1 até quanto?")
+  );
 
   // Criando variável de número sorteado
   var numeroSorteado = sorteia(numeroMaximo);
 
-  // Criando variável para receber chute do usuário
-  var chute = parseInt(prompt("Digite um chute: "));
-  
-  // Comparando chute com o número gerado
-  if (chute == numeroSorteado) {
-    mostra("Você acertou!");
-  } else {
-    mostra("Você errou, o número pensado foi " + numeroSorteado);
+  var tentativas = 1;
+
+  while (tentativas <= 3) {
+    // Criando variável para receber chute do usuário
+    var chute = parseInt(prompt("Digite um chute: "));
+
+    // Comparando chute com o número gerado
+    if (chute == numeroSorteado) {
+      mostra("Você ACERTOU! O número sorteado foi: " + numeroSorteado);
+      break;
+    } else {
+      mostra("Você ERROU! O número sorteado foi: " + numeroSorteado);
+    }
+
+    tentativas++;
   }
 </script>

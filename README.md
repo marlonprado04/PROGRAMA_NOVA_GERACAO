@@ -42,6 +42,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Repetir enquanto](#repetir-enquanto)
     - [Outra forma de repetir](#outra-forma-de-repetir)
     - [Acumulando valores](#acumulando-valores)
+    - [Interrompendo uma repetição](#interrompendo-uma-repetição)
 - [Links e artigos](#links-e-artigos)
 
 # Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -786,6 +787,65 @@ Abaixo o código de exemplo:
   // Mostrando mensagem na tela
   mostra("A média das idades é: " + mediaDasIdades);
 
+</script>
+
+```
+
+### Interrompendo uma repetição
+
+Para interromper um laço de repetição podemos usar o comando `break`.
+
+Isso é útil em situações em que, por exemplo, se for atingida uma certa condição dentro de um laço de repetição, o laço pare.
+
+Abaixo o código do jogo de advinhação com o comando break que o torna mais funcional:
+
+```javascript
+
+<meta charset="UTF-8" />
+
+<script>
+  // Criando função para pular linha
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  // Criando função para printar uma mensagem
+  function mostra(mensagem) {
+    document.write(mensagem);
+    pulaLinha();
+  }
+
+  // Criano função para sortear número
+  function sorteia(n) {
+    // Retornando número de acordo com sugestão do usuário
+    return Math.round(Math.random() * n);
+  }
+
+  // Criando variável para receber o número máximo de sorteio sugerido pelo usuário
+  var numeroMaximo = parseInt(
+    prompt("Você quer sortear um número de 1 até quanto?")
+  );
+
+  // Criando variável de número sorteado
+  var numeroSorteado = sorteia(numeroMaximo);
+
+  var tentativas = 1;
+
+  while (tentativas <= 3) {
+    // Criando variável para receber chute do usuário
+    var chute = parseInt(prompt("Digite um chute: "));
+
+    // Comparando chute com o número gerado
+    if (chute == numeroSorteado) {
+      mostra("Você ACERTOU! O número sorteado foi: " + numeroSorteado);
+      break;
+    } else {
+      mostra("Você ERROU! O número sorteado foi: " + numeroSorteado);
+    }
+
+    tentativas++;
+  }
 </script>
 
 ```
