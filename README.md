@@ -2,53 +2,41 @@
 
 Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
 
-# Índice
+## Índice
 
 - [PROJETO\_CALDEIRA](#projeto_caldeira)
-- [Índice](#índice)
-- [Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos](#curso-4-html-e-css-trabalhando-com-responsividade-e-publicação-de-projetos)
-  - [Unidades de medidas](#unidades-de-medidas)
+  - [Índice](#índice)
+  - [Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos](#curso-4-html-e-css-trabalhando-com-responsividade-e-publicação-de-projetos)
     - [Unidade de Medida REM](#unidade-de-medida-rem)
     - [Aplicando o REM](#aplicando-o-rem)
-  - [Adaptando elementos](#adaptando-elementos)
     - [Descubra a super unidade de medida](#descubra-a-super-unidade-de-medida)
-  - [Responsividade](#responsividade)
     - [Media Queries](#media-queries)
     - [Cabeçalho responsivo](#cabeçalho-responsivo)
-  - [Responsividade e GitHub](#responsividade-e-github)
     - [Conteúdo responsivo](#conteúdo-responsivo)
     - [Git e GitHub](#git-e-github)
     - [Colocando o projeto no ar](#colocando-o-projeto-no-ar)
-- [Aprender a lógica de programação](#aprender-a-lógica-de-programação)
-  - [Comece a programar hoje](#comece-a-programar-hoje)
-  - [Comunique-se com o usuário](#comunique-se-com-o-usuário)
+  - [Aprender a lógica de programação](#aprender-a-lógica-de-programação)
     - [Concatenação](#concatenação)
     - [Tornando o programa dinâmico com variáveis](#tornando-o-programa-dinâmico-com-variáveis)
-  - [Crie suas próprias funcionalidades](#crie-suas-próprias-funcionalidades)
     - [Melhorando a manutenção do código](#melhorando-a-manutenção-do-código)
     - [Funções](#funções)
     - [Funções com parâmetros](#funções-com-parâmetros)
-  - [Pratique resolvendo problemas do seu dia a dia](#pratique-resolvendo-problemas-do-seu-dia-a-dia)
     - [Calculando o IMC](#calculando-o-imc)
     - [Retorno de funções](#retorno-de-funções)
     - [Entendendo a fundo o retorno de funções](#entendendo-a-fundo-o-retorno-de-funções)
     - [Interagindo com o usuário](#interagindo-com-o-usuário)
-  - [Execute códigos diferentes dependendo da condição](#execute-códigos-diferentes-dependendo-da-condição)
     - [Convertendo texto em números](#convertendo-texto-em-números)
     - [Trabalhando com condições](#trabalhando-com-condições)
     - [Melhorando programa de IMC](#melhorando-programa-de-imc)
     - [Jogo de advinhação](#jogo-de-advinhação)
-  - [Repita tarefas](#repita-tarefas)
     - [Repetir enquanto](#repetir-enquanto)
     - [Outra forma de repetir](#outra-forma-de-repetir)
     - [Acumulando valores](#acumulando-valores)
     - [Interrompendo uma repetição](#interrompendo-uma-repetição)
     - [Repetições aninhadas](#repetições-aninhadas)
-- [Links e artigos](#links-e-artigos)
+  - [Links e artigos](#links-e-artigos)
 
-# Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
-
-## Unidades de medidas
+## Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
 
 ### Unidade de Medida REM
 
@@ -62,15 +50,11 @@ Nesse caso vamos usar a escala de REM, que equivale a 16 pixels. Ou seja, 1 rem 
 
 Nessa aula vamos alterar todas as medidas de fonte que usamos pixels para rem.
 
-## Adaptando elementos
-
 ### Descubra a super unidade de medida
 
 Podemos usar a unidade de medida de %, porém como diz no W3SCHOOL, a % é uma unidade relativa que respeita o tamanho do "pai".
 
 <https://www.w3schools.com/cssref/css_units.php>
-
-## Responsividade
 
 ### Media Queries
 
@@ -110,8 +94,6 @@ Para deixar o cabeçalho responsivo, podemos adicionar um padding entre os eleme
 
 ... Resto do código...
 ```
-
-## Responsividade e GitHub
 
 ### Conteúdo responsivo
 
@@ -153,17 +135,13 @@ OBS: Necessário que os arquivos do respositório estejam na pasta raiz para que
 
 Link do vercel: <https://vercel.com/>
 
-# Aprender a lógica de programação
-
-## Comece a programar hoje
+## Aprender a lógica de programação
 
 Para começar a programar é necessário ter um programa que sirva de editor para o código.
 
 Alguns exemplos incluem o Sublime Text, Visual Studio Code ou mesmo o Notepad++.
 
 No curso de JavaScript vamos usar o Google Chrome para interpretar o código escrito, então não é necessário um compilador ou etc (algumas linguagens necessitam disso para funcionar).
-
-## Comunique-se com o usuário
 
 ### Concatenação
 
@@ -225,8 +203,6 @@ Outro exemplo de uso para poupar código:
 </script>
 
 ```
-
-## Crie suas próprias funcionalidades
 
 ### Melhorando a manutenção do código
 
@@ -293,8 +269,6 @@ Exemplo:
 </script>
 
 ```
-
-## Pratique resolvendo problemas do seu dia a dia
 
 ### Calculando o IMC
 
@@ -442,8 +416,6 @@ Abaixo o código adaptado que recebe o nome, altura e peso do usuário e mostra 
   mostra(nome + ", o seu IMC é:" + imc);
 </script>
 ```
-
-## Execute códigos diferentes dependendo da condição
 
 ### Convertendo texto em números
 
@@ -667,8 +639,6 @@ Com tudo aprendido até aqui podemos criar um jogo de adivinhação, conforme c�
 </script>
 
 ```
-
-## Repita tarefas
 
 ### Repetir enquanto
 
@@ -914,7 +884,7 @@ Podemos substituir por:
 
 ```
 
-# Links e artigos
+## Links e artigos
 
 Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>
 
