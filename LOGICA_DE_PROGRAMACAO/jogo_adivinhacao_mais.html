@@ -1,0 +1,25 @@
+<meta charset="UTF-8" />
+<h1>Jogo de adivinhação:</h1>
+
+<input />
+
+<button>Compare com meu segredo</button>
+
+<script>
+  // Criando variáveis necessárias
+  var segredo = 5;
+  var input = document.querySelector("input");
+  var button = document.querySelector("button");
+
+  // Criando função para verificar se informação contida no input do usuário é igual ao segredo
+  function verifica() {
+    if (input.value == segredo) {
+      alert("Você ACERTOU!");
+    } else {
+      alert("Você ERROU!");
+    }
+  }
+
+  // Atribuindo código da função "verifica" à variável button, porém somente ao ser clicada.
+  button.onclick = verifica;
+</script>

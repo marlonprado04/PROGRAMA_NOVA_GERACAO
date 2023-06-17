@@ -34,6 +34,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Acumulando valores](#acumulando-valores)
     - [Interrompendo uma repetição](#interrompendo-uma-repetição)
     - [Repetições aninhadas](#repetições-aninhadas)
+    - [Campo de texto e botão](#campo-de-texto-e-botão)
   - [Links e artigos](#links-e-artigos)
 
 ## Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
@@ -880,6 +881,44 @@ Podemos substituir por:
     //Pulando linha após printar a primeira linha de 10 estrelas
     pulaLinha();
   }
+</script>
+
+```
+
+### Campo de texto e botão
+
+Para aprimorar o programa de adivinhação podemos incluir um campo input e um botão no HTML.
+
+Dessa forma, o código funciona ao usuário preencher o input e clicar no botão.
+
+Abaixo o código de exemplo:
+
+```javascript
+
+<meta charset="UTF-8" />
+<h1>Jogo de adivinhação:</h1>
+
+<input />
+
+<button>Compare com meu segredo</button>
+
+<script>
+  // Criando variáveis necessárias
+  var segredo = 5;
+  var input = document.querySelector("input");
+  var button = document.querySelector("button");
+
+  // Criando função para verificar se informação contida no input do usuário é igual ao segredo
+  function verifica() {
+    if (input.value == segredo) {
+      alert("Você ACERTOU!");
+    } else {
+      alert("Você ERROU!");
+    }
+  }
+
+  // Atribuindo código da função "verifica" à variável button, porém somente ao ser clicada.
+  button.onclick = verifica;
 </script>
 
 ```
