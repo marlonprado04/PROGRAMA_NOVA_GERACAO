@@ -35,6 +35,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Interrompendo uma repetição](#interrompendo-uma-repetição)
     - [Repetições aninhadas](#repetições-aninhadas)
     - [Campo de texto e botão](#campo-de-texto-e-botão)
+    - [Melhorando a usabilidade](#melhorando-a-usabilidade)
   - [Links e artigos](#links-e-artigos)
 
 ## HTML e CSS
@@ -920,6 +921,55 @@ Abaixo o código de exemplo:
   // Atribuindo código da função "verifica" à variável button, porém somente ao ser clicada.
   button.onclick = verifica;
 </script>
+
+```
+
+### Melhorando a usabilidade
+
+Para melhorar ainda mais a interação do usuário podemos fazer com que o campo de input fique em foco, ou seja, fazer o mouse ir para o campo de input automaticamente. Para isso usarmos o comando `input.focus()`.
+
+Também podemos incluir na função uma linha que paga a informação da tentativa anterior, assim o usuário não precisa digitar novamente. Para isso basta atribuir ao input um valor em branco, com o seguinte código `input.value = "";`
+
+Abaixo os códigos com as modificações:
+
+```javascript
+
+<meta charset="UTF-8" />
+<h1>Jogo de adivinhação:</h1>
+
+<input />
+
+<button>Compare com meu segredo</button>
+
+<script>
+  // Criando variáveis necessárias
+  var segredo = 5;
+  var input = document.querySelector("input");
+  var button = document.querySelector("button");
+  
+  // Fazendo mouse focar no campo de input assim que página é carregada
+  input.focus();
+
+  // Criando função para verificar se informação contida no input do usuário é igual ao segredo
+  function verifica() {
+    if (input.value == segredo) {
+      alert("Você ACERTOU!");
+    } else {
+      alert("Você ERROU!");
+    }
+
+    // Atribuindo ao input o valor em branco 
+    input.value = "";
+    
+    // Fazendo o mouse voltar para o botão de input assim que o código acima for executado
+    input.focus();
+
+  }
+
+  // Atribuindo código da função "verifica" à variável button, porém somente ao ser clicada.
+  button.onclick = verifica;
+</script>
+
 
 ```
 

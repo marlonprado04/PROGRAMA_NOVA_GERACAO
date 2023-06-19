@@ -10,6 +10,9 @@
   var segredo = 5;
   var input = document.querySelector("input");
   var button = document.querySelector("button");
+  
+  // Fazendo mouse focar no campo de input assim que página é carregada
+  input.focus();
 
   // Criando função para verificar se informação contida no input do usuário é igual ao segredo
   function verifica() {
@@ -18,6 +21,13 @@
     } else {
       alert("Você ERROU!");
     }
+
+    // Atribuindo ao input o valor em branco 
+    input.value = "";
+    
+    // Fazendo o mouse voltar para o botão de input assim que o código acima for executado
+    input.focus();
+
   }
 
   // Atribuindo código da função "verifica" à variável button, porém somente ao ser clicada.
