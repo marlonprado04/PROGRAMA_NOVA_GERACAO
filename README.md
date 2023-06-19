@@ -36,6 +36,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Repetições aninhadas](#repetições-aninhadas)
     - [Campo de texto e botão](#campo-de-texto-e-botão)
     - [Melhorando a usabilidade](#melhorando-a-usabilidade)
+    - [Armazenando muitos dados](#armazenando-muitos-dados)
   - [Links e artigos](#links-e-artigos)
 
 ## HTML e CSS
@@ -970,6 +971,69 @@ Abaixo os códigos com as modificações:
   button.onclick = verifica;
 </script>
 
+
+```
+
+### Armazenando muitos dados
+
+Para lidar com muitos dados, como por exemplo, comparar um chute de um usuário com uma lista de números, podemos usar outro tipo de variável chamado `array`.
+
+Um array é declarado da seguinte forma `var exemplo = [1, 4. 3]`.
+
+Outra dica é usar um laço de repetição para varrer a comparação em cada elemento do array. Para garantir que a lista percorra o número exato de elementos contidos no array, podemos usar a função nativa do js `length`. Essa função retorna o número de elementos do array.
+
+Abaixo o código do jogo de adivinhação adaptado:
+
+```javascript
+<meta charset="UTF-8" />
+<h1>Jogo de adivinhação:</h1>
+
+<input />
+
+<button>Compare com meu segredo</button>
+
+<script>
+  // Criando variáveis necessárias
+  var segredos = [5, 7, 10, 2];
+  var input = document.querySelector("input");
+  var button = document.querySelector("button");
+
+  // Fazendo mouse focar no campo de input assim que página é carregada
+  input.focus();
+
+  // Criando função para verificar se informação contida no input do usuário é igual ao segredo
+  function verifica() {
+    // Criando variável para verificar se o segredo foi achado
+    achou = false;
+
+    // Criando laço de repetição para varrer o array e testar cada número
+    for (var posicao = 0; posicao < segredos.length; posicao++) {
+      if (input.value == segredos[posicao]) {
+        alert("Você ACERTOU!");
+
+        // Mudando valor da variável para true no caso dp chute ter sido correto
+        achou = true;
+
+        // Parando a comparação se o chute for encontrado na lista de numeros
+        break;
+      }
+    }
+
+    // Printando na tela que o usuário errou o chute
+    if (achou == false) {
+      alert("Você ERROU!");
+    }
+
+    // Atribuindo ao input o valor em branco
+    input.value = "";
+
+    // Fazendo o mouse voltar para o botão de input assim que o código acima for executado
+    input.focus();
+  }
+
+  // Atribuindo código da função "verifica" à variável button, porém somente ao ser clicada.
+  button.onclick = verifica;
+</script>
 
 ```
 
