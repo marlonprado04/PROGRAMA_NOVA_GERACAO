@@ -6,7 +6,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
 
 - [PROJETO\_CALDEIRA](#projeto_caldeira)
   - [Índice](#índice)
-  - [Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos](#curso-4-html-e-css-trabalhando-com-responsividade-e-publicação-de-projetos)
+  - [HTML e CSS](#html-e-css)
     - [Unidade de Medida REM](#unidade-de-medida-rem)
     - [Aplicando o REM](#aplicando-o-rem)
     - [Descubra a super unidade de medida](#descubra-a-super-unidade-de-medida)
@@ -37,7 +37,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Campo de texto e botão](#campo-de-texto-e-botão)
   - [Links e artigos](#links-e-artigos)
 
-## Curso 4: HTML e CSS: trabalhando com responsividade e publicação de projetos
+## HTML e CSS
 
 ### Unidade de Medida REM
 
