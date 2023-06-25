@@ -37,6 +37,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Campo de texto e botão](#campo-de-texto-e-botão)
     - [Melhorando a usabilidade](#melhorando-a-usabilidade)
     - [Armazenando muitos dados](#armazenando-muitos-dados)
+    - [Manipulando Array](#manipulando-array)
   - [Links e artigos](#links-e-artigos)
 
 ## HTML e CSS
@@ -1034,6 +1035,118 @@ Abaixo o código do jogo de adivinhação adaptado:
   // Atribuindo código da função "verifica" à variável button, porém somente ao ser clicada.
   button.onclick = verifica;
 </script>
+
+```
+### Manipulando Array
+
+Seguindo nos estudos, podemos adicionar informações em um array com o comando `push`. Dessa forma, conseguimos deixar o código mais dinâmico, permitindo que os números sorteados sejam gerados aleatoriamente toda vez que o código for rodado.
+
+No código abaixo também incluímos uma função para deixar o código mais funcional, evitando que `um número seja sorteado duas vezes` dentro da lista de segredos.
+
+Código:
+
+```javascript
+
+<meta charset="UTF-8" />
+<h1>Jogo de adivinhação:</h1>
+
+<input />
+
+<button>Compare com meu segredo</button>
+
+<script>
+  // Criando função para sortear números aleatórios
+  function sorteia() {
+    // Criando variavel do número
+    var numero = 0;
+
+    // Criando while para atribuir um numero maior que 0
+    while (numero == 0) {
+      numero = Math.round(Math.random() * 10);
+    }
+
+    return numero;
+  }
+
+  // Criando função para sortear números de forma que não se repitam, onde permite informar quantos números serão sorteados
+  function sorteiaNumeros(quantidade) {
+    // Criando variável local para armazenar os números sorteados
+    var segredos = [];
+
+    // Criando variável para servir de contagem de segredos
+    var numero = 1;
+
+    // Criando laço de repetição para gerar os segredos de forma que não se repitam
+    while (numero <= quantidade) {
+      // Criando variáveis necessárias
+      var numeroAleatorio = sorteia();
+      var achou = false;
+
+      // Criando for para verificar se numero gerado já está dentro da lista de segredos
+      for (var posicao = 0; posicao < segredos.length; posicao++) {
+        // If que verifica se item foi localizado dentro da lista de segredos
+        if (segredos[posicao] == numeroAleatorio) {
+          achou = true;
+          break;
+        }
+      }
+
+      // If para adicionar o número aleatório gerado caso não tenha sido encontrado na lista
+      if (achou == false) {
+        segredos.push(numeroAleatorio);
+        //Incrementando variável de apoio para while somente quando um número for adicionado à lista de segredos
+        numero++;
+      }
+    }
+
+    return segredos;
+  }
+
+  // Criando variáveis necessárias
+  var input = document.querySelector("input");
+  var button = document.querySelector("button");
+
+  // Criando array para conter os segredos e adicionando os segredos
+  var segredos = sorteiaNumeros(3);
+  console.log(segredos);
+
+  // Fazendo mouse focar no campo de input assim que página é carregada
+  input.focus();
+
+  // Criando função para verificar se informação contida no input do usuário é igual ao segredo
+  function verifica() {
+    // Criando variável para verificar se o segredo foi achado
+    achou = false;
+
+    // Criando laço de repetição para varrer o array e testar cada número
+    for (var posicao = 0; posicao < segredos.length; posicao++) {
+      if (input.value == segredos[posicao]) {
+        alert("Você ACERTOU!");
+
+        // Mudando valor da variável para true no caso dp chute ter sido correto
+        achou = true;
+
+        // Parando a comparação se o chute for encontrado na lista de numeros
+        break;
+      }
+    }
+
+    // Printando na tela que o usuário errou o chute
+    if (achou == false) {
+      alert("Você ERROU!");
+    }
+
+    // Atribuindo ao input o valor em branco
+    input.value = "";
+
+    // Fazendo o mouse voltar para o botão de input assim que o código acima for executado
+    input.focus();
+  }
+
+  // Atribuindo código da função "verifica" à variável button, porém somente ao ser clicada.
+  button.onclick = verifica;
+</script>
+
 
 ```
 
