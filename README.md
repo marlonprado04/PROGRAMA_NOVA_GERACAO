@@ -51,6 +51,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Conversão de tipos](#conversão-de-tipos)
     - [Para saber mais: Conversão de valores](#para-saber-mais-conversão-de-valores)
     - [Para saber mais: Palavras reservadas](#para-saber-mais-palavras-reservadas)
+    - [JavaScript e NodeJS](#javascript-e-nodejs)
 
 ## HTML e CSS
 
@@ -1563,3 +1564,18 @@ private
 protected
 public
 ```
+
+### JavaScript e NodeJS
+
+O JS possui algumas caracteristicas que precisam ser levadas em conta na hora de se programar.
+
+O JavaScript é uma linguagem com `tipagem dinâmica`, ou seja, não é necessário informar o tipo de variável ao declara-la. Ele permite que as variáveis tenham o tipo modificado durante a execução do código.
+
+O JS é uma linguagem `multiparadigma`, ou seja, ele funciona com mais de um paradigma de programação, permitindo que o programa seja executado das mais diversas formas.
+
+O que é o ES6 e o ES2015? É a versão do JavaScript que saiu em 2015, onde quando a linguagem começou a receber atualizações anuais.
+
+O JavaScript é uma linguagem `interpretada` e não compilada. De forma simples, linguagens interpretadas são "convertidas em tempo real" para a linguagem de máquina, dessa forma ela perde em desempenho. Enquanto linguagens compiladas são convertidas para a linguagem de máquina antes de o programa ser executado.
+
+O que é o NodeJS? O node é um ambiente que permite a execução do JavaScript sem precisar de um `interpretador` da linguagem (que no caso do JS costuma ser um navegador com suporte para linguagem).
+

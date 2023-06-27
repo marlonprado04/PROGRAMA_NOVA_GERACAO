@@ -1,2 +1,4 @@
-// Teste de codifigação:
+// Testes:
+
+// Tipagem dinâmica
 
