@@ -38,7 +38,9 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Melhorando a usabilidade](#melhorando-a-usabilidade)
     - [Armazenando muitos dados](#armazenando-muitos-dados)
     - [Manipulando Array](#manipulando-array)
+  - [JavaScript: tipos, variáveis e funções](#javascript-tipos-variáveis-e-funções)
   - [Links e artigos](#links-e-artigos)
+    - [JavaScript: tipos, variáveis e funções](#javascript-tipos-variáveis-e-funções-1)
 
 ## HTML e CSS
 
@@ -1037,6 +1039,7 @@ Abaixo o código do jogo de adivinhação adaptado:
 </script>
 
 ```
+
 ### Manipulando Array
 
 Seguindo nos estudos, podemos adicionar informações em um array com o comando `push`. Dessa forma, conseguimos deixar o código mais dinâmico, permitindo que os números sorteados sejam gerados aleatoriamente toda vez que o código for rodado.
@@ -1150,6 +1153,8 @@ Código:
 
 ```
 
+## JavaScript: tipos, variáveis e funções
+
 ## Links e artigos
 
 Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>
@@ -1159,3 +1164,14 @@ Podcast Alura: <https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser
 5 dúvidas de quem quer começar com TI: <https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao>
 
 Como escolher minha carreira em TI: <https://www.alura.com.br/artigos/como-escolher-minha-carreira-em-ti>
+
+Diferença entre backend e frontend: <https://cursos.alura.com.br/extra/alura-mais/qual-e-a-diferenca-entre-back-end-e-front-end--c174>
+
+### JavaScript: tipos, variáveis e funções
+
+VSCode: Dicas e truques: <https://www.youtube.com/watch?v=C3o9KwOHeCk>
+
+Como utilizar o terminal integrado no VSCode: [Link](https://www.alura.com.br/artigos/como-utilizar-terminal-integrado-visual-studio-code?_gl=1*1um01ax*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzU0MzMuNjAuMC4w*_fplc*T0d2JTJGSUwlMkZkbzhNSVM2MGI0TWxWRlNCRUoxVktBWlhWMiUyRnlCUnJEcm9VaGxMSUZEbVhncmtERCUyQkl1QlZpcWlzSGY3cDY3Y0NMYzRvWSUyQjJ3SUhlTDBQcDhFdFI4JTJCUkFEcVcxeGo4NEVzTTFYWkRaUVJtclh4b3NxV2NjT3lBJTNEJTNE)
+
+Trabalhando com caminhos e pastas no terminal: [Link](https://www.alura.com.br/artigos/trabalhando-com-caminhos-e-pastas-no-terminal?_gl=1*1qdg7uc*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzU0NzMuMjAuMC4w*_fplc*TnNYM0h5SlJPYVRXQ2NtQmtpZCUyRlA3ZXdaR3Y2OVNXam5WRXFvOXg1SFZib0tuc0wlMkJvRTdFejkxSURYSiUyRlhWQzZWM3RuVk5ndzZEZDhITXlJS2olMkZmSkZMNXJsZllZbXQ5UUhiOEgzSmNwJTJGZW5lS3YlMkYxWENqTGJlM2FPUUp3JTNEJTNE)
+
