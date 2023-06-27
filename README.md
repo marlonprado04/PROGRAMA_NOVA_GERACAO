@@ -46,6 +46,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Para saber mais: Codificação de strings](#para-saber-mais-codificação-de-strings)
     - [Tipo boolean](#tipo-boolean)
     - [Para saber mais: Tipos null e undefined](#para-saber-mais-tipos-null-e-undefined)
+    - [Var, let e const](#var-let-e-const)
 
 ## HTML e CSS
 
@@ -1310,3 +1311,66 @@ console.log(null === undefined); // false
 No cotidiano é comum considerar undefined como uma ausência de valor “inesperada” (causada por um bug ou erro no código) e null como um tipo de dado que também significa ausência de valor, mas não de maneira inesperada.
 
 Por exemplo, um campo em uma tabela de um banco de dados que esteja sem dados ou uma informação solicitada que não seja obrigatória e não tenha sido preenchida pelo usuário pode ter valor null.
+
+### Var, let e const
+
+O JavaScript possui 3 formas de criar variáveis que são `var`, `let` e `const`.
+
+A variáverl do tipo `var` permite o uso mesmo antes de ser declarada, ou seja, podemos criar uma variável sem informar que ela é var e já sair usando e só no final do uso declara-la.
+
+A variável do tipo `let` foi criada justamente para corrigir possíveis problemas que a variável `var` pode gerar, pois ela impede o uso sem que seja inicializada. Dessa forma, fica impossível criar 2 variáveis com o mesmo nome por acidente.
+
+A variável do tipo `const` na verdade é uma constante. Uma característica dela é que ao ser declarada ela obriga a atribuição de algum valor. 
+
+Abaixo um código de exemplo:
+
+```javascript
+
+// Criando e trabalhando com var
+
+var varAltura = 5;
+var varComprimento = 7;
+
+// O JS permite usar uma variável do tipo VAR antes de cria-la
+varArea = varAltura * varComprimento;
+console.log(varArea);
+
+// Aqui estou criando a variável utilizada
+var varArea;
+
+// ---------------------------
+// Criando e trabalhando com LET
+
+let letForma = "retângulo" 
+let letAltura = 5;
+let letComprimento = 7;
+let letArea;
+
+if(letForma==="retângulo"){
+    letArea = letAltura * letComprimento;
+}else{
+    letArea = (letAltura * letComprimento) / 2;
+}
+
+console.log(letArea);
+
+// Ao tentar criar a variável usada acima na linha abaixo, o js apresenta erro
+    // let letArea;
+
+// -------------------------------
+// Trabalhando com CONST
+
+// Criando constantes
+const constForma = "quadrado";
+const constAltura = 5;
+const constComprimento = 7; 
+let constArea;
+
+if(constForma === "quadrado"){
+    constArea = constAltura * constComprimento;
+}else{
+    constArea = (constAltura * constComprimento) / 2;
+}
+console.log(constArea);
+
+```
