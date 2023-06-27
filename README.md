@@ -41,6 +41,9 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Links e artigos](#links-e-artigos)
   - [JavaScript: tipos, variáveis e funções](#javascript-tipos-variáveis-e-funções)
     - [Tipo number](#tipo-number)
+    - [Tipo string](#tipo-string)
+    - [Para saber mais: Codificação de strings](#para-saber-mais-codificação-de-strings)
+    - [Tipo boolean](#tipo-boolean)
     - [Links e artigos](#links-e-artigos-1)
 
 ## HTML e CSS
@@ -1209,8 +1212,46 @@ console.log(alura * primeiroNumero);
 
 ```
 
-### Links e artigos
+### Tipo string
 
+Variáveis do tipo `string` servem para armazenar uma cadeia de caracteres.
+
+O JS interpreta qualquer coisa entre aspas simples ou aspas dupla como uma string.
+
+O operador para concatenar strings em JavaScript é o `+`.
+
+Abaixo um código de exemplo:
+
+```javascript
+
+
+// Criando variaveis do tipo string
+const texto1 = "Olá, mundo!";
+const texto2 = "Olá, mundo!";
+
+// Quando usar aspas duplas ou simples
+// Resposta: Quando for necessário incluir uma das duas dentro do texto de string
+const citacao = 'O Marlon disse "Olá pessoas" e aí foi embora.';
+console.log(citacao);
+
+// O operador de concatenação é o +
+const citacao2 = "Meu nome é: ";
+const meuNome = "Marlon";
+console.log(citacao2 + meuNome);
+
+```
+
+### Para saber mais: Codificação de strings
+
+A codificação de caracteres, também conhecida como character encoding, é um sistema que permite que os computadores processem caracteres especiais, como acentos, ideogramas e emojis. Ao longo das décadas, foram desenvolvidos conjuntos de caracteres especiais, como o ASCII e o Unicode, que possuem códigos para cada caractere.
+
+O Unicode é amplamente utilizado e possui códigos para caracteres de mais de 150 idiomas, símbolos matemáticos e emojis. O JavaScript utiliza o UTF-16 como padrão de codificação de caracteres. No entanto, bancos de dados podem aceitar outras codificações, embora o UTF-16 seja amplamente suportado pelas tecnologias atuais.
+
+A codificação de caracteres é fundamental para garantir a correta exibição e processamento de diferentes idiomas e caracteres especiais em sistemas computacionais.
+
+
+### Tipo boolean
+### Links e artigos
 
 VSCode: Dicas e truques: <https://www.youtube.com/watch?v=C3o9KwOHeCk>
 
