@@ -52,6 +52,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Para saber mais: Conversão de valores](#para-saber-mais-conversão-de-valores)
     - [Para saber mais: Palavras reservadas](#para-saber-mais-palavras-reservadas)
     - [JavaScript e NodeJS](#javascript-e-nodejs)
+    - [Erros e stacktrace](#erros-e-stacktrace)
 
 ## HTML e CSS
 
@@ -1579,3 +1580,47 @@ O JavaScript é uma linguagem `interpretada` e não compilada. De forma simples,
 
 O que é o NodeJS? O node é um ambiente que permite a execução do JavaScript sem precisar de um `interpretador` da linguagem (que no caso do JS costuma ser um navegador com suporte para linguagem).
 
+### Erros e stacktrace
+
+É necessário saber interpretar erros para poder solucionar eles.
+
+Por exemplo, ao tentar executar o código `const numero` o sistema apresentará o erro de que a variável não foi inalizada ao ser declarada.
+
+A mensagem de erro sai com o caminho do arquivo e a linha onde o erro foi identificado, além da descrição de erro, por exemplo, `SyntaxError: Missing initializer in const declaration`.
+
+```javascript
+/home/marlon/Documentos/GitHub/PROJETO_CALDEIRA/3_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/ERROS.js:1
+const numero;
+      ^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (internal/modules/cjs/loader.js:915:16)
+    at Module._compile (internal/modules/cjs/loader.js:963:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
+    at Module.load (internal/modules/cjs/loader.js:863:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:708:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+```
+
+Abaixo o código completo (comentado) com diversos erros de execução:
+
+```javascript
+
+// Códigos com erro
+
+// Variáveis do tipo const não permitem criação sem definição de valor
+
+// const numero;
+
+// ----------------------
+
+// Não podemos usar o comando console.log sem finalizar a fecha de parenteses 
+
+// console.log(minhaVar;
+
+// ----------------------
+
+// Nâo podemos imprimir na tela variáveis que nem foram criadas
+// console.log(minhaVariavel);
+```
