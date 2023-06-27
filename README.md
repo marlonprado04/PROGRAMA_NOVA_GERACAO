@@ -15,7 +15,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Conteúdo responsivo](#conteúdo-responsivo)
     - [Git e GitHub](#git-e-github)
     - [Colocando o projeto no ar](#colocando-o-projeto-no-ar)
-  - [Aprender a lógica de programação](#aprender-a-lógica-de-programação)
+  - [Lógica de programação](#lógica-de-programação)
     - [Concatenação](#concatenação)
     - [Tornando o programa dinâmico com variáveis](#tornando-o-programa-dinâmico-com-variáveis)
     - [Melhorando a manutenção do código](#melhorando-a-manutenção-do-código)
@@ -38,10 +38,10 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Melhorando a usabilidade](#melhorando-a-usabilidade)
     - [Armazenando muitos dados](#armazenando-muitos-dados)
     - [Manipulando Array](#manipulando-array)
+    - [Links e artigos](#links-e-artigos)
   - [JavaScript: tipos, variáveis e funções](#javascript-tipos-variáveis-e-funções)
     - [Tipo number](#tipo-number)
-  - [Links e artigos](#links-e-artigos)
-    - [JavaScript: tipos, variáveis e funções](#javascript-tipos-variáveis-e-funções-1)
+    - [Links e artigos](#links-e-artigos-1)
 
 ## HTML e CSS
 
@@ -142,7 +142,7 @@ OBS: Necessário que os arquivos do respositório estejam na pasta raiz para que
 
 Link do vercel: <https://vercel.com/>
 
-## Aprender a lógica de programação
+## Lógica de programação
 
 Para começar a programar é necessário ter um programa que sirva de editor para o código.
 
@@ -1154,6 +1154,18 @@ Código:
 
 ```
 
+### Links e artigos
+
+Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>
+
+Podcast Alura: <https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-simples-hipsters-09-a577>
+
+5 dúvidas de quem quer começar com TI: <https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao>
+
+Como escolher minha carreira em TI: <https://www.alura.com.br/artigos/como-escolher-minha-carreira-em-ti>
+
+Diferença entre backend e frontend: <https://cursos.alura.com.br/extra/alura-mais/qual-e-a-diferenca-entre-back-end-e-front-end--c174>
+
 ## JavaScript: tipos, variáveis e funções
 
 ### Tipo number
@@ -1197,19 +1209,8 @@ console.log(alura * primeiroNumero);
 
 ```
 
-## Links e artigos
+### Links e artigos
 
-Guia da Alura de unidades no CSS: <https://www.alura.com.br/artigos/guia-de-unidades-no-css>
-
-Podcast Alura: <https://cursos.alura.com.br/extra/hipsterstech/css-cansei-de-ser-simples-hipsters-09-a577>
-
-5 dúvidas de quem quer começar com TI: <https://www.alura.com.br/artigos/5-duvidas-de-quem-quer-iniciar-na-carreira-de-programacao>
-
-Como escolher minha carreira em TI: <https://www.alura.com.br/artigos/como-escolher-minha-carreira-em-ti>
-
-Diferença entre backend e frontend: <https://cursos.alura.com.br/extra/alura-mais/qual-e-a-diferenca-entre-back-end-e-front-end--c174>
-
-### JavaScript: tipos, variáveis e funções
 
 VSCode: Dicas e truques: <https://www.youtube.com/watch?v=C3o9KwOHeCk>
 
