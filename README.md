@@ -40,12 +40,12 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Manipulando Array](#manipulando-array)
     - [Links e artigos](#links-e-artigos)
   - [JavaScript: tipos, variáveis e funções](#javascript-tipos-variáveis-e-funções)
+    - [Links e artigos](#links-e-artigos-1)
     - [Tipo number](#tipo-number)
     - [Tipo string](#tipo-string)
     - [Para saber mais: Codificação de strings](#para-saber-mais-codificação-de-strings)
     - [Tipo boolean](#tipo-boolean)
     - [Para saber mais: Tipos null e undefined](#para-saber-mais-tipos-null-e-undefined)
-    - [Links e artigos](#links-e-artigos-1)
 
 ## HTML e CSS
 
@@ -1172,6 +1172,18 @@ Diferença entre backend e frontend: <https://cursos.alura.com.br/extra/alura-ma
 
 ## JavaScript: tipos, variáveis e funções
 
+### Links e artigos
+
+VSCode: Dicas e truques: [Link](https://www.youtube.com/watch?v=C3o9KwOHeCk)
+
+Como utilizar o terminal integrado no VSCode: [Link](https://www.alura.com.br/artigos/como-utilizar-terminal-integrado-visual-studio-code?_gl=1*1um01ax*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzU0MzMuNjAuMC4w*_fplc*T0d2JTJGSUwlMkZkbzhNSVM2MGI0TWxWRlNCRUoxVktBWlhWMiUyRnlCUnJEcm9VaGxMSUZEbVhncmtERCUyQkl1QlZpcWlzSGY3cDY3Y0NMYzRvWSUyQjJ3SUhlTDBQcDhFdFI4JTJCUkFEcVcxeGo4NEVzTTFYWkRaUVJtclh4b3NxV2NjT3lBJTNEJTNE)
+
+Trabalhando com caminhos e pastas no terminal: [Link](https://www.alura.com.br/artigos/trabalhando-com-caminhos-e-pastas-no-terminal?_gl=1*1qdg7uc*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzU0NzMuMjAuMC4w*_fplc*TnNYM0h5SlJPYVRXQ2NtQmtpZCUyRlA3ZXdaR3Y2OVNXam5WRXFvOXg1SFZib0tuc0wlMkJvRTdFejkxSURYSiUyRlhWQzZWM3RuVk5ndzZEZDhITXlJS2olMkZmSkZMNXJsZllZbXQ5UUhiOEgzSmNwJTJGZW5lS3YlMkYxWENqTGJlM2FPUUp3JTNEJTNE)
+
+Formatar números no JavaScript: [Link](https://www.alura.com.br/artigos/formatando-numeros-no-javascript?_gl=1*da0r6x*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzY3NDIuNTkuMC4w*_fplc*NWNWZ0ZQOSUyQkRsTldRNG5NUyUyRjBUZ1ZqNmdjeHJVTDF2MFpFY2psZ3FKdGh3NzBBa0gwUG5aaFVBQnBSelBnODZkYTJOUWtncm5neUVTT0pMNnIxbEF6NUNrS3pKRXZYSXBuQTNKMDdnQ1dIWEpFOHI0NGolMkZValRNRld0Q0R3JTNEJTNE)
+
+Ordenação de números no JavaScript: [Link](https://www.alura.com.br/artigos/ordenacao-de-numeros-no-javascript-nao-funciona?_gl=1*eu6s41*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzY4MTEuNjAuMC4w*_fplc*Z0NpeVVTY2ZBOUJmak5Zd1VJTjZEWDIlMkZ5bVNRZUlEY2t4VlElMkJHV0JXVzVYblRmWE84YUUwdmxqd05wQ3Z2b0oySUhxJTJCd2d4NDQzSVJjVkQydmFvd0lCVGElMkZLenQ1a0ZjeEtNdDRRV05lMWg3NzVudjhRQlNTSVhrRnBDdXclM0QlM0Q.)
+
 ### Tipo number
 
 Variaveis do tipo number podem ser inteiras e de ponto flutuante, sendo que variaveis de ponto flutuante permitem declaração sem o 0 na frente.
@@ -1298,15 +1310,3 @@ console.log(null === undefined); // false
 No cotidiano é comum considerar undefined como uma ausência de valor “inesperada” (causada por um bug ou erro no código) e null como um tipo de dado que também significa ausência de valor, mas não de maneira inesperada.
 
 Por exemplo, um campo em uma tabela de um banco de dados que esteja sem dados ou uma informação solicitada que não seja obrigatória e não tenha sido preenchida pelo usuário pode ter valor null.
-
-### Links e artigos
-
-VSCode: Dicas e truques: [Link](https://www.youtube.com/watch?v=C3o9KwOHeCk)
-
-Como utilizar o terminal integrado no VSCode: [Link](https://www.alura.com.br/artigos/como-utilizar-terminal-integrado-visual-studio-code?_gl=1*1um01ax*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzU0MzMuNjAuMC4w*_fplc*T0d2JTJGSUwlMkZkbzhNSVM2MGI0TWxWRlNCRUoxVktBWlhWMiUyRnlCUnJEcm9VaGxMSUZEbVhncmtERCUyQkl1QlZpcWlzSGY3cDY3Y0NMYzRvWSUyQjJ3SUhlTDBQcDhFdFI4JTJCUkFEcVcxeGo4NEVzTTFYWkRaUVJtclh4b3NxV2NjT3lBJTNEJTNE)
-
-Trabalhando com caminhos e pastas no terminal: [Link](https://www.alura.com.br/artigos/trabalhando-com-caminhos-e-pastas-no-terminal?_gl=1*1qdg7uc*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzU0NzMuMjAuMC4w*_fplc*TnNYM0h5SlJPYVRXQ2NtQmtpZCUyRlA3ZXdaR3Y2OVNXam5WRXFvOXg1SFZib0tuc0wlMkJvRTdFejkxSURYSiUyRlhWQzZWM3RuVk5ndzZEZDhITXlJS2olMkZmSkZMNXJsZllZbXQ5UUhiOEgzSmNwJTJGZW5lS3YlMkYxWENqTGJlM2FPUUp3JTNEJTNE)
-
-Formatar números no JavaScript: [Link](https://www.alura.com.br/artigos/formatando-numeros-no-javascript?_gl=1*da0r6x*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzY3NDIuNTkuMC4w*_fplc*NWNWZ0ZQOSUyQkRsTldRNG5NUyUyRjBUZ1ZqNmdjeHJVTDF2MFpFY2psZ3FKdGh3NzBBa0gwUG5aaFVBQnBSelBnODZkYTJOUWtncm5neUVTT0pMNnIxbEF6NUNrS3pKRXZYSXBuQTNKMDdnQ1dIWEpFOHI0NGolMkZValRNRld0Q0R3JTNEJTNE)
-
-Ordenação de números no JavaScript: [Link](https://www.alura.com.br/artigos/ordenacao-de-numeros-no-javascript-nao-funciona?_gl=1*eu6s41*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzY4MTEuNjAuMC4w*_fplc*Z0NpeVVTY2ZBOUJmak5Zd1VJTjZEWDIlMkZ5bVNRZUlEY2t4VlElMkJHV0JXVzVYblRmWE84YUUwdmxqd05wQ3Z2b0oySUhxJTJCd2d4NDQzSVJjVkQydmFvd0lCVGElMkZLenQ1a0ZjeEtNdDRRV05lMWg3NzVudjhRQlNTSVhrRnBDdXclM0QlM0Q.)
