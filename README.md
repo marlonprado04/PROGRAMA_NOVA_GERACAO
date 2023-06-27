@@ -50,6 +50,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Truthy e falsy](#truthy-e-falsy)
     - [Conversão de tipos](#conversão-de-tipos)
     - [Para saber mais: Conversão de valores](#para-saber-mais-conversão-de-valores)
+    - [Para saber mais: Palavras reservadas](#para-saber-mais-palavras-reservadas)
 
 ## HTML e CSS
 
@@ -1495,4 +1496,70 @@ console.log(Number(usuarioConectado2)); // retorna 0
 usuarioConectado2 = true;
 console.log(Number(usuarioConectado2)); // retorna 1
 
+```
+
+### Para saber mais: Palavras reservadas
+
+Diferente de algumas outras linguagens, o JS não permite uso de palavras reservadas pelo sistema na criação de variáveis.
+
+Por exemplo, se tentarmos criar uma variável chamada `const` ou `if` ou `var`, o JS não vai reconhecer essas palavras como identificadoees e nem interpretar o que será executado nessa linha.
+
+Abaixo a lista de palavras que o JS não permite que sejam usadas:
+
+```javascript
+arguments
+as
+async
+await
+break
+case
+catch
+class
+const
+continue
+debugger
+default
+delete
+do
+else
+eval
+export
+extends
+false
+finally
+for
+from
+function
+get
+if
+import
+in
+instanceof
+let
+of
+new
+null
+return
+set
+static
+super
+switch
+target
+this
+throw
+true
+try
+typeof
+var
+void
+while
+with
+yield
+enum
+implements
+interface
+package
+private
+protected
+public
 ```
