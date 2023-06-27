@@ -39,6 +39,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Armazenando muitos dados](#armazenando-muitos-dados)
     - [Manipulando Array](#manipulando-array)
   - [JavaScript: tipos, variáveis e funções](#javascript-tipos-variáveis-e-funções)
+    - [Tipo number](#tipo-number)
   - [Links e artigos](#links-e-artigos)
     - [JavaScript: tipos, variáveis e funções](#javascript-tipos-variáveis-e-funções-1)
 
@@ -1154,6 +1155,47 @@ Código:
 ```
 
 ## JavaScript: tipos, variáveis e funções
+
+### Tipo number
+
+Variaveis do tipo number podem ser inteiras e de ponto flutuante, sendo que variaveis de ponto flutuante permitem declaração sem o 0 na frente.
+
+Ao tentar multiplicar algo que não é number por um number, o retorno será "NaN" que significa "Not a Number".
+
+Abaixo um código de exemplo:
+
+```javascript
+// Variáveis do tipo number
+
+// Criando constante
+const meuNumero = 3;
+
+const primeiroNumero = 1;
+const segundoNumero = 4;
+
+const operacao = primeiroNumero + segundoNumero;
+
+console.log(operacao);
+
+
+// Ṕonto flutuante
+
+const numeroPontoFlutuante = 3.5;
+
+// Javascript permite declarar ponto flutuante sem o zero na fente
+const pontoFlutuanteSemZero = .3;
+
+const novaOperacao = numeroPontoFlutuante / pontoFlutuanteSemZero;
+
+// Printando na tela
+console.log(novaOperacao);
+
+// Testando impressao do NaN
+
+const alura = "Alura";
+console.log(alura * primeiroNumero);
+
+```
 
 ## Links e artigos
 
