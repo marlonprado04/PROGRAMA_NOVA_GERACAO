@@ -48,6 +48,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Para saber mais: Tipos null e undefined](#para-saber-mais-tipos-null-e-undefined)
     - [Var, let e const](#var-let-e-const)
     - [Truthy e falsy](#truthy-e-falsy)
+    - [Conversão de tipos](#conversão-de-tipos)
 
 ## HTML e CSS
 
@@ -1414,4 +1415,41 @@ console.log(typeof varNull); // retorna object (o que é um bug do JavaScript)
 console.log(typeof numero); // retorna number
 console.log(typeof string); // retorna string
 
+```
+
+### Conversão de tipos
+
+Quando falamos de conversão de tipos, o JS possui 2 formas de conversão, a conversão `implícita` e a conversão `explícita`.
+
+A conversão implicita ocorre quando, por exemplo, tentamos somar uma variável `number` com uma variável `string`. O retorno da soma será uma concatenação, pois o JS converte a number em string.
+
+A conversão explícita ocorre através de funções executadas propositalmente, ou seja, quando desejamos converter um valor em outro. Um exemplo é a função `Number()`que converte um valor em `number`.
+
+> Um detalhe para se atentar é é que ao tentar converter um caractere não numérico o retorno será `NaN`(Not a Number).
+
+Abaixo um código de exemplo:
+
+```javascript
+// conversão implicita
+
+const numero = 456;
+const numeroString = "456";
+
+// Ao usar 2 operadores de = o javascript converte os valores em string
+console.log(numero == numeroString); // retorna true
+
+console.log(numero === numeroString); // retorna false
+
+console.log(numero + numeroString); // concatena, retornando 456456
+
+// ---------------
+
+// conversão explícita
+
+// Number()
+console.log(typeof Number(numeroString)) // retorna number
+
+console.log(numero + Number(numeroString)); // retorna a soma 912
+
+console.log(Number("123a")) // retorna NaN
 ```
