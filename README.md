@@ -1320,7 +1320,7 @@ A variáverl do tipo `var` permite o uso mesmo antes de ser declarada, ou seja, 
 
 A variável do tipo `let` foi criada justamente para corrigir possíveis problemas que a variável `var` pode gerar, pois ela impede o uso sem que seja inicializada. Dessa forma, fica impossível criar 2 variáveis com o mesmo nome por acidente.
 
-A variável do tipo `const` na verdade é uma constante. Uma característica dela é que ao ser declarada ela obriga a atribuição de algum valor. 
+A variável do tipo `const` na verdade é uma constante. Uma característica dela é que ao ser declarada ela obriga a atribuição de algum valor.
 
 Abaixo um código de exemplo:
 
