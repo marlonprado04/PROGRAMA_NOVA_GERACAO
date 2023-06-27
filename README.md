@@ -47,6 +47,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Tipo boolean](#tipo-boolean)
     - [Para saber mais: Tipos null e undefined](#para-saber-mais-tipos-null-e-undefined)
     - [Var, let e const](#var-let-e-const)
+    - [Truthy e falsy](#truthy-e-falsy)
 
 ## HTML e CSS
 
@@ -1372,5 +1373,45 @@ if(constForma === "quadrado"){
     constArea = (constAltura * constComprimento) / 2;
 }
 console.log(constArea);
+
+```
+
+### Truthy e falsy
+
+Dentro do JS existem outras informações que são tratadas como `true` e `false` pela linguagem.
+
+Por exemplo, variáveis de string vazias e o número 0 se comparados com `false` retornam que a comparação é verdadeira, ou seja, para o JS são a mesma coisa.
+
+> Um detalhe para se atentar é o uso de `null` em variáveis. Diferente de `undefined` o `null` possui um comportamento de `objeto`, o que pode ocasionar bugs em códigos.
+
+Abaixo um código de exemplo:
+
+```javascript
+// boolean
+
+const usuarioLogado = true;
+const contaPaga = false;
+
+// truthy ou falsy
+
+let n1 = 0; // 0 => false
+let n2 = 1;// 1 => true
+let texto = "";// "" => false
+
+console.log(n1 == false);
+console.log(texto == false);
+console.log(n2 == true);
+
+// null ou undefined
+
+let varUndefined; // undefined
+let varNull = null; // null | object (bug)
+let numero = 3; // tipo number
+let string = "Alura"; // tipo string
+
+console.log(typeof varUndefined); // retorna undefined
+console.log(typeof varNull); // retorna object (o que é um bug do JavaScript)
+console.log(typeof numero); // retorna number
+console.log(typeof string); // retorna string
 
 ```
