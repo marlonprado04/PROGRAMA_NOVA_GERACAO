@@ -44,6 +44,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Tipo string](#tipo-string)
     - [Para saber mais: Codificação de strings](#para-saber-mais-codificação-de-strings)
     - [Tipo boolean](#tipo-boolean)
+    - [Para saber mais: Tipos null e undefined](#para-saber-mais-tipos-null-e-undefined)
     - [Links e artigos](#links-e-artigos-1)
 
 ## HTML e CSS
@@ -1249,11 +1250,58 @@ O Unicode é amplamente utilizado e possui códigos para caracteres de mais de 1
 
 A codificação de caracteres é fundamental para garantir a correta exibição e processamento de diferentes idiomas e caracteres especiais em sistemas computacionais.
 
-
 ### Tipo boolean
+
+O tipo boleano serve para armazenar `true` ou `falso` e costuma ser utilizado para comparar valores.
+
+Abaixo um exemplo de código:
+
+```javascript
+
+// Criando variaveis e constante
+const n1 = 5;
+const n2 = 10;
+
+// Comparando valores das constantes
+
+console.log(n1 === n2); // retorna false
+
+// Criando uma 3 constante com valor igual à 1
+const n3 = 5;
+
+console.log(n1 === n3); // retorna true
+
+// Criando constantes de string
+
+const texto1 = "Alura";
+const texto2 = "a";
+
+console.log(texto1 === texto2); // retorna false
+
+```
+
+### Para saber mais: Tipos null e undefined
+
+O JS possui 2 tipos de valores para representar a ausência de informação que são o tipo `null` o `undefined`.
+
+A diferença deles é que o `null` é o valor atribuído à uma variável vazia que foi inicializada e o `undefined` é o valor padrão de uma variável criada mas não inicializada.
+
+> `undefined` também é o valor retornado por uma função que não tem cláusula `return`
+
+É importante notar que, embora os dois tipos sejam utilizados para sinalizar ausência de valor, os operadores de comparação do JavaScript podem ou não diferenciá-los:
+
+```javascript
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+```
+
+No cotidiano é comum considerar undefined como uma ausência de valor “inesperada” (causada por um bug ou erro no código) e null como um tipo de dado que também significa ausência de valor, mas não de maneira inesperada.
+
+Por exemplo, um campo em uma tabela de um banco de dados que esteja sem dados ou uma informação solicitada que não seja obrigatória e não tenha sido preenchida pelo usuário pode ter valor null.
+
 ### Links e artigos
 
-VSCode: Dicas e truques: <https://www.youtube.com/watch?v=C3o9KwOHeCk>
+VSCode: Dicas e truques: [Link](https://www.youtube.com/watch?v=C3o9KwOHeCk)
 
 Como utilizar o terminal integrado no VSCode: [Link](https://www.alura.com.br/artigos/como-utilizar-terminal-integrado-visual-studio-code?_gl=1*1um01ax*_ga*MTY3MDI0NzMxLjE2ODY0MjQ0MjQ.*_ga_59FP0KYKSM*MTY4NzgzNDY5Mi4yMC4xLjE2ODc4MzU0MzMuNjAuMC4w*_fplc*T0d2JTJGSUwlMkZkbzhNSVM2MGI0TWxWRlNCRUoxVktBWlhWMiUyRnlCUnJEcm9VaGxMSUZEbVhncmtERCUyQkl1QlZpcWlzSGY3cDY3Y0NMYzRvWSUyQjJ3SUhlTDBQcDhFdFI4JTJCUkFEcVcxeGo4NEVzTTFYWkRaUVJtclh4b3NxV2NjT3lBJTNEJTNE)
 
