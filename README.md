@@ -49,6 +49,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Var, let e const](#var-let-e-const)
     - [Truthy e falsy](#truthy-e-falsy)
     - [Conversão de tipos](#conversão-de-tipos)
+    - [Para saber mais: Conversão de valores](#para-saber-mais-conversão-de-valores)
 
 ## HTML e CSS
 
@@ -1452,4 +1453,46 @@ console.log(typeof Number(numeroString)) // retorna number
 console.log(numero + Number(numeroString)); // retorna a soma 912
 
 console.log(Number("123a")) // retorna NaN
+```
+
+### Para saber mais: Conversão de valores
+
+É possível converter valores no JS com mais de uma forma.
+
+Por exemplo, para a conversão de `string` para `number`, podemos usar a função `Number()`, assim como usando o operador de `+` antes da variável.
+
+No caso de string, podemos usar o operador `String()` ou `toString()` após a variável.
+
+Podemos converter `boolean` para number e string também através dos comandos acima.
+
+> Se atentar à forma de uso dos conversores de string
+
+Abaixo um código de exemplo:
+
+```javascript
+
+// String()
+
+let telefone1 = 12341234;
+console.log("O telefone é " + String(telefone1)); // retorna "12341234"
+
+let telefone2 = 12341234;
+console.log("O telefone é " + telefone2.toString()); // também retorna "12341234"
+
+// Podemos converter boleano para String e para Number também
+
+// String
+
+let usuarioConectado1 = false;
+console.log(String(usuarioConectado1)); // retorna "false"
+usuarioConectado1 = true;
+console.log(String(usuarioConectado1)); // retorna "true"
+
+// Number
+
+let usuarioConectado2 = false;
+console.log(Number(usuarioConectado2)); // retorna 0
+usuarioConectado2 = true;
+console.log(Number(usuarioConectado2)); // retorna 1
+
 ```

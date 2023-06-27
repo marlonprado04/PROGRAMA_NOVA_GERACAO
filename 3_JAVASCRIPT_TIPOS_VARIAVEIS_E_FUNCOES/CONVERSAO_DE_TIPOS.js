@@ -22,3 +22,27 @@ console.log(numero + Number(numeroString)); // retorna a soma 912
 console.log(Number("123a")) // retorna NaN
 
 // String()
+
+let telefone1 = 12341234;
+console.log("O telefone é " + String(telefone1)); // retorna "12341234"
+
+let telefone2 = 12341234;
+console.log("O telefone é " + telefone2.toString()); // também retorna "12341234"
+
+// Podemos converter boleano para String e para Number também
+
+// String
+
+let usuarioConectado1 = false;
+console.log(String(usuarioConectado1)); // retorna "false"
+usuarioConectado1 = true;
+console.log(String(usuarioConectado1)); // retorna "true"
+
+// Number
+
+let usuarioConectado2 = false;
+console.log(Number(usuarioConectado2)); // retorna 0
+usuarioConectado2 = true;
+console.log(Number(usuarioConectado2)); // retorna 1
+
+
