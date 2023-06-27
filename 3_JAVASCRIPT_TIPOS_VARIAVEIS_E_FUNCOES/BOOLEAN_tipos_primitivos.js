@@ -18,5 +18,3 @@ const texto1 = "Alura";
 const texto2 = "a";
 
 console.log(texto1 === texto2); // retorna false
-
-// Criando outra constante de string
