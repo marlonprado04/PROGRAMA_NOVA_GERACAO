@@ -57,6 +57,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Operadores de comparação](#operadores-de-comparação)
     - [Para saber mais: Mais sobre operadores](#para-saber-mais-mais-sobre-operadores)
     - [Operador ternário](#operador-ternário)
+    - [Template literal](#template-literal)
 
 ## HTML e CSS
 
@@ -1712,4 +1713,33 @@ if(idadeCliente>=idadeMinima){
 // Alternativa com operador ternário
 console.log(idadeCliente >= idadeMinima ? "Cerveja" : "Suco");
 
+```
+
+### Template literal
+
+Template string serve para poupar e deixar o código mais legível na hora de trabalhar com strings.
+
+Para isso, precisamos usar um acento de crase para identificar a string ao invés de `aspas normal` ou `aspas simples`.
+
+Fazendo isso, podemos usar o operador `${}` para incluir uma variável ou função dentro desse trecho.A
+
+Abaixo um código de exemplo:
+
+```javascript
+
+
+const nome = "Ju";
+const idade = 2021- 1981;
+const cidadeDeNascimento = "São Paulo";
+
+// Print com concatenação padrão
+const apresentacao1 = "Meu nome é " + nome + ", minha idade é " + idade + " e nasci na cidade de " + cidadeDeNascimento + ".";
+
+console.log(apresentacao1);
+
+// Template String
+
+const apresentacao2 = `Meu nome é ${nome}, minha idade é ${idade} e nasci na cidade de ${cidadeDeNascimento}.`;
+
+console.log(apresentacao2);
 ```
