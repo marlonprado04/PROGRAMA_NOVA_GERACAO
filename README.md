@@ -55,7 +55,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Erros e stacktrace](#erros-e-stacktrace)
     - [Console.api](#consoleapi)
     - [Operadores de comparação](#operadores-de-comparação)
-    - [](#)
+    - [Para saber mais: Mais sobre operadores](#para-saber-mais-mais-sobre-operadores)
 
 ## HTML e CSS
 
@@ -1679,4 +1679,12 @@ console.log(typeof texto);
 
 ```
 
-### 
+### Para saber mais: Mais sobre operadores
+
+O JS possui varios outros operadores padrão.
+
+Abaixo alguns:
+
+- `||`: Operador “ou”, retorna `true` caso uma condição seja válida;
+- `&&`: Operador “e”, retorna `true` somente se todas as condições forem válidas;
+- `!=` e `!==`: Operadores “não igual” e “estritamente não igual”, utilizados para comparação, da mesma forma que `==` e `===` retornam `true` ou `false`.
