@@ -58,6 +58,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Para saber mais: Mais sobre operadores](#para-saber-mais-mais-sobre-operadores)
     - [Operador ternário](#operador-ternário)
     - [Template literal](#template-literal)
+    - [Faça como eu fiz: Utilizando ternários e templates](#faça-como-eu-fiz-utilizando-ternários-e-templates)
 
 ## HTML e CSS
 
@@ -1742,4 +1743,22 @@ console.log(apresentacao1);
 const apresentacao2 = `Meu nome é ${nome}, minha idade é ${idade} e nasci na cidade de ${cidadeDeNascimento}.`;
 
 console.log(apresentacao2);
+```
+
+### Faça como eu fiz: Utilizando ternários e templates
+
+Podemos juntar conceitos aprendidos utilizando o `operador ternário` e os `template strings`.
+
+Pegando o exemplo de código que valida a idade para definir qual bebida tomar:
+
+```javascript
+// Declarando variável
+const nome = "Leo";
+const idade = 23;
+const bebidaMaior = "cerveja";
+const bebidaMenor = "suco";
+
+// Usando template string e operador ternário juntos 
+const pedido = `${nome} diz: "por favor, quero beber ${idade >= 18 ? bebidaMaior : bebidaMenor}"`
+console.log(pedido)
 ```
