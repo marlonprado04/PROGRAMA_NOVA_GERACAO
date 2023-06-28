@@ -59,6 +59,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Operador ternário](#operador-ternário)
     - [Template literal](#template-literal)
     - [Faça como eu fiz: Utilizando ternários e templates](#faça-como-eu-fiz-utilizando-ternários-e-templates)
+    - [Funções](#funções-1)
 
 ## HTML e CSS
 
@@ -1761,4 +1762,34 @@ const bebidaMenor = "suco";
 // Usando template string e operador ternário juntos 
 const pedido = `${nome} diz: "por favor, quero beber ${idade >= 18 ? bebidaMaior : bebidaMenor}"`
 console.log(pedido)
+```
+
+### Funções
+
+Funções servem para organizar e poupar código. Elas executam operações de forma dinâmica.
+
+Exemplo de código:
+
+```javascript
+// Executando código da forma aprendida até agora
+let x = "";
+console.log(x);
+x = "oi";
+
+// Declarando função
+function imprimeTexto(texto){
+    console.log(texto);
+}
+
+// Executando função
+imprimeTexto("Oi");
+
+// Existem 3 formas de escrever funções
+
+function soma(){ 
+    return 2 + 2;
+}
+
+// Usando função dentro de função
+imprimeTexto(soma());
 ```
