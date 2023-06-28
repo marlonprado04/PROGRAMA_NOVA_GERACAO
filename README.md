@@ -53,6 +53,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Para saber mais: Palavras reservadas](#para-saber-mais-palavras-reservadas)
     - [JavaScript e NodeJS](#javascript-e-nodejs)
     - [Erros e stacktrace](#erros-e-stacktrace)
+    - [Console.api](#consoleapi)
 
 ## HTML e CSS
 
@@ -1623,4 +1624,25 @@ Abaixo o código completo (comentado) com diversos erros de execução:
 
 // Nâo podemos imprimir na tela variáveis que nem foram criadas
 // console.log(minhaVariavel);
+```
+
+### Console.api
+
+O comando `console.log` é apenas um dos diversos comandos que o `console` possui.
+
+Por exemplo, ao executar o comando `console.error`o JS mostra uma mensagem de erro (dependendo do interpretador a mensagem pode sair diferente de um `console.log` comum).
+
+Abaixo um código de exemplo:
+
+```javascript
+const minhaVar = true;
+
+console.log(123);
+console.log("eu sou um texto");
+console.log(minhaVar);
+
+// Tratamento de erros
+
+console.error("deu erro!");
+
 ```
