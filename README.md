@@ -54,6 +54,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [JavaScript e NodeJS](#javascript-e-nodejs)
     - [Erros e stacktrace](#erros-e-stacktrace)
     - [Console.api](#consoleapi)
+    - [Operadores de comparação](#operadores-de-comparação)
+    - [](#)
 
 ## HTML e CSS
 
@@ -1646,3 +1648,35 @@ console.log(minhaVar);
 console.error("deu erro!");
 
 ```
+
+### Operadores de comparação
+
+Uma característica bem específica do JS é que ele possui 2 operadores de comparação, sendo o `==` e o `===`.
+
+O comando `==` realiza a conversão implícita de uma informação antes de realizar a comparação, enquanto o `===` sempre compara os valores sem a conversão.
+
+Exemplo de código:
+
+```javascript
+
+// == comparação implícita
+
+const numero = 5;
+const texto = "5";
+
+console.log(numero == texto); // retorna true
+
+
+// === comparação exata / precisa
+
+
+console.log(numero === texto); // retorna false
+
+// typeof para ver o tipo de cada variável
+
+console.log(typeof numero);
+console.log(typeof texto);
+
+```
+
+### 

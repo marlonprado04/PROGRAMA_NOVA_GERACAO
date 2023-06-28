@@ -1,4 +1,1 @@
 // Testes:
-
-// Tipagem dinâmica
-
