@@ -56,6 +56,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Console.api](#consoleapi)
     - [Operadores de comparação](#operadores-de-comparação)
     - [Para saber mais: Mais sobre operadores](#para-saber-mais-mais-sobre-operadores)
+    - [Operador ternário](#operador-ternário)
 
 ## HTML e CSS
 
@@ -1688,3 +1689,27 @@ Abaixo alguns:
 - `||`: Operador “ou”, retorna `true` caso uma condição seja válida;
 - `&&`: Operador “e”, retorna `true` somente se todas as condições forem válidas;
 - `!=` e `!==`: Operadores “não igual” e “estritamente não igual”, utilizados para comparação, da mesma forma que `==` e `===` retornam `true` ou `false`.
+
+### Operador ternário
+
+Como alternativa para o operador `if` podemos usar o operador `ternário`, que serve para poupar linhas de código.
+
+Ele se chama assim pois são usados 3 operadores para ser executado.
+
+Abaixo um código de exemplo:
+
+```javascript
+const idadeMinima = 18;
+const idadeCliente = 19;
+
+// Código com if
+if(idadeCliente>=idadeMinima){ 
+    console.log("Cerveja");
+}else{ 
+    console.log("Suco");
+}
+
+// Alternativa com operador ternário
+console.log(idadeCliente >= idadeMinima ? "Cerveja" : "Suco");
+
+```
