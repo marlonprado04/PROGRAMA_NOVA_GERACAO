@@ -63,6 +63,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Parâmetros e argumentos](#parâmetros-e-argumentos)
     - [Expressão de função](#expressão-de-função)
     - [Arrow Function](#arrow-function)
+  - [Javascript: Arrays](#javascript-arrays)
+    - [Introdução a Arrays](#introdução-a-arrays)
 
 ## HTML e CSS
 
@@ -1938,5 +1940,36 @@ const somaNumerosPequenos = (n1, n2) => {
 console.log(apresentarArrow("Marlon"));
 console.log(soma(1, 2));
 console.log(somaNumerosPequenos(3,9));
+
+```
+
+## Javascript: Arrays
+
+### Introdução a Arrays
+
+Arrays servem para armazenar várias informações junto.
+
+Abaixo um código de exemplo:
+
+```javascript
+// Exemplo de calculo de média com multiplas variáveis
+
+const nota1 = 10;
+const nota2 = 6.5;
+const nota3 = 8;
+const nota4 = 7.5;
+
+const media = (nota1 + nota2 + nota3 + nota4) / 4
+
+console.log(media);
+
+// Exemplo com uso de arrays
+
+const notas = [10, 6.5, 8, 7.5];
+
+const mediaNotas = ((notas[0] + notas[1] + notas[2] + notas[3]) / notas.length);
+
+console.log(mediaNotas);
+
 
 ```
