@@ -65,6 +65,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Arrow Function](#arrow-function)
   - [Javascript: Arrays](#javascript-arrays)
     - [Introdução a Arrays](#introdução-a-arrays)
+    - [Adicionando elementos](#adicionando-elementos)
 
 ## HTML e CSS
 
@@ -1971,5 +1972,29 @@ const mediaNotas = ((notas[0] + notas[1] + notas[2] + notas[3]) / notas.length);
 
 console.log(mediaNotas);
 
+
+```
+
+### Adicionando elementos
+
+Para adicionar valores a arrays criados usamos o comando `push`.
+
+Uma particularidade do javascript é permitir inclusão de valores em arrays, mesmo que eles tenham sido criados dentro de uma `const`.
+
+Abaixo um código de exemplo:
+
+```javascript
+
+// Criando array com alguns valores
+const notas = [10, 6, 8];
+
+// Adicionando um valor ao array
+// Uma particularidade do JS é permitir que seja adicionada informação no array mesmo que seja uma constante
+notas.push(7);
+
+// Criando variável para calcular a média
+const media = ((notas[0] + notas[1] + notas[2] + notas[3]) / notas.length);
+
+console.log(media);
 
 ```
