@@ -1940,4 +1940,3 @@ console.log(soma(1, 2));
 console.log(somaNumerosPequenos(3,9));
 
 ```
-
