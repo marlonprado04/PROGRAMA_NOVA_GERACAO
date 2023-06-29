@@ -62,6 +62,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Funções](#funções-1)
     - [Parâmetros e argumentos](#parâmetros-e-argumentos)
     - [Expressão de função](#expressão-de-função)
+    - [Arrow Function](#arrow-function)
 
 ## HTML e CSS
 
@@ -1899,3 +1900,44 @@ console.log(somar(1,2)); // Retorna erro de "não possível acessar antes da ini
 const somar = function (n1, n2){ return n1 + n2}; 
 
 ```
+
+### Arrow Function
+
+Uma 3ª forma de criar functions no JS é a `arrow function`, que é parecida com a expressão de função.
+
+Para criar uma Arrow Function usamos a estrutura `const exemplo = nome => return "Olá " + nome;`
+
+Abaixo o código com mais exemplos:
+
+```javascript
+// Jeito tradicional de declarar função
+function apresentar(nome){
+    return `Meu nome é ${nome}`;
+}
+
+console.log(apresentar("Marlon"));
+
+// ---------------------
+
+// Declarando uma Arrow Function que recebe apenas 1 atributo
+const apresentarArrow = nome => `Meu nome é aaa ${nome}`;
+
+// Declarando uma Arrow Function que recebe 2 atributos
+const soma = (n1, n2) => n1 + n2;
+
+// Declarando uma Arrow Function com + de 1 linha de instrução
+const somaNumerosPequenos = (n1, n2) => {
+    if(n1 >= 10 || n2 >= 10){
+        return "Somente números de 1 a 9."
+    }else{
+        return n1 + n2;
+    } 
+}
+
+// Printando retornos
+console.log(apresentarArrow("Marlon"));
+console.log(soma(1, 2));
+console.log(somaNumerosPequenos(3,9));
+
+```
+
