@@ -61,6 +61,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Faça como eu fiz: Utilizando ternários e templates](#faça-como-eu-fiz-utilizando-ternários-e-templates)
     - [Funções](#funções-1)
     - [Parâmetros e argumentos](#parâmetros-e-argumentos)
+    - [Expressão de função](#expressão-de-função)
 
 ## HTML e CSS
 
@@ -1853,5 +1854,48 @@ function divide(n1 = 1, n2 = 1){
 
 // Executando função divide e passando 1 só parâmetro
 console.log(divide(soma(4, 3))); // retorna 7
+
+```
+
+### Expressão de função
+
+É possível declarar uma expressão de função, que consiste em atribuir uma função à uma variável.
+
+Boas práticas sugerem que usemos variáveis do tipo `const` para evitar que as informações nela sejam substituidas.
+
+A principal diferença de uma função declarada e expressão de função é que as expressões de função não podem ser usadas antes de declaradas.
+
+Exemplo:
+
+```javascript
+// Forma declarativa e forma de expressão de função
+
+// Declarando uma função da forma convencional
+function exemplo(n1, n2){
+    return n1 + n2;
+}
+
+// Declarando uma EXPRESSÃO de função
+// Criando ela como CONST para não correr risco de apagar as informações durente o código
+// Como pe uma expressão de função, não é necessário atribuir nome à função (ex: function SOMA(){})
+const soma = function(n1, n2) { return n1 + n2};
+console.log(soma(1,1));
+
+// -----------------------------------
+
+// Diferenças entre função declarada e expressão de função
+
+// Diferença principal: HOISTING (içar)
+// Funções e var são "listadas" no topo, mas funções const e let não.
+
+// Função declarada
+console.log(apresentar()); // retorna "olá"
+function apresentar(){
+    return "Olá";
+}
+
+// Expressão de função
+console.log(somar(1,2)); // Retorna erro de "não possível acessar antes da inicialização"
+const somar = function (n1, n2){ return n1 + n2}; 
 
 ```
