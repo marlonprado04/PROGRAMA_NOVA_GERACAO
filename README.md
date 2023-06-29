@@ -66,6 +66,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
   - [Javascript: Arrays](#javascript-arrays)
     - [Introdução a Arrays](#introdução-a-arrays)
     - [Adicionando elementos](#adicionando-elementos)
+    - [Deletando elementos](#deletando-elementos)
 
 ## HTML e CSS
 
@@ -1997,4 +1998,27 @@ const media = ((notas[0] + notas[1] + notas[2] + notas[3]) / notas.length);
 
 console.log(media);
 
+```
+
+### Deletando elementos
+
+Para deletar elementos usamos o comando `pop()`.
+
+Abaixo um exemplo de código:
+
+```javascript
+// Criando array
+const notas = [10, 6, 8, 5.4, 12];
+
+// Removendo último elemento do array
+notas.pop();
+
+// Printando array
+console.log(notas);
+
+// Criando variável para calcular a média
+const media = ((notas[0] + notas[1] + notas[2] + notas[3]) / notas.length);
+
+// Printando média dos valores que sobraram no array
+console.log(media);
 ```
