@@ -68,6 +68,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Adicionando elementos](#adicionando-elementos)
     - [Deletando elementos](#deletando-elementos)
     - [Dividindo com slice()](#dividindo-com-slice)
+    - [Alterando com splice()](#alterando-com-splice)
 
 ## HTML e CSS
 
@@ -2074,5 +2075,27 @@ const sala2 = alunos.slice(10);
 
 // Printando sala 2
 console.log(sala2);
+
+```
+
+### Alterando com splice()
+
+O método `splice()` permite `remover` e `substituir` itens do array e substituí-los por outro na mesma posição.
+
+Ele suporta 3 parâmetros, onde o 1º indica o índice do elemento a ser excluído, o 2º indica o número de elementos para excluir e o 3º permite colocar alguma coisa no lugar.
+
+Abaixo um exemplo:
+
+```javascript
+
+const nomes = ["João", "Ana", "Caio", "Lara", "Marjorie", "Leo"];
+
+// Removendo Ana e Caio do array
+// 1º parâmetro -> índice do elemento a ser excluído
+// 2º parâmetro -> número de elementos (a partir do 1º) a ser excluídos
+// 3º parâmetro -> substitui os itens excluídos pelo informado
+nomes.splice(1, 2, "Rodrigo");
+
+console.log(nomes);// retorna [ 'João', 'Rodrigo', 'Lara', 'Marjorie', 'Leo' ]
 
 ```
