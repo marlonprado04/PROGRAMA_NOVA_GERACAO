@@ -70,6 +70,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Dividindo com slice()](#dividindo-com-slice)
     - [Alterando com splice()](#alterando-com-splice)
     - [Concatenando arrays](#concatenando-arrays)
+    - [Lista com 2 dimensões](#lista-com-2-dimensões)
 
 ## HTML e CSS
 
@@ -2115,5 +2116,29 @@ const salaPython = ["Ju", "Leo", "Raquel"];
 const salasUnificadas = salaJS.concat(salaPython);
 
 console.log(salasUnificadas);
+
+```
+
+### Lista com 2 dimensões
+
+O JS permite criar arrays com 2 dimensões, basta criar um novo array contendo os 2 (ou mais) arrays desejados.
+
+Para acessar um item específico dentro de um array específico, passamos primeiro a posição do array e depois a posição do item dentro do array.
+
+Abaixo um código de exemplo:
+
+```javascript
+// Criando listas
+const alunos = ["João", "Juliana", "Ana", "Caio"];
+const medias = [10, 8, 7.5, 9];
+
+// Criando lista unificada 
+const listaDeAlunosEMedias = [alunos, medias];
+
+//Printando lista completa
+console.log(listaDeAlunosEMedias);
+
+// Printando itens da 1ª posição em ambas listas
+console.log(`A aluna da 1ª posição é ${listaDeAlunosEMedias[0][1]} e a nota na 1ª posição é ${listaDeAlunosEMedias[1][1]}`);
 
 ```
