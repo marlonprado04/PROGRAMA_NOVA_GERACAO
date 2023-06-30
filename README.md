@@ -69,6 +69,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Deletando elementos](#deletando-elementos)
     - [Dividindo com slice()](#dividindo-com-slice)
     - [Alterando com splice()](#alterando-com-splice)
+    - [Concatenando arrays](#concatenando-arrays)
 
 ## HTML e CSS
 
@@ -2097,5 +2098,22 @@ const nomes = ["João", "Ana", "Caio", "Lara", "Marjorie", "Leo"];
 nomes.splice(1, 2, "Rodrigo");
 
 console.log(nomes);// retorna [ 'João', 'Rodrigo', 'Lara', 'Marjorie', 'Leo' ]
+
+```
+
+### Concatenando arrays
+
+O método `concat()` permite concatenar arrays, porém ele não modifica o array de origem, ou seja, `é necessário atribuir o resultado à um novo array`.
+
+Abaixo um código de exemplo:
+
+```javascript
+const salaJS = ["Evaldo", "Camis", "Mari"];
+const salaPython = ["Ju", "Leo", "Raquel"];
+
+// Concatenando arrays
+const salasUnificadas = salaJS.concat(salaPython);
+
+console.log(salasUnificadas);
 
 ```
