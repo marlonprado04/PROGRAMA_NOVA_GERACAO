@@ -71,6 +71,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Alterando com splice()](#alterando-com-splice)
     - [Concatenando arrays](#concatenando-arrays)
     - [Lista com 2 dimensões](#lista-com-2-dimensões)
+    - [Procurando na lista](#procurando-na-lista)
 
 ## HTML e CSS
 
@@ -2141,4 +2142,41 @@ console.log(listaDeAlunosEMedias);
 // Printando itens da 1ª posição em ambas listas
 console.log(`A aluna da 1ª posição é ${listaDeAlunosEMedias[0][1]} e a nota na 1ª posição é ${listaDeAlunosEMedias[1][1]}`);
 
+```
+### Procurando na lista
+
+Para encontrar determinado valor no array é usado o método `includes(item)`, onde passamos como parâmetro o `item` que desejamos buscar.
+
+No código abaixo foi usado também o método `indexof[item]` que retorna o índice do `item` buscado dentro do array.
+
+> OBS: Conforme [documentação oficial](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf), o JS retorna o índice do primeiro item encontrado. Ou seja, se houver 2 itens iguais no array, o resultado da consulta será o 1º valor localizado, a não ser que seja passado qual o índice desejamos buscar.
+
+Abaixo o código:
+
+```javascript
+// Criando listas de alunos e notas
+const alunos = ["João", "Juliana", "Ana", "Caio"];
+const medias = [10, 8, 7.5, 9];
+
+// Criando lista com 2 dimensões de alunos e notas
+const listaDeAlunosEMedias = [alunos, medias];
+
+// Criando função para consultar aluno cadastrado
+function consultaAlunoENota(aluno){
+    if(listaDeAlunosEMedias[0].includes(aluno)){
+        // Criando variável com índice descoberto
+        const indice = listaDeAlunosEMedias[0].indexOf(aluno);
+
+        // Criando variável com média do aluno de acordo com o índice descoberto
+        const media = listaDeAlunosEMedias[1][indice];
+
+        // Retornando nome e média do aluno
+        return `${aluno} está cadastrado e sua média é ${media}`;
+    }else{
+         return `${aluno} não encontrado!`;
+    }
+}
+
+// Chamando a função para ver se funciona
+console.log(consultaAlunoENota("João"));
 ```
