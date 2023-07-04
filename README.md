@@ -75,6 +75,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Desestruturando uma lista](#desestruturando-uma-lista)
     - [Para saber mais: desestruturação](#para-saber-mais-desestruturação)
     - [For clássico](#for-clássico)
+    - [Média com for](#média-com-for)
 
 ## HTML e CSS
 
@@ -2324,4 +2325,31 @@ for (let indice = 0; indice < numeros.length; indice++){
     // Printando todos valores do array
     console.log(numeros[indice]);
 }
+```
+
+### Média com for
+
+Podemos usar o FOR como alternativa para varrer a lista de notas criadas anteriormente e calcular a média.
+
+Abaixo o código de exemplo:
+
+```javascript
+// Criando array com notas
+const notas = [10, 6.5, 8, 7.5];
+
+// Criando variável que vai conter a soma das notas
+let somaDasNotas = 0;
+
+// Criando for para varrer e somar o array de notas
+for (let i = 0; i < notas.length; i++){
+    // Adicionando à variável o valor da nota na posição atual
+    somaDasNotas += notas[i];   
+}
+
+// Criando variável com a média das notas
+const media = somaDasNotas / notas.length;
+
+// Printando
+console.log(`A média das notas é ${media}.`)
+
 ```
