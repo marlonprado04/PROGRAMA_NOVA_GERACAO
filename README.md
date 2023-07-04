@@ -74,6 +74,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Procurando na lista](#procurando-na-lista)
     - [Desestruturando uma lista](#desestruturando-uma-lista)
     - [Para saber mais: desestruturação](#para-saber-mais-desestruturação)
+    - [For clássico](#for-clássico)
 
 ## HTML e CSS
 
@@ -2229,7 +2230,7 @@ console.log(consultaAlunoENota("João"));
 
 ```
 
-###  Para saber mais: desestruturação
+### Para saber mais: desestruturação
 
 O `destructuring` do JS permite deixar o código muito mais semântico, legível e funcional, poupando muitas linhas de código.
 
@@ -2306,4 +2307,21 @@ function imprimeDados({nome, idade}){
 
 imprimeDados(pessoa);
 
+```
+
+### For clássico
+
+For é o laço de repetição tradicional que existe em praticamente todas as linguagens de programação.
+
+Abaixo um exemplo em JS:
+
+```javascript
+// Criando array
+const numeros = [100, 200, 300, 400, 500, 600];
+
+// Criando for
+for (let indice = 0; indice < numeros.length; indice++){
+    // Printando todos valores do array
+    console.log(numeros[indice]);
+}
 ```
