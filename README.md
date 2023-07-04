@@ -72,6 +72,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Concatenando arrays](#concatenando-arrays)
     - [Lista com 2 dimensões](#lista-com-2-dimensões)
     - [Procurando na lista](#procurando-na-lista)
+    - [Desestruturando uma lista](#desestruturando-uma-lista)
+    - [Para saber mais: desestruturação](#para-saber-mais-desestruturação)
 
 ## HTML e CSS
 
@@ -2143,6 +2145,7 @@ console.log(listaDeAlunosEMedias);
 console.log(`A aluna da 1ª posição é ${listaDeAlunosEMedias[0][1]} e a nota na 1ª posição é ${listaDeAlunosEMedias[1][1]}`);
 
 ```
+
 ### Procurando na lista
 
 Para encontrar determinado valor no array é usado o método `includes(item)`, onde passamos como parâmetro o `item` que desejamos buscar.
@@ -2179,4 +2182,128 @@ function consultaAlunoENota(aluno){
 
 // Chamando a função para ver se funciona
 console.log(consultaAlunoENota("João"));
+```
+
+### Desestruturando uma lista
+
+Para deixar o código anterior mais legível podemos separar os arrays em 2 listas com o código `const alunos = listaDeAlunosEMedias[0]` para os `alunos` e `const medias = listaDeAlunosEMedias[1]` para as `médias`.
+
+Uma alternativa do JS para poupar linha de código é a desestruturação de listas. Usando isso, o código seria `const [alunos, medias] = listaDeAlunosEMedias`, pois assim estamos atribuindo à posição `0` e `1` do array os nomes de `alunos` e `média`, respectivamente.
+
+Abaixo o código:
+
+```javascript
+
+// Criando listas de alunos e notas
+const alunos = ["João", "Juliana", "Ana", "Caio"];
+const medias = [10, 8, 7.5, 9];
+
+// Criando lista com 2 dimensões de alunos e notas
+const listaDeAlunosEMedias = [alunos, medias];
+
+// Criando função para consultar aluno cadastrado
+function consultaAlunoENota(aluno){
+    if(listaDeAlunosEMedias[0].includes(aluno)){
+        // Criando variaveis para separar os arrays da forma tradicional
+        // const alunos = listaDeAlunosEMedias[0];
+        // const medias = listaDeAlunosEMedias[1];
+
+        // Atribuindo aos arrays nomes específicos com a nova sintaxe suportada
+        const [alunos, medias] = listaDeAlunosEMedias;
+
+        // Criando variável com índice descoberto
+        const indice = alunos.indexOf(aluno);
+
+        // Criando variável com média do aluno de acordo com o índice descoberto
+        const media = medias[indice];
+
+        // Retornando nome e média do aluno
+        return `${aluno} está cadastrado e sua média é ${media}`;
+    }else{
+         return `${aluno} não encontrado!`;
+    }
+}
+
+// Chamando a função para ver se funciona
+console.log(consultaAlunoENota("João"));
+
+```
+
+###  Para saber mais: desestruturação
+
+O `destructuring` do JS permite deixar o código muito mais semântico, legível e funcional, poupando muitas linhas de código.
+
+Abaixo alguns exemplos de uso para trabalhar com `arrays`e `funções`:
+
+```javascript
+// Testes com destructuring do array
+
+// Criando arrays
+const numerosPares = [2, 4, 6];
+const numerosImpares = [1, 3, 5];
+
+// Essa linha faz com que o array seja "aberto" e os dados sejam passados para o novo array de forma unificada, sem criar um array de arrays
+const numeros = [...numerosPares, ...numerosImpares];
+
+// Printando
+console.log(numeros);
+
+// ------------------------------------
+
+// Criando código onde defino um nome dos 2 primeiros números e a partir do 3 coloco tudo junto em um array separado
+const [num1, num2, ...outrosNumeros] = [1, 2, 3, 4, 5];
+
+// Printando 
+console.log(num1, num2, outrosNumeros);
+
+
+// -------------------------------------
+
+// Criando um array com valor padrão para quando o valor do item não for atribuído
+// Útil para quando não temos certeza do conteúdo que vamos receber no array
+const [nome1 = "Juliana"] = [];
+
+// Printando
+
+console.log(nome1);
+
+// ----------------------------
+
+// Destructuring serve para objetos também, por exemplo, se precisarmos adicionar alguma informação não contida antes
+
+// Criando pessoa sem telefone
+const pessoa = {
+    nome: "Ju",
+    idade: 25
+}
+
+//Todo o objeto pessoa sem telefone para uma nova variável, porém adicionando o telefone
+const pessoaComTelefone = {
+    ...pessoa,
+    telefone: 1234131414
+}
+
+// Printando:
+console.log(pessoa);
+console.log(pessoaComTelefone);
+
+// -----------------------------------------------------
+
+// Criando uma variável com o nome do atributo dentro do objeto e passando o mesmo valor do atributo para ela
+const { idade } = pessoa;
+
+// Printando 
+console.log(idade);
+
+// ----------------------------------------
+
+
+// Também podemos usar o conceito anterior como parãmetro de função
+// Assim podemos passar o objeto que a função fará o mesmo procedimento
+function imprimeDados({nome, idade}){
+    console.log(nome, idade);
+}
+
+imprimeDados(pessoa);
+
 ```
