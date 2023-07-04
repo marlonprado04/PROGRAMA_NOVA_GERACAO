@@ -76,6 +76,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [Para saber mais: desestruturação](#para-saber-mais-desestruturação)
     - [For clássico](#for-clássico)
     - [Média com for](#média-com-for)
+    - [Média com for of](#média-com-for-of)
 
 ## HTML e CSS
 
@@ -2344,6 +2345,36 @@ let somaDasNotas = 0;
 for (let i = 0; i < notas.length; i++){
     // Adicionando à variável o valor da nota na posição atual
     somaDasNotas += notas[i];   
+}
+
+// Criando variável com a média das notas
+const media = somaDasNotas / notas.length;
+
+// Printando
+console.log(`A média das notas é ${media}.`)
+
+```
+
+### Média com for of
+
+O `FOR OF` serve para substituir o FOR quando é necessário percorrer toda a lista de elementos, item  a item.
+
+Ele é menos flexível que o for tradicional, já que obriga percorrer o array inteiro, então acaba sendo usado só para situações específicas. Porém, ele deixa o código bem mais enxuto.
+
+Abaixo o código de exemplo:
+
+```javascript
+
+// Criando array
+const notas = [10, 6.5, 8, 7.5];
+
+
+// Criando variável para soma das notas
+let somaDasNotas = 0;
+
+// Criando FOR OF, que serve para percorrer o array de início ao fim
+for (let nota of notas) {
+    somaDasNotas += nota;
 }
 
 // Criando variável com a média das notas
