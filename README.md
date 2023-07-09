@@ -77,6 +77,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
     - [For clássico](#for-clássico)
     - [Média com for](#média-com-for)
     - [Média com for of](#média-com-for-of)
+    - [Média com forEach](#média-com-foreach)
 
 ## HTML e CSS
 
@@ -2376,6 +2377,42 @@ let somaDasNotas = 0;
 for (let nota of notas) {
     somaDasNotas += nota;
 }
+
+// Criando variável com a média das notas
+const media = somaDasNotas / notas.length;
+
+// Printando
+console.log(`A média das notas é ${media}.`)
+
+```
+
+### Média com forEach
+
+O `forEach` é um método do array que funciona de forma parecida com o `for of`, a diferença é que ao varrer todo o array ele permite trabalhar com o índice do array além do item na posição.
+
+> OBS: O `forEach` depende de uma função anônima para seu uso
+
+Exemplo de código:
+
+```javascript
+
+const notas = [10, 6.5, 8, 7.5];
+
+// Criando arquivo com a soma das notas
+let somaDasNotas = 0;
+
+// Usando o método forEach do array
+// e passando uma função anônima como callback para o método
+notas.forEach(
+    
+    // função anônima
+    // recebe a nota e imprime a nota a na posição a cada execução (varrendo todo array)
+    function(nota, indice){
+
+        // imprimindo a nota
+        console.log(`A nota ${nota} está na posição ${indice} do array.`);
+        somaDasNotas +=nota;
+});
 
 // Criando variável com a média das notas
 const media = somaDasNotas / notas.length;
