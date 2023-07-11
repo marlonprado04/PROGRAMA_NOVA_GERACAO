@@ -1,6 +1,6 @@
-# PROJETO_CALDEIRA
+# PROJETO_NOVA_GERACAO
 
-Repositório com aulas, exercícios e conteúdos do Projeto Caldeira
+Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do Instituto Caldeira
 
 ## Índice
 
