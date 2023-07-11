@@ -4,7 +4,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
 
 ## Índice
 
-- [PROJETO\_CALDEIRA](#projeto_caldeira)
+- [PROJETO\_NOVA\_GERACAO](#projeto_nova_geracao)
   - [Índice](#índice)
   - [HTML e CSS](#html-e-css)
     - [Unidade de Medida REM](#unidade-de-medida-rem)
@@ -78,6 +78,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Média com for](#média-com-for)
     - [Média com for of](#média-com-for-of)
     - [Média com forEach](#média-com-foreach)
+    - [Revisando callbacks](#revisando-callbacks)
 
 ## HTML e CSS
 
@@ -2419,5 +2420,37 @@ const media = somaDasNotas / notas.length;
 
 // Printando
 console.log(`A média das notas é ${media}.`)
+
+```
+
+### Revisando callbacks
+
+Funções callback podem ser usadas das 3 formas já apresentadas até o momento.
+
+Exemplo de código:
+
+```javascript
+
+// Declarando array
+const nomes = ["Evaldo", "Mari", "Camis"];
+
+// Usando função declarada como callback
+nomes.forEach(function (nome) {
+  console.log(nome);
+});
+
+// Usando arrow function como callback
+nomes.forEach((nome) => {
+  console.log(nome);
+});
+
+// Usando função externa como callback
+function imprimeNome(nome){
+    console.log(nome);
+}
+
+// Passando apenas a referência da função, sem os (). 
+// dessa forma estamos passando a função completa sem executar
+nomes.forEach(imprimeNome);
 
 ```
