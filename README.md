@@ -81,6 +81,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Revisando callbacks](#revisando-callbacks)
     - [Método map()](#método-map)
     - [Alterando strings com map()](#alterando-strings-com-map)
+    - [Para saber mais: strings são arrays?](#para-saber-mais-strings-são-arrays)
 
 ## HTML e CSS
 
@@ -2508,3 +2509,25 @@ console.log(nomesPadrozinados2);
 
 ```
 
+### Para saber mais: strings são arrays?
+
+Strings podem ser tratadas como arrays se necessário.
+
+Podemos percorrer todos os caracteres de uma string para deixá-la em letra maiúscula, por exemplo.
+
+Código:
+
+```javascript
+// Criando variável
+const nome = "Alura"; // ["A", "l", "u", "r", "a"]
+let nomeMaiusculas = "";
+
+// Criando for para percorrer a string e colocar todas as letras em maiúsculo
+for (let i = 0; i < nome.length; i++) {
+    nomeMaiusculas += nome[i].toUpperCase()
+}
+// Printando novo nome
+console.log(nome);//Alura
+console.log(nomeMaiusculas); //ALURA
+
+```
