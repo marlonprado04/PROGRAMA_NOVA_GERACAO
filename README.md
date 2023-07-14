@@ -85,6 +85,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Filtrando elementos](#filtrando-elementos)
     - [Somando com reduce](#somando-com-reduce)
     - [Clonando com spread operator](#clonando-com-spread-operator)
+    - [Removendo elementos repetidos](#removendo-elementos-repetidos)
 
 ## HTML e CSS
 
@@ -2623,6 +2624,12 @@ Isso é necessário porque o javascript trata arrays criados a partir de outros 
 
 O `spread operator` está disponível desde a versão mais recente do Ecmascript 6.
 
+> A partir do código `const novasNotas = notas`, o JavaScript entende que `novasNotas` e `notas` passam a ser o mesmo array, e agora eles apontam para o mesmo espaço na memória.
+>
+> Como estamos lidando com dados mais complexos, o JavaScript faz isso por padrão para otimizar memória e performance, em vez de realizar uma cópia do array em toda nova atribuição.
+>
+> Uma atribuição de um array é chamada de atribuição por referência, pois nela é passada a referência do array em si, e não uma cópia de seu valor.
+
 Abaixo um exemplo de código:
 
 ```javascript
@@ -2646,4 +2653,26 @@ const novasNotas2 = [...notas, 9];
 console.log(`As novas notas são ${novasNotas2}`);
 console.log(`As notas antigas são ${notas}`);
 
+```
+
+### Removendo elementos repetidos
+
+Para facilitar o trabalho de remover valores duplicados de arrays podemos usar a classe `Set` que é padrão do javascript.
+
+Essa classe não permite que os valores internos se repitam, dessa forma basta passar o array com valores repetidos como parâmetro para a classe.
+
+Abaixo o código de exemplo:
+
+```javascript
+// Criando array com nomes duplicados
+const nomes = ["Ana", "Clara", "Maria", "Maria", "João", "João", "João"];
+
+// Criando nova variável com o array a partir do método padrão do JS chamado Set (ele não permite valores duplicados internamente)
+const meuSet = new Set(nomes);
+
+// passando valor do set para um novo array
+const nomesAtualizados = [...meuSet];
+
+// Printando valores do novo array
+console.log(nomesAtualizados);
 ```
