@@ -96,6 +96,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Tipos de dados e valores](#tipos-de-dados-e-valores)
     - [Objetos em objetos](#objetos-em-objetos)
     - [Lista de objetos](#lista-de-objetos)
+    - [Funções](#funções-2)
+    - [Para saber mais: objeto literal e referência](#para-saber-mais-objeto-literal-e-referência)
 
 ## HTML e CSS
 
@@ -2937,4 +2939,79 @@ const listaApenasApartamentos = cliente.enderecos.filter(
 
 // Printando lista de apartramentos
 console.log(listaApenasApartamentos);
+```
+
+### Funções
+
+Um objeto também permite adicionar atributos do tipo function à eles, dessa forma podemos realizar operações com os valores dos objetos.
+
+Abaixo um exemplo:
+
+```javascript
+// Criando objeto inicial
+const cliente = {
+    nome: "Joao",
+    idade: 24,
+    email: "joao@firma.com",
+    telefone: ["1155555550", "1144444440"],
+    saldo: 200,
+    efetuaPagamento: function (valor) { // criando função para realizar compra
+        if (valor > this.saldo) { // confirmando se valor da compra é abaixo do saldo
+            console.log("Saldo insuficiente"); // printando mensagem de saldo insuficiente
+        }
+        else {
+            this.saldo -= valor; // debitando valor
+            console.log(`Pagamento realizado. Novo saldo: ${this.saldo}`); //printando mensagem de sucesso com novo saldo
+        }
+    }
+};
+
+// Chamando função do objeto cliente
+cliente.efetuaPagamento(25);
+```
+
+### Para saber mais: objeto literal e referência
+
+O JS trabalha com objetos da mesma forma que com arrays quando se trata de copiar informações (com notação literal), ou seja, se passar um objeto já criado para um novo objeto, o que acontece é que o JS vai direcionar o 2º objeto para a posição na memória do 1º.
+
+Exemplo:
+
+```javascript
+// Criando obj personagem
+const objPersonagem = {
+    nome: "Gandalf",
+    classe: "mago",
+    nivel: "20"
+}
+
+// Criando novo objeto a partir do já criado
+const objPersonagem2 = objPersonagem
+
+// Mudando o nome do objeto personagem 2
+objPersonagem2.nome = "Gandalf, o Cinzento"
+
+// Printando ambos objetos para exemplificar saida
+console.log(objPersonagem.nome) //Gandalf, o Cinzento
+console.log(objPersonagem2.nome) //Gandalf, o Cinzento
+
+// Ambos objetos retornam o mesmo valor, pois o JS apenas aponta os valores para a mesma posição na memória do computador
+```
+
+Como contornar isso? Usando o método `Object.create()` para criar um novo objeto.
+
+Exemplo:
+
+```javascript
+// Para resolver esse problema criamos um objeto através do método object.create()
+
+// Criando novo objeto a partir do anterior
+const objPersonagem3 = Object.create(objPersonagem);
+
+// Atribuindo novo valor ao nome do objeto criado
+objPersonagem3.nome = "Gandalf, o Branco";
+
+// Printando novas informações
+console.log(objPersonagem.nome); //Gandalf
+console.log(objPersonagem3.nome); //Gandalf, o Cinzento
+
 ```
