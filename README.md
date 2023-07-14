@@ -82,6 +82,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Método map()](#método-map)
     - [Alterando strings com map()](#alterando-strings-com-map)
     - [Para saber mais: strings são arrays?](#para-saber-mais-strings-são-arrays)
+    - [Filtrando elementos](#filtrando-elementos)
 
 ## HTML e CSS
 
@@ -2529,5 +2530,29 @@ for (let i = 0; i < nome.length; i++) {
 // Printando novo nome
 console.log(nome);//Alura
 console.log(nomeMaiusculas); //ALURA
+
+```
+
+### Filtrando elementos
+
+O método `filter` serve para filtrar elementos de um array.
+
+Ele também recebe uma função callback como parâmetro.
+
+> Como convenção sempre devemos declarar o 1º atributo da função, no JS é permitido usaro _ como primeiro parâmetro quando ele não estiver sendo usado.
+
+Código de exemplo:
+
+```javascript
+const alunos = ["Ana", "Marcos", "Maria", "Mauro"];
+const medias = [7, 4.5, 8, 7.5];
+
+// Criando variável com o filtro de reprovados
+const reprovados = alunos.filter((_, indice) => {
+    return medias[indice] < 7;
+});
+
+// Printando lista de reprovados
+console.log(reprovados);
 
 ```
