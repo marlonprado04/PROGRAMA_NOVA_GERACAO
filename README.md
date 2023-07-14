@@ -84,6 +84,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Para saber mais: strings são arrays?](#para-saber-mais-strings-são-arrays)
     - [Filtrando elementos](#filtrando-elementos)
     - [Somando com reduce](#somando-com-reduce)
+    - [Clonando com spread operator](#clonando-com-spread-operator)
 
 ## HTML e CSS
 
@@ -2611,5 +2612,38 @@ function calculaMedia2(notasDaSala) {
 console.log(`A média da sala de JavaScript é ${calculaMedia(salaJS)}`);
 console.log(`A média da sala de Java é ${calculaMedia(salaJava)}`);
 console.log(`A média da sala de Python é ${calculaMedia(salaPython)}`);
+
+```
+
+### Clonando com spread operator
+
+Para criar um novo array a partir de outro sem que eles se interfiram, é necessário usar o `spread operator` que serve para "destrinchar" o array antigo e passar para o novo.
+
+Isso é necessário porque o javascript trata arrays criados a partir de outros como o mesmo objeto, apontando sempre pro mesmo endereço da memória.
+
+O `spread operator` está disponível desde a versão mais recente do Ecmascript 6.
+
+Abaixo um exemplo de código:
+
+```javascript
+// Criando variável com notas
+const notas = [7, 7, 8, 9];
+
+// Criando nova variável de notas para modificar os valors
+const novasNotas = notas;
+
+// Adicionando numero 10 no array novo (de forma errada)
+novasNotas.push(10);
+
+// Printando listas
+console.log(`As novas notas são ${novasNotas}`);
+console.log(`As notas antigas são ${notas}`);
+
+// Adicionando numero 9 no array novo (da forma certa)
+const novasNotas2 = [...notas, 9];
+
+// Printando listas
+console.log(`As novas notas são ${novasNotas2}`);
+console.log(`As notas antigas são ${notas}`);
 
 ```
