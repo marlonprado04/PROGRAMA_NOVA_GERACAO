@@ -2,11 +2,11 @@
 
 Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do Instituto Caldeira
 
-## [Curso HTML e CSS](01_HTML_E_CSS/)
+## [Curso HTML e CSS](01_HTML_E_CSS/README.md)
 
 - [Portfolio](01_HTML_E_CSS/PORTFOLIO/README.md)
 
-## [Curso Lógica de Programação](02_LOGICA_DE_PROGRAMACAO/)
+## [Curso Lógica de Programação](02_LOGICA_DE_PROGRAMACAO/README.md)
 
 - [Exemplo: Jogo de Adivinhação](02_LOGICA_DE_PROGRAMACAO/ARRAY_jogo_adivinhacao_mais.html)
 - [Exemplo: Variáveis](02_LOGICA_DE_PROGRAMACAO/BASE_variaveis.html)
