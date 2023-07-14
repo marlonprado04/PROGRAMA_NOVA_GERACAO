@@ -7,6 +7,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [README.md](./01_HTML_E_CSS/README.md)
 
 - [02_LOGICA_DE_PROGRAMACAO](./02_LOGICA_DE_PROGRAMACAO/README.md)
+  - [README.md](./02_LOGICA_DE_PROGRAMACAO/README.md)
   - [ARRAY_jogo_adivinhacao_mais.html](./02_LOGICA_DE_PROGRAMACAO/ARRAY_jogo_adivinhacao_mais.html)
   - [BASE_document_write.html](./02_LOGICA_DE_PROGRAMACAO/BASE_document_write.html)
   - [BASE_teste_alert.html](./02_LOGICA_DE_PROGRAMACAO/BASE_teste_alert.html)
@@ -17,12 +18,12 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [FUNCTION_jogo_adivinhacao.html](./02_LOGICA_DE_PROGRAMACAO/FUNCTION_jogo_adivinhacao.html)
   - [FUNCTION_passando_parametro.html](./02_LOGICA_DE_PROGRAMACAO/FUNCTION_passando_parametro.html)
   - [IF_futebol.html](./02_LOGICA_DE_PROGRAMACAO/IF_futebol.html)
-  - [README.md](./02_LOGICA_DE_PROGRAMACAO/README.md)
   - [WHILE_ano_copa.html](./02_LOGICA_DE_PROGRAMACAO/WHILE_ano_copa.html)
   - [WHILE_media_idades.html](./02_LOGICA_DE_PROGRAMACAO/WHILE_media_idades.html)
   - [ZZZ_pagina_para_exercicios.html](./02_LOGICA_DE_PROGRAMACAO/ZZZ_pagina_para_exercicios.html)
 
 - [03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/README.md)
+  - [README.md](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/README.md)
   - [ARROW_FUNCTION.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/ARROW_FUNCTION.js)
   - [BOOLEAN_tipos_primitivos.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/BOOLEAN_tipos_primitivos.js)
   - [COMPARACOES.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/COMPARACOES.js)
@@ -33,7 +34,6 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [FUNCOES.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/FUNCOES.js)
   - [NUMBER_tipos_primitivos.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/NUMBER_tipos_primitivos.js)
   - [PARAMETROS_de_funcao.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/PARAMETROS_de_funcao.js)
-  - [README.md](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/README.md)
   - [STRING_tipos_primitivos.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/STRING_tipos_primitivos.js)
   - [TEMPLATE_STRINGS.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/TEMPLATE_STRINGS.js)
   - [TERNARIO.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/TERNARIO.js)
@@ -42,6 +42,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [zzzArquivo_para_exercicios.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/zzzArquivo_para_exercicios.js)
 
 - [04_JAVASCRIPT_ARRAYS](./04_JAVASCRIPT_ARRAYS/README.md)
+  - [README.md](./04_JAVASCRIPT_ARRAYS/README.md)
   - [00_exercicios.js](./04_JAVASCRIPT_ARRAYS/00_exercicios.js)
   - [01_media.js](./04_JAVASCRIPT_ARRAYS/01_media.js)
   - [02_PUSH_adicionando_elementos.js](./04_JAVASCRIPT_ARRAYS/02_PUSH_adicionando_elementos.js)
@@ -52,9 +53,10 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [07_lista_duas_dimensoes.js](./04_JAVASCRIPT_ARRAYS/07_lista_duas_dimensoes.js)
   - [08_INCLUDES_e_INDEXOF_procurando_na_lista.js](./04_JAVASCRIPT_ARRAYS/08_INCLUDES_e_INDEXOF_procurando_na_lista.js)
   - [09_DESTRUCTURING_procurando_na_lista.js](./04_JAVASCRIPT_ARRAYS/09_DESTRUCTURING_procurando_na_lista.js)
-  - [README.md](./04_JAVASCRIPT_ARRAYS/README.md)
+  
 
 - [05_JAVASCRIPT_OBJETOS](./05_JAVASCRIPT_OBJETOS/README.md)
+  - [README.md](./05_JAVASCRIPT_OBJETOS/README.md)
   - [00_exercicios.js](./05_JAVASCRIPT_OBJETOS/00_exercicios.js)
   - [01_listaCPFs.js](./05_JAVASCRIPT_OBJETOS/01_listaCPFs.js)
   - [02_ACESSO_VIA_PONTO.js](./05_JAVASCRIPT_OBJETOS/02_ACESSO_VIA_PONTO.js)
@@ -68,8 +70,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [10_OBJETO_LITERAL_E_REFERENCIA.js](./05_JAVASCRIPT_OBJETOS/10_OBJETO_LITERAL_E_REFERENCIA.js)
   - [11_FOR_IN_repeticao.js](./05_JAVASCRIPT_OBJETOS/11_FOR_IN_repeticao.js)
   - [12_METODOS_de_objeto.js](./05_JAVASCRIPT_OBJETOS/12_METODOS_de_objeto.js)
-  - [README.md](./05_JAVASCRIPT_OBJETOS/README.md)
-
+  
 - [LICENSE](./LICENSE)
 - [Planner de estudos (Programação).pdf](./Planner%20de%20estudos%20(Programação).pdf)
 - [README.md](./README.md)
