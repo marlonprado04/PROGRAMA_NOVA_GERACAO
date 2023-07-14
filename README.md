@@ -79,6 +79,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Média com for of](#média-com-for-of)
     - [Média com forEach](#média-com-foreach)
     - [Revisando callbacks](#revisando-callbacks)
+    - [Método map()](#método-map)
 
 ## HTML e CSS
 
@@ -2452,5 +2453,29 @@ function imprimeNome(nome){
 // Passando apenas a referência da função, sem os (). 
 // dessa forma estamos passando a função completa sem executar
 nomes.forEach(imprimeNome);
+
+```
+
+### Método map()
+
+A função `map()` serve como um laço de repetição que mapeia todos os dados de um array e permite atribuir novos valores a ele.
+
+Esse método recebe uma função callback como parâmetro.
+
+Abaixo o código de exemplo:
+
+```javascript
+
+const notas = [10, 9.5, 8, 7, 6];
+
+// Usando método map para percorrer o array e atribuir novo valor em cada item do array
+const notasAtualizadas = notas.map((nota)=>{
+    return nota + 1 >= 10 ? 10: nota + 1;
+})
+
+// Printando valor novo
+
+console.log(notasAtualizadas);
+
 
 ```
