@@ -86,6 +86,10 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Somando com reduce](#somando-com-reduce)
     - [Clonando com spread operator](#clonando-com-spread-operator)
     - [Removendo elementos repetidos](#removendo-elementos-repetidos)
+  - [Javascript: objetos](#javascript-objetos)
+    - [O que são objetos?](#o-que-são-objetos)
+    - [Acessando dados](#acessando-dados)
+    - [Acessando dados com colchetes](#acessando-dados-com-colchetes)
 
 ## HTML e CSS
 
@@ -2675,4 +2679,74 @@ const nomesAtualizados = [...meuSet];
 
 // Printando valores do novo array
 console.log(nomesAtualizados);
+```
+
+## Javascript: objetos
+
+### O que são objetos?
+
+Objetos são estruturas que permitem organizar caracteristicas de algo de forma separada.
+
+Por exemplo, ao invés de criar um array com nome, idade e cpf para determinada pessoa, podemos criar um objetoPessoa e atribuir essas informações à ela.
+
+Código de exemplo:
+
+```javascript
+const objetoPessoa = {
+    nome: "José",
+    idade: 23,
+    cpf: 1121313
+
+}
+```
+
+### Acessando dados
+
+Para acessar os dados de um objeto colocamos um ponto após o objeto e informamos o atributo desejado, por exemplo `objeto.nome`.
+
+Abaixo um código de exemplo:
+
+```javascript
+// Criando objeto do tipo cliente
+const cliente = {
+    nome:"André",
+    idade:32,
+    cpf:"1111111111",
+    email:"andre@gmail.com"
+};
+
+// Printando informações contidas no objeto
+console.log(`O nome do cliente é ${cliente.nome} e a idade é ${cliente.idade}`);
+console.log(`Os 3 primeiros dígitos do CPF são ${cliente.cpf.substring(0, 3)}`);
+```
+
+### Acessando dados com colchetes
+
+Podemos acessar valores de objetos com colchetes ao invés do ponto. Isso é uma alternativa que facilita situações onde desejamos acessar todos os valores, inclusive valores que podem estar vazios dentro do objeto.
+
+Abaixo um exemplo de código:
+
+```javascript
+// Criando objeto do tipo cliente
+const cliente = {
+    nome:"André",
+    idade:32,
+    cpf:"1111111111",
+    email:"andre@gmail.com"
+};
+
+// Printando informações contidas no objeto
+console.log(`O nome do cliente é ${cliente["nome"]} e a idade é ${cliente["idade"]}`);
+
+// Por que existem 2 formas de acessar valores de objetos?
+// Isso ocorre para facilitar acesso em momentos que não sabemos as chaves existentes
+
+// Criando variavel com as chaves do objeto
+const chaves = ["nome", "idade", "cpf", "email", "altura"];
+
+// Varrendo objeto em busca dos valores de cada chave
+// Para a chave "altura", o forEach vai retornar undefined
+chaves.forEach((chave) => {
+  console.log(`A chave ${chave} tem valor ${cliente[chave]}`);
+});
 ```
