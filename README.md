@@ -4,10 +4,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
 
 - [01_HTML_E_CSS](./01_HTML_E_CSS/README.md)
   - [PORTFOLIO](./01_HTML_E_CSS/PORTFOLIO)
-  - [README.md](./01_HTML_E_CSS/README.md)
 
 - [02_LOGICA_DE_PROGRAMACAO](./02_LOGICA_DE_PROGRAMACAO/README.md)
-  - [README.md](./02_LOGICA_DE_PROGRAMACAO/README.md)
   - [ARRAY_jogo_adivinhacao_mais.html](./02_LOGICA_DE_PROGRAMACAO/ARRAY_jogo_adivinhacao_mais.html)
   - [BASE_document_write.html](./02_LOGICA_DE_PROGRAMACAO/BASE_document_write.html)
   - [BASE_teste_alert.html](./02_LOGICA_DE_PROGRAMACAO/BASE_teste_alert.html)
@@ -23,7 +21,6 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [ZZZ_pagina_para_exercicios.html](./02_LOGICA_DE_PROGRAMACAO/ZZZ_pagina_para_exercicios.html)
 
 - [03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/README.md)
-  - [README.md](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/README.md)
   - [ARROW_FUNCTION.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/ARROW_FUNCTION.js)
   - [BOOLEAN_tipos_primitivos.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/BOOLEAN_tipos_primitivos.js)
   - [COMPARACOES.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/COMPARACOES.js)
@@ -42,7 +39,6 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [zzzArquivo_para_exercicios.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/zzzArquivo_para_exercicios.js)
 
 - [04_JAVASCRIPT_ARRAYS](./04_JAVASCRIPT_ARRAYS/README.md)
-  - [README.md](./04_JAVASCRIPT_ARRAYS/README.md)
   - [00_exercicios.js](./04_JAVASCRIPT_ARRAYS/00_exercicios.js)
   - [01_media.js](./04_JAVASCRIPT_ARRAYS/01_media.js)
   - [02_PUSH_adicionando_elementos.js](./04_JAVASCRIPT_ARRAYS/02_PUSH_adicionando_elementos.js)
@@ -56,7 +52,6 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   
 
 - [05_JAVASCRIPT_OBJETOS](./05_JAVASCRIPT_OBJETOS/README.md)
-  - [README.md](./05_JAVASCRIPT_OBJETOS/README.md)
   - [00_exercicios.js](./05_JAVASCRIPT_OBJETOS/00_exercicios.js)
   - [01_listaCPFs.js](./05_JAVASCRIPT_OBJETOS/01_listaCPFs.js)
   - [02_ACESSO_VIA_PONTO.js](./05_JAVASCRIPT_OBJETOS/02_ACESSO_VIA_PONTO.js)
@@ -73,4 +68,3 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   
 - [LICENSE](./LICENSE)
 - [Planner de estudos (Programação).pdf](./Planner%20de%20estudos%20(Programação).pdf)
-- [README.md](./README.md)
