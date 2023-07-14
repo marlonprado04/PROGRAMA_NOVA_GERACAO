@@ -92,6 +92,10 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [Acessando dados com colchetes](#acessando-dados-com-colchetes)
     - [Adicionando e alterando](#adicionando-e-alterando)
     - [Para saber mais: tipos de variáveis e objetos](#para-saber-mais-tipos-de-variáveis-e-objetos)
+    - [Para saber mais: como deletar uma propriedade?](#para-saber-mais-como-deletar-uma-propriedade)
+    - [Tipos de dados e valores](#tipos-de-dados-e-valores)
+    - [Objetos em objetos](#objetos-em-objetos)
+    - [Lista de objetos](#lista-de-objetos)
 
 ## HTML e CSS
 
@@ -2804,3 +2808,133 @@ pessoa = novaPessoa; // retorna erro
 ### Para saber mais: tipos de variáveis e objetos
 
 Para saber mais sobre tipos de variáveis consultar o artigo [Entenda a diferença entre var, let e const no JavaScript](https://www.alura.com.br/artigos/entenda-diferenca-entre-var-let-e-const-no-javascript)
+
+### Para saber mais: como deletar uma propriedade?
+
+Para deletar os valores de uma propriedade podemos usar o comando `delete`, mas é importante lembrar que esse comando deleta a propriedade junto do valor que estiver dentro dela.
+
+Exemplo:
+
+```javascript
+// Criando objeto de exemplo
+const objPersonagem = {
+    nome: "Gandalf",
+    classe: "mago",
+    nivel: "20",
+    aliado: {
+        nome: "Saruman",
+        classe: "mago"
+    },
+    status: "desaparecido"
+}
+
+// Deletando tanto o valor quanto a propriedade com o comando delete
+delete objPersonagem.aliado;
+
+// Printando todo objeto
+console.log(objPersonagem);
+```
+
+### Tipos de dados e valores
+
+Dentro de um objeto podemos armazenar todos os tipos nativos do javascript (string, boolean, int), mas também alguns outros mais complexos, como por exemplo listas.
+
+Listas são uteis em situações onde temos 2 ou mais informações muito similares e não desejamos criar um novo atributo para poupar cóoplexidade.
+
+Exemplo:
+
+```javascript
+// Criando objeto com array de informações
+const cliente = {
+    nome: "Joao",
+    idade: 24,
+    email: "joao@firma.com",
+    telefone: ["1155555550", "1311444441"],
+};
+
+// Printando objeto
+console.log(cliente);
+```
+
+### Objetos em objetos
+
+Podemos adicionar objetos dentro de outros objetos de forma aninhada da mesma forma que arrays. Isso ajuda a organizar o código em certas situações.
+
+Exemplo:
+
+```javascript
+// Criando objeto com array de informações
+const cliente = {
+    nome: "Joao",
+    idade: 24,
+    email: "joao@firma.com",
+    telefone: ["1155555550", "1311444441"],
+};
+
+// Adicionando ao objeto cliente um outro objeto do tipo endereço para deixar eles aninhados
+cliente.endereco = {
+    rua: "R. Joseph Climber",
+    numero: 1234,
+    apartamento: true,
+    complemento: "Ap 901",
+}
+
+// Printando objeto cliente
+console.log(cliente);
+
+// Printando objeto endereço
+console.log(cliente.endereco);
+
+```
+
+### Lista de objetos
+
+Para deixar o código ainda mais funcional podemos criar listas de objetos. Isso é particularmente útil em situações do tipo que o cliente possui mais de um endereço e os dados de endereço são diversos.
+
+Abaixo um exemplo:
+
+```javascript
+// Criando objeto com array de informações
+const cliente = {
+    nome: "Joao",
+    idade: 24,
+    email: "joao@firma.com",
+    telefone: ["1155555550", "1311444441"],
+};
+
+// Adicionando uma lista de objetos (endereços) ao objeto pessoa
+cliente.enderecos = [
+    {
+        rua: "R. Joseph Climber",
+        numero: 1234,
+        apartamento: true,
+        complemento: "Ap 901",
+    }
+]
+
+// Adicionando outro objeto à lista de objetos endereços
+cliente.enderecos.push({
+    rua: "R. Oswaldo Aranha",
+    numero: 404,
+    apartamento: false,
+}
+)
+
+// Printando objeto cliente
+console.log(cliente);
+
+// Printando objeto endereço
+console.log(cliente.enderecos);
+
+//-------------------------
+
+// Exemplo dos benefícios de se ter um array de objetos
+
+//Criando uma variável que contem os endereços filtrados
+const listaApenasApartamentos = cliente.enderecos.filter(
+    (endereco) => endereco.apartamento === true // filtrando os que são apartamento e passando para lista
+);
+
+// Printando lista de apartramentos
+console.log(listaApenasApartamentos);
+```
