@@ -90,6 +90,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
     - [O que são objetos?](#o-que-são-objetos)
     - [Acessando dados](#acessando-dados)
     - [Acessando dados com colchetes](#acessando-dados-com-colchetes)
+    - [Adicionando e alterando](#adicionando-e-alterando)
+    - [Para saber mais: tipos de variáveis e objetos](#para-saber-mais-tipos-de-variáveis-e-objetos)
 
 ## HTML e CSS
 
@@ -2750,3 +2752,55 @@ chaves.forEach((chave) => {
   console.log(`A chave ${chave} tem valor ${cliente[chave]}`);
 });
 ```
+
+### Adicionando e alterando
+
+Para adicionar novos atributos ou alterar dados de algum atributo dentro de um objeto, podemos usar a estrutura `objeto.atributo = "valor_a_ser_preenchido`.
+
+Mesmo que o objeto seja criado a partir de uma variável do tipo `const`, conseguimos alterar os atributos dentro dele. Isso ocorre porque variáveis `const` impedem apenas a mudança do escopo da variável, ou seja, a estrutura "pai" dela, o que não se aplica aos atributos contidos internamente.
+
+Abaixo o código de exemplo:
+
+```javascript
+// Criando objeto pessoa
+const pessoa = {
+    nome: "Luma",
+    profissao: "Engenheira"
+};
+
+// Printando nome
+console.log(pessoa.nome);
+
+// Tentando printar propriedade que não existe
+console.log(pessoa.telefone); // retorna undefined
+
+// Criando novo atributo e atribuindo um valor a esse atributo do objeto pessoa
+pessoa.telefone = "11 12313141";
+
+// Printando propriedade que passou a existir
+console.log(pessoa.telefone);
+
+// Mudando dado do atributo nome
+pessoa.nome = "Luma Silva";
+
+// Printando todo objeto pessoa
+console.log(pessoa);
+
+
+// -----------------------------
+
+// Podemos editar variáveis constantes?
+// Variáveis constantes não permitem modificar todo o conteúdo da variável, porém se quisermos mudar propriedades dentro do objeto não tem problema
+
+// Criando novo objeto para exemplificar porque a const permite edição
+const novaPessoa = {
+    nome:"Pedro",
+}
+
+// Tentando atribuir ao objeto pessoa inicial esse novo objeto
+pessoa = novaPessoa; // retorna erro
+```
+
+### Para saber mais: tipos de variáveis e objetos
+
+Para saber mais sobre tipos de variáveis consultar o artigo [Entenda a diferença entre var, let e const no JavaScript](https://www.alura.com.br/artigos/entenda-diferenca-entre-var-let-e-const-no-javascript)
