@@ -17,6 +17,8 @@
   - [Para saber mais: objeto literal e referência](#para-saber-mais-objeto-literal-e-referência)
   - [for...in](#forin)
   - [Métodos de objetos](#métodos-de-objetos)
+    - [Sintaxe de espalhamento](#sintaxe-de-espalhamento)
+    - [Para saber mais: spread operator](#para-saber-mais-spread-operator)
 
 ## O que são objetos?
 
@@ -415,3 +417,158 @@ if(!chavesDoObjeto.includes("enderecos")){ // Fazendo verificação
     console.error("Erro. É necessário ter um endereço cadastrado.") // Printando mensagem de erro caso o cliente não possua endereço
 }
 ```
+
+### Sintaxe de espalhamento
+
+Podemos usar a sintaxe de espalhamento para distribuir valores de objetos dentro de uma função ou etc.
+
+Isso é útil em situações onde precisamos de todos os dados de um objeto de forma separada, sem que sejam tratados como objetos, mas o objeto possui muitos atributos para serem passados manualmente.
+
+Abaixo um exemplo:
+
+```javascript
+// Criando objeto cliente
+const cliente = {
+    nome: "Joao",
+    idade: 24,
+    email: "joao@firma.com",
+    telefone: ["1155555550", "1144444440"],
+};
+cliente.enderecos = [
+    {
+        rua: "R. Joseph Climber",
+        numero: 1337,
+        apartamento: true,
+        complemento: "ap 934",
+    },
+];
+
+// Criando função para ligar para os 2 números contidos no array
+function ligaParaCliente(telefoneComercial, telefoneResidencial) {
+    console.log(`Ligando para ${telefoneComercial}`);
+    console.log(`Ligando para ${telefoneResidencial}`);
+}
+
+// Usando o expalhamento para não precisar informar cada posição do array contendo os números
+ligaParaCliente(...cliente.telefone);
+
+// Criando variável para simular como seria passar cada campo do objeto cliente
+const dadosParaEntrega = {
+    destinatario: cliente.nome, // passando nome do cliente
+    rua: cliente.enderecos[0].rua, // passando rua que está dentro do objeto que está no array de endereços na posição 0
+    numero: cliente.enderecos[0].numero, // passando numero que está dentro do objeto que está no array de endereços na posição 0
+    complemento: cliente.enderecos[0].complemento, // passando complemento que está dentro do objeto que está no array de endereços na posição 0
+}
+
+// Usando a mesma função do espalhamento para espalhar todos os dados contidos dentro do OBJETO endereço que está no do ARRAY de endereços, na posição 0.
+const dadosParaEntrega2 = {
+    destinatario: cliente.nome,
+    ...cliente.enderecos[0],
+}
+
+// Printando dados para entrega 1
+console.log(dadosParaEntrega);
+// Printando dados para entrega 2
+console.log(dadosParaEntrega2);
+```
+
+### Para saber mais: spread operator
+
+Importante se atentar a certos detalhes no uso do `spread operator`.
+
+> O espalhamento de objetos que possuam propriedades com o mesmo nome serão incrementados um encima do outro, ou seja, `se tentarmos criar um novo objeto pessoa onde passamos 2 pessoas diferentes que possuam o mesmo atributo, as informações do último objeto é que permanecerão`.
+>
+> Apesar de prático, o uso da sintaxe de espalhamento pode gerar bastante processamento, então devemos usar com cuidado, especialmente em `loops` e `funções recursivas`.
+
+```javascript
+// Criando objeto ficha guerreiro
+const fichaGuerreiro = {
+    nome: "Aragorn",
+    classe: "guerreiro"
+}
+// Criando equipamento guerreiro
+const equipoGuerreiro = {
+    espada: "Andúril",
+    capa: "capa élfica +2"
+}
+
+// Exemplo de criação de objeto literal
+const guerreiro1 = { fichaGuerreiro, equipoGuerreiro }
+console.log(guerreiro1)
+
+// Exemplo de criação com spread operator
+const guerreiro2 = { ...fichaGuerreiro, ...equipoGuerreiro }
+console.log(guerreiro2)
+
+// ------------------------
+
+// Exemplo onde os objetos possuam chaves / propriedades com o mesmo nome
+
+// criando objetos
+const mago = {
+    nome: "Gandalf",
+    classe: "mago"
+}
+const guerreiro = {
+    nome: "Aragorn",
+    classe: "guerreiro"
+}
+
+const ranger = {
+    nome: "Legolas",
+    classe: "ranger"
+}
+
+// Passando todos as classes criadas
+const personagens = { ...mago, ...guerreiro, ...ranger }
+console.log(personagens) // O resultado será o último valor passado, pois o JS sobrescreve a cada ocorrência
+
+```
+
+Para mais detalhes desse funcionamento acessar [ES6 - Desestruturando objetos](https://www.alura.com.br/artigos/es6-desestruturando-objetos)
+
+O JS também permite desestruturar objetos para poupar código na hora de trabalhar com atributos individuais.
+
+Abaixo um código de exemplo:
+
+```javascript
+// Criando objeto fornecedor
+const fornecedor = {
+    razaosocial: "Alura - Cursos Online",
+    cnpj: "00.000.000/0000-00",
+    email: "suporte@alura.com.br"
+};
+
+// Criando variável a partir da propriedade razaosocial
+const { razaosocial } = fornecedor;
+console.log(razaosocial);
+
+// --------------------------------------
+
+// E se o objeto vier mal estruturado, sem nomes de atributos aparentes?
+
+//Exemplo de objeto
+
+const json = {
+    a: "Matheus",
+    b: "23",
+    c: "matheushcastiglioni@gmail.com"
+};
+
+// Criando variáveis para cada um dos atributos do objeto
+const { a: nome, b: idade, c: email } = json;
+console.log(nome);
+console.log(idade);
+console.log(email);
+
+// O código acima seria o mesmo que fazer
+
+const nome1 = json.a;
+const idade1 = json.b;
+const email1 = json.c;
+console.log(nome);
+console.log(idade);
+console.log(email);
+```
+
+Para saber como usar `destructuring` com arrays siga o video [Destructuring em JavaScript #AluraMais](https://www.youtube.com/watch?v=f8a-qwKC5yk)

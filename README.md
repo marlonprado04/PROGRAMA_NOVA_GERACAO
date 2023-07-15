@@ -12,13 +12,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [BASE_variaveis.html](./02_LOGICA_DE_PROGRAMACAO/BASE_variaveis.html)
   - [FOR_estrelas.html](./02_LOGICA_DE_PROGRAMACAO/FOR_estrelas.html)
   - [FOR_tabuada.html](./02_LOGICA_DE_PROGRAMACAO/FOR_tabuada.html)
-  - [FUNCTION_calcula_imc.html](./02_LOGICA_DE_PROGRAMACAO/FUNCTION_calcula_imc.html)
-  - [FUNCTION_jogo_adivinhacao.html](./02_LOGICA_DE_PROGRAMACAO/FUNCTION_jogo_adivinhacao.html)
-  - [FUNCTION_passando_parametro.html](./02_LOGICA_DE_PROGRAMACAO/FUNCTION_passando_parametro.html)
-  - [IF_futebol.html](./02_LOGICA_DE_PROGRAMACAO/IF_futebol.html)
-  - [WHILE_ano_copa.html](./02_LOGICA_DE_PROGRAMACAO/WHILE_ano_copa.html)
-  - [WHILE_media_idades.html](./02_LOGICA_DE_PROGRAMACAO/WHILE_media_idades.html)
-  - [ZZZ_pagina_para_exercicios.html](./02_LOGICA_DE_PROGRAMACAO/ZZZ_pagina_para_exercicios.html)
+  - ...
 
 - [03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/README.md)
   - [ARROW_FUNCTION.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/ARROW_FUNCTION.js)
@@ -28,15 +22,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [CONVERSAO_DE_TIPOS.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/CONVERSAO_DE_TIPOS.js)
   - [ERROS.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/ERROS.js)
   - [EXPRESSOES_de_funcao.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/EXPRESSOES_de_funcao.js)
-  - [FUNCOES.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/FUNCOES.js)
-  - [NUMBER_tipos_primitivos.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/NUMBER_tipos_primitivos.js)
-  - [PARAMETROS_de_funcao.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/PARAMETROS_de_funcao.js)
-  - [STRING_tipos_primitivos.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/STRING_tipos_primitivos.js)
-  - [TEMPLATE_STRINGS.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/TEMPLATE_STRINGS.js)
-  - [TERNARIO.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/TERNARIO.js)
-  - [TRUTHY_E_FALSY.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/TRUTHY_E_FALSY.js)
-  - [VARIAVEIS_tipos.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/VARIAVEIS_tipos.js)
-  - [zzzArquivo_para_exercicios.js](./03_JAVASCRIPT_TIPOS_VARIAVEIS_E_FUNCOES/zzzArquivo_para_exercicios.js)
+  - ...
 
 - [04_JAVASCRIPT_ARRAYS](./04_JAVASCRIPT_ARRAYS/README.md)
   - [00_exercicios.js](./04_JAVASCRIPT_ARRAYS/00_exercicios.js)
@@ -45,11 +31,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [03_POP_deletando_elementos.js](./04_JAVASCRIPT_ARRAYS/03_POP_deletando_elementos.js)
   - [04_SLICE_dividindo_array.js](./04_JAVASCRIPT_ARRAYS/04_SLICE_dividindo_array.js)
   - [05_SPLICE_atualizando_lista.js](./04_JAVASCRIPT_ARRAYS/05_SPLICE_atualizando_lista.js)
-  - [06_CONCAT_juntando_salas.js](./04_JAVASCRIPT_ARRAYS/06_CONCAT_juntando_salas.js)
-  - [07_lista_duas_dimensoes.js](./04_JAVASCRIPT_ARRAYS/07_lista_duas_dimensoes.js)
-  - [08_INCLUDES_e_INDEXOF_procurando_na_lista.js](./04_JAVASCRIPT_ARRAYS/08_INCLUDES_e_INDEXOF_procurando_na_lista.js)
-  - [09_DESTRUCTURING_procurando_na_lista.js](./04_JAVASCRIPT_ARRAYS/09_DESTRUCTURING_procurando_na_lista.js)
-  
+  - ...
 
 - [05_JAVASCRIPT_OBJETOS](./05_JAVASCRIPT_OBJETOS/README.md)
   - [00_exercicios.js](./05_JAVASCRIPT_OBJETOS/00_exercicios.js)
@@ -58,13 +40,7 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [03_ACESSO_VIA_COLCHETES.js](./05_JAVASCRIPT_OBJETOS/03_ACESSO_VIA_COLCHETES.js)
   - [04_ALTERAR_E_ADICIONAR.js](./05_JAVASCRIPT_OBJETOS/04_ALTERAR_E_ADICIONAR.js)
   - [05_DELETE.js](./05_JAVASCRIPT_OBJETOS/05_DELETE.js)
-  - [06_ARRAY_tipos.js](./05_JAVASCRIPT_OBJETOS/06_ARRAY_tipos.js)
-  - [07_ANINHADOS.js](./05_JAVASCRIPT_OBJETOS/07_ANINHADOS.js)
-  - [08_LISTA_DE_OBJETOS.js](./05_JAVASCRIPT_OBJETOS/08_LISTA_DE_OBJETOS.js)
-  - [09_FUNCOES.js](./05_JAVASCRIPT_OBJETOS/09_FUNCOES.js)
-  - [10_OBJETO_LITERAL_E_REFERENCIA.js](./05_JAVASCRIPT_OBJETOS/10_OBJETO_LITERAL_E_REFERENCIA.js)
-  - [11_FOR_IN_repeticao.js](./05_JAVASCRIPT_OBJETOS/11_FOR_IN_repeticao.js)
-  - [12_METODOS_de_objeto.js](./05_JAVASCRIPT_OBJETOS/12_METODOS_de_objeto.js)
-  
+  - ...
+
 - [LICENSE](./LICENSE)
 - [Planner de estudos (Programação).pdf](./Planner%20de%20estudos%20(Programação).pdf)
