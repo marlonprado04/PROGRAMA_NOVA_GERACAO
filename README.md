@@ -25,7 +25,6 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - ...
 
 - [04_JAVASCRIPT_ARRAYS](./04_JAVASCRIPT_ARRAYS/README.md)
-  - [00_exercicios.js](./04_JAVASCRIPT_ARRAYS/00_exercicios.js)
   - [01_media.js](./04_JAVASCRIPT_ARRAYS/01_media.js)
   - [02_PUSH_adicionando_elementos.js](./04_JAVASCRIPT_ARRAYS/02_PUSH_adicionando_elementos.js)
   - [03_POP_deletando_elementos.js](./04_JAVASCRIPT_ARRAYS/03_POP_deletando_elementos.js)
@@ -34,7 +33,6 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - ...
 
 - [05_JAVASCRIPT_OBJETOS](./05_JAVASCRIPT_OBJETOS/README.md)
-  - [00_exercicios.js](./05_JAVASCRIPT_OBJETOS/00_exercicios.js)
   - [01_listaCPFs.js](./05_JAVASCRIPT_OBJETOS/01_listaCPFs.js)
   - [02_ACESSO_VIA_PONTO.js](./05_JAVASCRIPT_OBJETOS/02_ACESSO_VIA_PONTO.js)
   - [03_ACESSO_VIA_COLCHETES.js](./05_JAVASCRIPT_OBJETOS/03_ACESSO_VIA_COLCHETES.js)
