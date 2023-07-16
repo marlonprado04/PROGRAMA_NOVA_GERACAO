@@ -20,6 +20,7 @@
     - [Sintaxe de espalhamento](#sintaxe-de-espalhamento)
     - [Para saber mais: spread operator](#para-saber-mais-spread-operator)
     - [O formato JSON](#o-formato-json)
+    - [Lendo um arquivo JSON](#lendo-um-arquivo-json)
 
 ## O que são objetos?
 
@@ -575,3 +576,41 @@ console.log(email);
 Para saber como usar `destructuring` com arrays siga o video [Destructuring em JavaScript #AluraMais](https://www.youtube.com/watch?v=f8a-qwKC5yk)
 
 ### O formato JSON
+
+O formato JSON (JavaScript Object Notation) é um formato que permite estrtuturar / escrever objetos JavaScript.
+
+Arquivos JSON possuem uma certa similaridade com a construção de objetos em JS, mas não são 100% idênticos na estrutura.
+
+Abaixo uma imagem de exemplo:
+
+![Comparação de objeto cliente escrito em JSON VS JavaScript](json_vs_javascript.png)
+
+Lista de propriedades de um JSON:
+
+- Não temos variáveis;
+- Chaves das propriedades possuem "" para identificar;
+- Arrays e objetos aninhados podem existir;
+- Proibito ter `trailling comma` (vírguka no último item de um bloco)
+
+- Funções não são permitidas;
+- Comentários não são permitidos;
+- Suporta apenas tipos primitivos (string, number, boolean, null) além de arrays e objetos aninhados
+
+![Lista propriedades de um JSON em relação ao JavaScript](propriedades_json.png)
+
+### Lendo um arquivo JSON
+
+Para ler um arquivo JSON no JS podemos criar uma variável e passar para ela a função `require` nativa do JS, onde só precisamos passar o caminho do arquivo `.JSON` como argumento.
+
+Abaixo um exemplo:
+
+```javascript
+// Criando variável para armazenar os dados do JSON
+const dados = require("./exemplo.json");
+
+// Printando conteúdo da variável dados
+console.log(dados);
+
+// Printando tipo da variável dados
+console.log(typeof dados);
+```
