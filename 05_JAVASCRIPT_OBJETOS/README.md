@@ -21,6 +21,8 @@
     - [Para saber mais: spread operator](#para-saber-mais-spread-operator)
     - [O formato JSON](#o-formato-json)
     - [Lendo um arquivo JSON](#lendo-um-arquivo-json)
+    - [Operações com um JSON](#operações-com-um-json)
+    - [Para saber mais: copiando objetos](#para-saber-mais-copiando-objetos)
 
 ## O que são objetos?
 
@@ -614,3 +616,49 @@ console.log(dados);
 // Printando tipo da variável dados
 console.log(typeof dados);
 ```
+
+### Operações com um JSON
+
+Dentro do JS existe um objeto global no Node que permite trabalhar com arquivos JSON.
+
+Dois exemplos de funções que podem ser usadas são a `stringfy` e a `parse`, onde elas funcionam respectivamente para tornar um objeto em `string` e outra para "transformar" (parsear) uma variável `string para objeto`.
+
+Abaixo um exemplo de código:
+
+```javascript
+// Criando variável para armazenar os dados do JSON
+const dados = require("./exemplo.json");
+
+// Printando conteúdo da variável dados
+console.log(dados);
+
+// Printando tipo da variável dados
+console.log(typeof dados);
+
+// -------------------------------------
+
+// Usando a função stringify do objeto global JSON para transformar dados em string
+const clienteEmString = JSON.stringify(dados);
+
+// Printando nova variavel para exemplificar
+console.log(clienteEmString);
+
+// Printando tipo da nova variável
+console.log(typeof clienteEmString);
+
+// Como a nova variável é uma string, ela não permite operações de objetos, como abaixo
+console.log(clienteEmString.nome); // retorna undefined
+
+// --------------------------------------
+
+// Para transformar a nova variável em objeto novamente podemos usar outra função do JSON
+const objetoCliente = JSON.parse(clienteEmString);
+
+// Printando informação da variavel objetoCliente 
+console.log(objetoCliente);
+
+// Printando tipo da variável objetoCliente
+console.log(typeof objetoCliente);
+```
+
+### Para saber mais: copiando objetos
