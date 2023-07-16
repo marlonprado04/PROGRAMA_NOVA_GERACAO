@@ -19,6 +19,7 @@
   - [Métodos de objetos](#métodos-de-objetos)
     - [Sintaxe de espalhamento](#sintaxe-de-espalhamento)
     - [Para saber mais: spread operator](#para-saber-mais-spread-operator)
+    - [O formato JSON](#o-formato-json)
 
 ## O que são objetos?
 
@@ -572,3 +573,5 @@ console.log(email);
 ```
 
 Para saber como usar `destructuring` com arrays siga o video [Destructuring em JavaScript #AluraMais](https://www.youtube.com/watch?v=f8a-qwKC5yk)
+
+### O formato JSON
