@@ -13,6 +13,9 @@ O curso é focado em FrontEnd.
   - [Consolidando o seu conhecimento](#consolidando-o-seu-conhecimento)
   - [Eventos com JavaScript](#eventos-com-javascript)
   - [Desafio 02 - Consolidando o seu conhecimento](#desafio-02---consolidando-o-seu-conhecimento)
+  - [Alterando um item na página](#alterando-um-item-na-página)
+  - [Reaproveitando código](#reaproveitando-código)
+  - [Alterando vários componentes](#alterando-vários-componentes)
 
 ## Manipular um elemento
 
@@ -76,4 +79,95 @@ const botao = document.querySelector("#calcular");
 // Adicionando um evento ao clicar no botão
 // Imprimindo mensagem de "fui clicado" no console
 botao.addEventListener("click", () =>{return console.log("fui clicado")});
+```
+
+## Alterando um item na página
+
+Para alterar um elemento na página podemos usar os conhecimentos aprendidos até então.
+
+Abaixo o código `main.js` alterado dentro da pasta `projeto_robo`, que será o projeto principal:
+
+```javascript
+// Criando variáveis de acesso 
+const subtrair = document.querySelector("#subtrair");
+const somar = document.querySelector("#somar");
+const braco = document.querySelector("#braco");
+
+// Criando evento para somar os pontos do braço ao clicar
+somar.addEventListener("click", (evento) => {
+    braco.value = parseInt(braco.value) + 1;
+});
+
+// Criando evento para subtrair os pontos do braço ao clicar
+subtrair.addEventListener("click", (evento) => {
+    braco.value = parseInt(braco.value) - 1;
+});
+
+```
+
+## Reaproveitando código
+
+Para reaproveitar o código do projeto podemos criar uma função que recebe como parâmetro o tipo de operação `somar` ou `subtrair` e a partir disso realizar a operação necessária.
+
+Nó código abaixo foi realizada essa alteração e também foi criada uma nova variável para iniciar o tratamento de dados a partir da seleção de `classes` dos elementos, ou seja, trabalharemos com `array` (já que classes pertencem à varios elementos).
+
+O código:
+
+```javascript
+// Criando variáveis de acesso individual (por id)
+const subtrair = document.querySelector("#subtrair");
+const somar = document.querySelector("#somar");
+const braco = document.querySelector("#braco");
+
+// Criando variável para acessar todos botões de controle (array)
+const controle = document.querySelectorAll(".controle-ajuste");
+
+// Criando evento para somar os pontos do braço ao clicar a partir da função criada
+somar.addEventListener("click", () => manipulaDados("somar"));
+
+// Criando evento para subtrair os pontos do braço ao clicar a partir da função criada
+subtrair.addEventListener("click", () => manipulaDados("subtrair"));
+
+// Declarando função que realiz a operação de soma ou subtração de pontos de acordo com o parâmetro passado
+function manipulaDados(operacao) {
+    if (operacao === "subtrair") {
+        braco.value = parseInt(braco.value) - 1;
+    } else {
+        braco.value = parseInt(braco.value) + 1;
+    }
+}
+```
+
+## Alterando vários componentes
+
+Para dar início à refatoração do código e deixá-lo muito mais dinâmico podemos utilizar a classe ao invés do id no `querySelector`.
+
+Dessa forma, o JS retorna um `array` que pode ser trabalhado com o método `forEach`, por exemplo. A partir desse método podemos passar o `elemento` que está sendo clicado como parâmetro da função callback e para cada elemento clicado realizar a função `manipulaDados` para realizar a manipulação dos dados, onde ela recebe como parâmetro o `target` do evento realizado ao receber um clique de botão.
+
+Dessa forma, toda vez que qualquer botão do HTML for clicado os braços terão 1 ponto adicionado ou removido.
+
+Abaixo o código refatorado:
+
+```javascript
+// Criando variáveis de acesso individual (por id)
+const subtrair = document.querySelector("#subtrair");
+const somar = document.querySelector("#somar");
+const braco = document.querySelector("#braco");
+
+// Criando variável para acessar todos botões de controle (array)
+const controle = document.querySelectorAll(".controle-ajuste");
+
+// Realizando a operação forEach para que a cada clique no elemento da classe .controle-ajuste a função manipulaDados seja chamada e receba o texto do target do evento clicado
+controle.forEach((elemento) => {
+    elemento.addEventListener("click", (evento) => { manipulaDados(evento.target.textContent) });
+});
+
+// Declarando função que realiz a operação de soma ou subtração de pontos de acordo com o parâmetro passado (+ ou -)
+function manipulaDados(operacao) {
+    if (operacao === "-") {
+        braco.value = parseInt(braco.value) - 1;
+    } else {
+        braco.value = parseInt(braco.value) + 1;
+    }
+}
 ```
