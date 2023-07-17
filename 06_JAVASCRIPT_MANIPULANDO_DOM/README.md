@@ -20,6 +20,7 @@ O curso é focado em FrontEnd.
   - [Alterando o elemento](#alterando-o-elemento)
   - [Código à prova de falhas](#código-à-prova-de-falhas)
   - [Para saber mais: data-attribute](#para-saber-mais-data-attribute)
+  - [Desafio 04 - Consolidando o seu conhecimento](#desafio-04---consolidando-o-seu-conhecimento)
 
 ## Manipular um elemento
 
@@ -313,3 +314,7 @@ function mudaCores(elementos){
     var tipoElemento = elementos.getAttribute("[data-tipo]");
   }
 ```
+
+## Desafio 04 - Consolidando o seu conhecimento
+
+Apenas com teoria não é possível aprender código, então, vamos exercitar a utilização do data-attribute em funções neste desafio. Temos uma lista de cores disponibilizada no código abaixo. Você irá criar um botão que, ao ser clicado, faz aparecer esta lista, e também criará um segundo botão que, ao ser clicado, faz com que a lista de cores volte a sumir.
