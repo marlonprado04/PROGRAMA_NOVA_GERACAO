@@ -23,6 +23,10 @@
     - [Lendo um arquivo JSON](#lendo-um-arquivo-json)
     - [Operações com um JSON](#operações-com-um-json)
     - [Para saber mais: copiando objetos](#para-saber-mais-copiando-objetos)
+    - [Encontrando um objeto](#encontrando-um-objeto)
+    - [Filtando objetos](#filtando-objetos)
+    - [Ordenando objetos](#ordenando-objetos)
+    - [Ordenando ao contrário](#ordenando-ao-contrário)
 
 ## O que são objetos?
 
@@ -662,3 +666,148 @@ console.log(typeof objetoCliente);
 ```
 
 ### Para saber mais: copiando objetos
+
+Para saber mais sobre o funcionamento do JS se tratando de administração de memória, consultar [Vamos implementar uma função de clonagem profunda com imutabilidade em JS?](https://www.alura.com.br/artigos/implementar-funcao-clonagem-profunda-imutabilidade-js)
+
+### Encontrando um objeto
+
+Para fazer uma consulta dentro de um objeto podemos criar uma função onde passamos como parâmetro os atributos necessários, por exemplo, o `objeto`, a `chave` e o `valor` a ser consultado.
+
+Além disso, é possível realizar essa busca com o método `find` (próprio de objetos).
+
+No exemplo abaixo foi criada uma função que permite realizar busca recursiva dentro de arrays que fazem partes de objetos, por exemplo, no caso de um cliente ter 2 telefones o método `includes` ao invés de uma comparação exata com `===`, o código funciona perfeitamente.
+
+Código:
+
+```javascript
+// Criando variável e passando arquivo JSON com dados de clientes
+const clientes = require("./clientes.json");
+
+// Criando função para consultar cliente
+// Passando como parâmetro: a lista onde será buscado, a chave e o valor a ser pesquisado
+function encontrar(lista, chave, valor){ 
+
+    // Retornando valor a partir de uma pesquisa dentro do array (método find) e passando uma função callback para consultar o item específico a partir da chave consultada, com o método includes (pŕoprio de array e strings)
+    return lista.find((item) => item[chave].includes(valor));
+}
+
+// Criando variáveis para testar consulta da lista de clientes
+const encontrado = encontrar(clientes, "nome", "Kirby");
+const encontrado2 = encontrar(clientes, "telefone", "1918820860");
+
+// Printando resultados
+console.log(encontrado);
+console.log(encontrado2);
+```
+
+### Filtando objetos
+
+Para filtar objetos podemos usar o método `filter` que é próprio de objetos e serve para realizar filtros. Ele recebe uma função callback como parâmetro.
+
+No código abaixo usamos uma função callback que verifica se o campo apartamento é `true` e ao mesmo tempo se o cliente NÂO (!) possui complemento informado. Para checar se o campo de complemento está preenchido usamos o método de objeto `hasOwnProperty`.
+
+Abaixo o código de exemplo:
+
+```javascript
+// Criando variável com objeto
+const clientes = require("./clientes.json")
+
+// Criando função para consultar clientes que possuem apartamento, mas não possuem complemento
+function filtrarApartamentoSemComplemento(clientes) {
+    // Retornando o resultado da função "filter" (própria de objetos)
+    return clientes.filter((cliente) => {
+        // Retornando resultado da função callback que filtra clientes que possuem apartamento como true e que NÂO (!) possuem a propriedade "complemento" preenchida
+        return (cliente.endereco.apartamento && !cliente.endereco.hasOwnProperty("complemento"));
+    });
+}
+
+// Passando resultado do filtro para uma variável
+const filtrados = filtrarApartamentoSemComplemento(clientes);
+
+// Printando resultado
+console.log(filtrados);
+```
+
+### Ordenando objetos
+
+Para ordenar objetos podemos usar o método `sort` que recebe como parâmetro uma função callback.
+
+Abaixo um exemplo de uso:
+
+```javascript
+// Passando JSON para variável
+const clientes = require("./clientes.json");
+
+// Criando função para ordenar lista a partir da propriedade passada
+function ordenar(lista, propriedade) {
+
+    // Criando variável para armazenar o resultado
+    // Passando para variável um resultado do método sort (próprio de arrays), que recebe como parâmetro uma função callback que exige retorno 0, -1 ou 1
+    const resultado = lista.sort((a, b) => {
+        
+        // Comparando elementos a<b, retorna -1 se verdadeiro 
+        if (a[propriedade] < b[propriedade]) {
+            return -1;
+        }
+        // Comparando elementos a<b, retorna 1 se for verdadeiro
+        if (a[propriedade] > b[propriedade]) {
+            return 1;
+        }
+        // Retorna 0 se os elementos forem iguais
+        return 0;
+    });
+
+    // Retornando variável resultado
+    return resultado;
+}
+
+// Passando retorno da função ordenar para uma variável
+const ordenadoNome = ordenar(clientes, "nome");
+
+// Printando resultado da variável criada
+console.log(ordenadoNome);
+```
+
+### Ordenando ao contrário
+
+Para realizar a ordenação inversa podemos usar o método `reverse` que é próprio de arrays e serve para isso.
+
+Abaixo um código de exemplo:
+
+```javascript
+// Passando JSON para variável
+const clientes = require("./clientes.json");
+
+// Criando função para ordenar lista a partir da propriedade passada
+function ordenar(lista, propriedade) {
+
+    // Criando variável para armazenar o resultado
+    // Passando para variável um resultado do método sort (próprio de arrays), que recebe como parâmetro uma função callback que exige retorno 0, -1 ou 1
+    const resultado = lista.sort((a, b) => {
+
+        // Comparando elementos a<b, retorna -1 se verdadeiro 
+        if (a[propriedade] < b[propriedade]) {
+            return -1;
+        }
+        // Comparando elementos a<b, retorna 1 se for verdadeiro
+        if (a[propriedade] > b[propriedade]) {
+            return 1;
+        }
+        // Retorna 0 se os elementos forem iguais
+        return 0;
+    });
+
+    // Retornando variável resultado
+    return resultado;
+}
+
+// Passando retorno da função ordenar para uma variável
+const ordenadoNome = ordenar(clientes, "nome");
+
+// Realizando ordenação inversa com o método reverse
+const ordenadoNomeInverso = ordenadoNome.reverse();
+
+// Printando resultado das variáveis
+console.log(ordenadoNome);
+console.log(ordenadoNomeInverso);
+```
