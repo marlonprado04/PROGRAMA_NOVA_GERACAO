@@ -39,6 +39,13 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [04_ALTERAR_E_ADICIONAR.js](./05_JAVASCRIPT_OBJETOS/04_ALTERAR_E_ADICIONAR.js)
   - [05_DELETE.js](./05_JAVASCRIPT_OBJETOS/05_DELETE.js)
   - ...
+  
+- [06_JAVASCRIPT_MANIPULANDO_DOM](./06_JAVASCRIPT_MANIPULANDO_DOM/README.md)
+  - [projeto_robo](./06_JAVASCRIPT_MANIPULANDO_DOM/projeto_robo)
+  - [01_desafio](./06_JAVASCRIPT_MANIPULANDO_DOM/01_desafio)
+  - [02_desafio](./06_JAVASCRIPT_MANIPULANDO_DOM/02_desafio)
+  - [03_desafio](./06_JAVASCRIPT_MANIPULANDO_DOM/03_desafio)
+  - ...
 
 - [LICENSE](./LICENSE)
 - [Planner de estudos (Programação).pdf](./Planner%20de%20estudos%20(Programação).pdf)
