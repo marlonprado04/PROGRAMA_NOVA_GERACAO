@@ -1,21 +1,21 @@
-// Criando variável para acessar todos botões de controle via data attributes
+// Criando variável para acessar os botões de controle via data attibutes
 const controle = document.querySelectorAll("[data-controle]");
 
-// Realizando a operação forEach para a cada clique no elemento da classe .controle-ajuste, a função manipulaDados seja chamada e receba o texto do target do evento clicado
-// Incluí passagem como parâmetro a classe da tag pai onde o botão está sendo clicado
+// Mapeando todos os botões de controle via forEach e adicionando evento de verificação de clique para cada um deles
 controle.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
-        // Passando o texto de conteúdo dentro da tag via data attibutes + a tag pai onde ela se encontra via parentNode
+        // Chamando método manipulaDados para cada evento de clique nos botões de controle
+        // Método recebe como parâmetro o valor do data attributes + a tag pai do evento clicado
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
     });
 });
 
-// Declarando função que realiz a operação de soma ou subtração de pontos de acordo com o parâmetro passado (+ ou -)
+// Declarando função que realiza adição ou subtração nos pontos(controle) de acordo com o botão clicado(operação)
 function manipulaDados(operacao, controle) {
-    // Criando variável genérica para trabalhar com a peças, onde ela recebe
-    // a tag irmâ da operação como parâmetro ao filtrar o atributo via data attibutes
+    // Criando variável para trabalhar dinamicamente com a peça de acordo com o controle passado
     const peca = controle.querySelector("[data-contador]");
 
+    // Verificando se operação do data attributo é soma ou subtração 
     if (operacao === "-") {
         peca.value = parseInt(peca.value) - 1;
     } else {
