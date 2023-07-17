@@ -19,6 +19,7 @@ O curso é focado em FrontEnd.
   - [Desafio 03 - Consolidando o seu conhecimento](#desafio-03---consolidando-o-seu-conhecimento)
   - [Alterando o elemento](#alterando-o-elemento)
   - [Código à prova de falhas](#código-à-prova-de-falhas)
+  - [Para saber mais: data-attribute](#para-saber-mais-data-attribute)
 
 ## Manipular um elemento
 
@@ -283,4 +284,32 @@ function manipulaDados(operacao, controle) {
         peca.value = parseInt(peca.value) + 1;
     }
 }
+```
+
+## Para saber mais: data-attribute
+
+Data-attributes são utilizados para guardar valores em elementos HTML. Esses valores podem ser manipulados através do JavaScript. Também é possível estilizar elementos HTML com CSS referenciando o seu data-attribute. Essa funcionalidade é bem recente no mundo do desenvolvimento, sendo lançada na última versão do HTML(HTML5).
+
+Data-attributes não devem ser utilizados para dados visíveis, pois tecnologias de acessibilidade podem não identificar seus valores.
+
+Abaixo um exemplo de código HTML:
+
+```html
+  <h1>Lista de tintas:</h1>
+  <ul id="lista">
+    <li data-cor="laranja" data-tipo="tinta-exterior" onclick="mudaCores(this)" class="item">Tinta laranja</li>
+    <li data-cor="vermelho" data-tipo="tinta-interior"  onclick="mudaCores(this)" class="item">Tinta vermelha</li>
+    <li data-cor="branco" data-tipo="tinta-interior"  onclick="mudaCores(this)" class="item">Tinta branca</li>
+    <li data-cor="amarelo" data-tipo="tinta-exterior"  onclick="mudaCores(this)" class="item">Tinta amarelo</li>
+    <li data-cor="rosa" data-tipo="tinta-exterior"  onclick="mudaCores(this)" class="item">Tinta rosa</li>
+  </ul>
+```
+
+Um exemplo de código em JavaScript demonstrando como acessar esses dados:
+
+```javascript
+function mudaCores(elementos){
+    var cores = elementos.getAttribute("[data-cor]");
+    var tipoElemento = elementos.getAttribute("[data-tipo]");
+  }
 ```
