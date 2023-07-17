@@ -23,6 +23,7 @@ O curso é focado em FrontEnd.
   - [Desafio 04 - Consolidando o seu conhecimento](#desafio-04---consolidando-o-seu-conhecimento)
   - [Interagindo com objetos](#interagindo-com-objetos)
   - [Cálculos dinâmicos](#cálculos-dinâmicos)
+  - [Compartilhando com o mundo](#compartilhando-com-o-mundo)
 
 ## Manipular um elemento
 
@@ -408,3 +409,8 @@ const pecas = {
     }
 }
 ```
+
+## Compartilhando com o mundo
+
+Para publicar o projeto na internet podemos usar o site [Vercel](https://vercel.com/).
+
