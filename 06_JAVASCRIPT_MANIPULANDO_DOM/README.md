@@ -10,12 +10,13 @@ O curso é focado em FrontEnd.
   - [Índice](#índice)
   - [Manipular um elemento](#manipular-um-elemento)
   - [Entendendo o DOM](#entendendo-o-dom)
-  - [Consolidando o seu conhecimento](#consolidando-o-seu-conhecimento)
+  - [Desafio 01 - Consolidando o seu conhecimento](#desafio-01---consolidando-o-seu-conhecimento)
   - [Eventos com JavaScript](#eventos-com-javascript)
   - [Desafio 02 - Consolidando o seu conhecimento](#desafio-02---consolidando-o-seu-conhecimento)
   - [Alterando um item na página](#alterando-um-item-na-página)
   - [Reaproveitando código](#reaproveitando-código)
   - [Alterando vários componentes](#alterando-vários-componentes)
+  - [Desafio 03 - Consolidand o seu conhecimento](#desafio-03---consolidand-o-seu-conhecimento)
 
 ## Manipular um elemento
 
@@ -27,7 +28,7 @@ O DOM (Document Object Model) o por onde o JS percorre para interagir com nosso 
 
 Para verificar isso podemos abrir o console do navegador em um site qualquer e digitar `document`. O que o console vai retornar é toda a estrutura em HTML do site em questão.
 
-## Consolidando o seu conhecimento
+## Desafio 01 - Consolidando o seu conhecimento
 
 Para testar os conhecimentos passados incial, criei uma pasta com arquivos necessários chamada `01_desafio`.
 
@@ -170,4 +171,23 @@ function manipulaDados(operacao) {
         braco.value = parseInt(braco.value) + 1;
     }
 }
+```
+
+## Desafio 03 - Consolidand o seu conhecimento
+
+Chegou a hora de praticar! No desafio desta aula, temos uma lista de cores que serão utilizadas para pintar uma loja, porém o cliente informou que não deseja mais pintar com a cor "vermelha". Retire esta cor da lista utilizando um método do JavaScript. Utilize a lista abaixo como base:
+
+`var lista = ["Laranja", "Vermelho", "Branco", "Amarelo", "Rosa"];`
+
+Para esse desafio a resposta é:
+
+```javascript
+// Criando array
+var lista = ["Laranja", "Vermelho", "Branco", "Amarelo", "Rosa"]; 
+
+// Removendo a cor vermelha do array
+lista.splice(lista.indexOf("Vermelho"), 1);
+
+// Printando array atualizado
+console.log(lista);
 ```
