@@ -17,16 +17,16 @@
   - [Para saber mais: objeto literal e referência](#para-saber-mais-objeto-literal-e-referência)
   - [for...in](#forin)
   - [Métodos de objetos](#métodos-de-objetos)
-    - [Sintaxe de espalhamento](#sintaxe-de-espalhamento)
-    - [Para saber mais: spread operator](#para-saber-mais-spread-operator)
-    - [O formato JSON](#o-formato-json)
-    - [Lendo um arquivo JSON](#lendo-um-arquivo-json)
-    - [Operações com um JSON](#operações-com-um-json)
-    - [Para saber mais: copiando objetos](#para-saber-mais-copiando-objetos)
-    - [Encontrando um objeto](#encontrando-um-objeto)
-    - [Filtando objetos](#filtando-objetos)
-    - [Ordenando objetos](#ordenando-objetos)
-    - [Ordenando ao contrário](#ordenando-ao-contrário)
+  - [Sintaxe de espalhamento](#sintaxe-de-espalhamento)
+  - [Para saber mais: spread operator](#para-saber-mais-spread-operator)
+  - [O formato JSON](#o-formato-json)
+  - [Lendo um arquivo JSON](#lendo-um-arquivo-json)
+  - [Operações com um JSON](#operações-com-um-json)
+  - [Para saber mais: copiando objetos](#para-saber-mais-copiando-objetos)
+  - [Encontrando um objeto](#encontrando-um-objeto)
+  - [Filtando objetos](#filtando-objetos)
+  - [Ordenando objetos](#ordenando-objetos)
+  - [Ordenando ao contrário](#ordenando-ao-contrário)
 
 ## O que são objetos?
 
@@ -426,7 +426,7 @@ if(!chavesDoObjeto.includes("enderecos")){ // Fazendo verificação
 }
 ```
 
-### Sintaxe de espalhamento
+## Sintaxe de espalhamento
 
 Podemos usar a sintaxe de espalhamento para distribuir valores de objetos dentro de uma função ou etc.
 
@@ -480,7 +480,7 @@ console.log(dadosParaEntrega);
 console.log(dadosParaEntrega2);
 ```
 
-### Para saber mais: spread operator
+## Para saber mais: spread operator
 
 Importante se atentar a certos detalhes no uso do `spread operator`.
 
@@ -581,7 +581,7 @@ console.log(email);
 
 Para saber como usar `destructuring` com arrays siga o video [Destructuring em JavaScript #AluraMais](https://www.youtube.com/watch?v=f8a-qwKC5yk)
 
-### O formato JSON
+## O formato JSON
 
 O formato JSON (JavaScript Object Notation) é um formato que permite estrtuturar / escrever objetos JavaScript.
 
@@ -604,7 +604,7 @@ Lista de propriedades de um JSON:
 
 ![Lista propriedades de um JSON em relação ao JavaScript](propriedades_json.png)
 
-### Lendo um arquivo JSON
+## Lendo um arquivo JSON
 
 Para ler um arquivo JSON no JS podemos criar uma variável e passar para ela a função `require` nativa do JS, onde só precisamos passar o caminho do arquivo `.JSON` como argumento.
 
@@ -621,7 +621,7 @@ console.log(dados);
 console.log(typeof dados);
 ```
 
-### Operações com um JSON
+## Operações com um JSON
 
 Dentro do JS existe um objeto global no Node que permite trabalhar com arquivos JSON.
 
@@ -665,11 +665,11 @@ console.log(objetoCliente);
 console.log(typeof objetoCliente);
 ```
 
-### Para saber mais: copiando objetos
+## Para saber mais: copiando objetos
 
 Para saber mais sobre o funcionamento do JS se tratando de administração de memória, consultar [Vamos implementar uma função de clonagem profunda com imutabilidade em JS?](https://www.alura.com.br/artigos/implementar-funcao-clonagem-profunda-imutabilidade-js)
 
-### Encontrando um objeto
+## Encontrando um objeto
 
 Para fazer uma consulta dentro de um objeto podemos criar uma função onde passamos como parâmetro os atributos necessários, por exemplo, o `objeto`, a `chave` e o `valor` a ser consultado.
 
@@ -700,7 +700,7 @@ console.log(encontrado);
 console.log(encontrado2);
 ```
 
-### Filtando objetos
+## Filtando objetos
 
 Para filtar objetos podemos usar o método `filter` que é próprio de objetos e serve para realizar filtros. Ele recebe uma função callback como parâmetro.
 
@@ -728,7 +728,7 @@ const filtrados = filtrarApartamentoSemComplemento(clientes);
 console.log(filtrados);
 ```
 
-### Ordenando objetos
+## Ordenando objetos
 
 Para ordenar objetos podemos usar o método `sort` que recebe como parâmetro uma função callback.
 
@@ -768,7 +768,7 @@ const ordenadoNome = ordenar(clientes, "nome");
 console.log(ordenadoNome);
 ```
 
-### Ordenando ao contrário
+## Ordenando ao contrário
 
 Para realizar a ordenação inversa podemos usar o método `reverse` que é próprio de arrays e serve para isso.
 
