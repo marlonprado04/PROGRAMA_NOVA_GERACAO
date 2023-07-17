@@ -21,6 +21,8 @@ O curso é focado em FrontEnd.
   - [Código à prova de falhas](#código-à-prova-de-falhas)
   - [Para saber mais: data-attribute](#para-saber-mais-data-attribute)
   - [Desafio 04 - Consolidando o seu conhecimento](#desafio-04---consolidando-o-seu-conhecimento)
+  - [Interagindo com objetos](#interagindo-com-objetos)
+  - [Cálculos dinâmicos](#cálculos-dinâmicos)
 
 ## Manipular um elemento
 
@@ -318,3 +320,9 @@ function mudaCores(elementos){
 ## Desafio 04 - Consolidando o seu conhecimento
 
 Apenas com teoria não é possível aprender código, então, vamos exercitar a utilização do data-attribute em funções neste desafio. Temos uma lista de cores disponibilizada no código abaixo. Você irá criar um botão que, ao ser clicado, faz aparecer esta lista, e também criará um segundo botão que, ao ser clicado, faz com que a lista de cores volte a sumir.
+
+## Interagindo com objetos
+
+Nessa aula apenas adicionamos o objeto contendo as estatístiscas no arquivo `main.js` e também adicionamos outros atributos no HTML, que foram os `data-peca` nos botões de + ou -, de acordo com cada peça. E também adicionamos o `data-estatistica` de acordo com cada estatística que iremos incrementar depois.
+
+## Cálculos dinâmicos
