@@ -1,12 +1,18 @@
 // Criando variável para acessar os botões de controle via data attibutes
 const controle = document.querySelectorAll("[data-controle]");
 
+// Criando variável para acessar todos os campos das estatísticas
+const estatisticas = document.querySelectorAll("[data-estatistica");
+
 // Mapeando todos os botões de controle via forEach e adicionando evento de verificação de clique para cada um deles
 controle.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
         // Chamando método manipulaDados para cada evento de clique nos botões de controle
         // Método recebe como parâmetro o valor do data attributes + a tag pai do evento clicado
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
+
+        // Chamando método atualizaEstatisticas e passando como parâmetro o valor do data attribute da peça clicada
+        atualizaEstatisticas(evento.target.dataset.peca);
     });
 });
 
@@ -21,6 +27,16 @@ function manipulaDados(operacao, controle) {
     } else {
         peca.value = parseInt(peca.value) + 1;
     }
+}
+
+// Declarando função para atualizar estatísticas a partir do atributo peça sendo passado
+function atualizaEstatisticas(peca){ 
+    // Criando forEach para percorrer todos elementos de estatística
+    estatisticas.forEach((elemento) => {
+        // A cada elemento percorrido, atuliza o "text content" (conteúdo) com o valor do conteúdo +  o valor dentro do objeto de valores incrementais no índice certo
+        // pecas[peca[elemento.dataset.estatistica]] = peças (obj) -> peça (conteúdo do data attribute sendo clicado) -> elemento.dataset.estatistica (valor das estatísticas no site para ser incrementado);
+        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
+    } )
 }
 
 // Objeto com valores a serem incrementados nas estatisticas do robo
