@@ -19,3 +19,24 @@ Para deixar o GitHub mais funcional podemos usar o VSCode na nuvem, basta estar 
 Para adicionar um colaborador no repositório do GitHub basta entrar no `repositório desejado -> settings -> colaborador`.
 
 Dessa forma é só colocar o @ de quem deseja adicionar como colaborador.
+
+## Git clone e log
+
+A diferença de GitHub e Git é que o GitHub é um projeto para distribuição de repositórios online, inclusive possui concorrentes fortes.
+
+Já o Git é são os códigos por trás do que o GitHub faz.
+
+Para realizar um clone de um repositório basta ter o `git` instalado na máquina, copiar a `url do projeto` e após isso usar o comando `git clone "url/do/projeto`. Dessa forma o repositório online será clonado localmente.
+
+Para exemplo:
+
+URL do projeto: https://github.com/marlonprado04/PROJETO_NOVA_GERACAO.git
+
+```
+git clone https://github.com/marlonprado04/PROJETO_NOVA_GERACAO.git
+```
+
+Para consultar todo o histórico de modificações realizadas podemos usar o comando `git log`, mas esse comando não demonstra de forma enxuta.
+
+Para visualizar todos os commits e modificações em uma só linha podemos usar o comando `git log --oneline`, dessa forma ele sai muito resumido (apenas com o hash e o titulo do commit).
+
