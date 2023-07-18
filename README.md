@@ -47,5 +47,8 @@ Repositório com aulas, exercícios e conteúdos do Projeto Nova Geração do In
   - [03_desafio](./06_JAVASCRIPT_MANIPULANDO_DOM/03_desafio)
   - ...
 
+- [07_GIT_E_GITHUB](./07_GIT_E_GITHUB/README.md)
+
+
 - [LICENSE](./LICENSE)
 - [Planner de estudos (Programação).pdf](./Planner%20de%20estudos%20(Programação).pdf)
