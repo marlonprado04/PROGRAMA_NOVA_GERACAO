@@ -132,7 +132,7 @@ Exemplos de uso:
 
 ## Git add
 
-O comando `git add` permite adicionar arquivos `trackeando` eles. 
+O comando `git add` permite adicionar arquivos `trackeando` eles.
 
 Por exemplo, ao criar um arquivo chamado `contato.html` e editar o arquivo `app.js`, podemos adicionar os arquivos separadamente para realizar commits individuais identificando cada modificação.
 
