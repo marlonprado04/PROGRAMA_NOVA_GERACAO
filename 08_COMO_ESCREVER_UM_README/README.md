@@ -23,7 +23,7 @@ Para acessar o artigo original clicar [neste link](https://www.alura.com.br/arti
   - [Licença](#licença)
   - [Referências de README](#referências-de-readme)
 
-## O que é um README? 
+## O que é um README?
 
 O README é um arquivo com extensão .md, ou seja, ele é escrito em Markdown que é uma linguagem de marcação utilizada para converter o texto em um HTML válido. Caso queira saber mais sobre, temos esse artigo que explica muito bem como funciona e como escrever anotações com essa linguagem.
 
