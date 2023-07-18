@@ -12,6 +12,7 @@ Vamos aprender tanto via web quanto via comando de terminal.
   - [Adicionando um colaborador](#adicionando-um-colaborador)
   - [Git clone e log](#git-clone-e-log)
   - [Git status, commit e push](#git-status-commit-e-push)
+  - [O que vimos até aqui](#o-que-vimos-até-aqui)
 
 ## VSCode no GitHub
 
@@ -50,3 +51,11 @@ Para verificar o status do git para ver se os códigos estão em dia, podemos us
 Para adicionar arquivos no commit podemos usar o comando `git commit <nome/do/arquivo> -m "titulo do comit`. Se necessário commitar todos arquivos modificados podemos usar o atalho `git add .` e depois `git commit -m "titulo do commit"`, dessa forma todos os arquivos do repositório serão commitados.
 
 Para _empurrar_ o código atualizado para o repositório online podemos usar o comando `git push origin main`, onde o `origin` é a origem do código (repositório raiz de onde parte todas as modificações).
+
+## O que vimos até aqui
+
+Para restaurar um repositório ou arquivos para uma versão anterior precisamos do hash da versão.
+
+Para ter o hash, podemos usar o comando já aprendido `git log --oneline`. Com esse comando podemos ter, por exemplo, o hash `0d4b034`.
+
+Para restaurar todos os arquivos do repositório para essa versão podemos usar o comando `git restore --source 0d4b034 .`, onde o `.` indica que todos os arquivo serão restaurados. Se fosse necessário restaurar apenas algum arquivo ou pasta precisaríamos passar o caminho do arquivo ou pasta como parâmetro ao invés do ponto.
