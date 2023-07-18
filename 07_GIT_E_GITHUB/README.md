@@ -14,6 +14,8 @@ Vamos aprender tanto via web quanto via comando de terminal.
   - [Git status, commit e push](#git-status-commit-e-push)
   - [O que vimos até aqui](#o-que-vimos-até-aqui)
   - [Para saber mais: Git log](#para-saber-mais-git-log)
+  - [Para saber mais: clone do git](#para-saber-mais-clone-do-git)
+  - [Faça como eu fiz: comandos do git](#faça-como-eu-fiz-comandos-do-git)
 
 ## VSCode no GitHub
 
@@ -75,3 +77,31 @@ Abaixo alguns deles:
   > Para saber mais, acesse [git log format string](https://devhints.io/git-log-format)
 
 Para mais informações gerais sobre o git log acessar [git log cheatsheet](https://devhints.io/git-log)
+
+## Para saber mais: clone do git
+
+O comando git clone cria uma cópia de um repositório git existente, e esse repositório pode ser local ou remoto. Além disso, essa cópia é um repositório git completo, com seu próprio histórico, gerenciamento de seus próprios arquivos e é um ambiente isolado como um todo do repositório original.
+
+Por conveniência, a clonagem cria uma conexão remota apontando para o repositório original. E é essa conexão que facilita muito a interação com o repositório central.
+
+Podemos clonar um repositório remoto para uma pasta específica com o comando:
+
+`git clone <repositorio> <meu-projeto-clone>`.
+
+O repositório localizado em `repositorio` é clonado para uma pasta chamada `meu-projeto-clone`.
+
+Podemos configurar o git clone para clonar o repositório a partir de uma `branch` específica, diferente da original, com o comando:
+
+`git clone -branch new_feature <repositorio>`
+
+O exemplo acima clonaria apenas a branch new_feature de repositorio.
+
+Para mais opções do `git clone` você pode consultar o site [neste link](https://git-scm.com/docs/git-clone).
+
+## Faça como eu fiz: comandos do git
+
+Uma pessoa atua como dev front-end e concluiu implementações importantes no desenvolvimento do projeto no qual está trabalhando. Agora, ela precisa verificar as modificações realizadas, adicioná-las ao seu repositório local, salvá-las e depois enviá-las ao repositório remoto utilizando o Git.
+
+Com base nesse contexto, quais comandos do git você pode utilizar para realizar essas ações?
+
+Comandos usados:
