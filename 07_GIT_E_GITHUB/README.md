@@ -13,6 +13,7 @@ Vamos aprender tanto via web quanto via comando de terminal.
   - [Git clone e log](#git-clone-e-log)
   - [Git status, commit e push](#git-status-commit-e-push)
   - [O que vimos até aqui](#o-que-vimos-até-aqui)
+  - [Para saber mais: Git log](#para-saber-mais-git-log)
 
 ## VSCode no GitHub
 
@@ -59,3 +60,18 @@ Para restaurar um repositório ou arquivos para uma versão anterior precisamos 
 Para ter o hash, podemos usar o comando já aprendido `git log --oneline`. Com esse comando podemos ter, por exemplo, o hash `0d4b034`.
 
 Para restaurar todos os arquivos do repositório para essa versão podemos usar o comando `git restore --source 0d4b034 .`, onde o `.` indica que todos os arquivo serão restaurados. Se fosse necessário restaurar apenas algum arquivo ou pasta precisaríamos passar o caminho do arquivo ou pasta como parâmetro ao invés do ponto.
+
+## Para saber mais: Git log
+
+O comando `git log` permite diversos parâmetros para torná-lo mais funcional.
+
+Abaixo alguns deles:
+
+- `git log --oneline`: Visualizar commits 1 em cada linha
+- `git log -p`: Para ver mais informações do commit (como alterações realizadas)
+- `git log --author="user_name"`: Pesquisar os commitr de determinado autor
+- `git log --since=1.month.ago --until=1.day.ago`: Pesquisar informações por data (no código de exemplo estamos buscando as informações do commit desde um mês atrás até um dia atrás)
+- `git log --pretty="format:%h %s"`: Podemos formatar a visualização das informações com esse comando. Nesse exemplo ele traz o hash seguido da mensagem de commit.
+  > Para saber mais, acesse [git log format string](https://devhints.io/git-log-format)
+
+Para mais informações gerais sobre o git log acessar [git log cheatsheet](https://devhints.io/git-log)
