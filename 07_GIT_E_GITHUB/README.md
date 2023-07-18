@@ -16,6 +16,8 @@ Vamos aprender tanto via web quanto via comando de terminal.
   - [Para saber mais: Git log](#para-saber-mais-git-log)
   - [Para saber mais: clone do git](#para-saber-mais-clone-do-git)
   - [Faça como eu fiz: comandos do git](#faça-como-eu-fiz-comandos-do-git)
+  - [Navegando no tempo](#navegando-no-tempo)
+  - [Git add](#git-add)
 
 ## VSCode no GitHub
 
@@ -105,3 +107,77 @@ Uma pessoa atua como dev front-end e concluiu implementações importantes no de
 Com base nesse contexto, quais comandos do git você pode utilizar para realizar essas ações?
 
 Comandos usados:
+
+1. Para verificar as modificações: `git status`
+2. Para adicioná-las ao repositório local: `git add .`
+3. Para salvá-las: `git commit -m "<comentario>"`
+4. Para enviá-las ao repositório remoto: `git push`
+
+## Navegando no tempo
+
+Você fez quatro commits em seu código HTML: Adicionando Title, Adicionando imagem de fundo, Adicionando tabela e Adicionando footer, mas os três últimos commits não foram aprovados por seu supervisor. Então, você precisa voltar ao ponto inicial do projeto. Qual o comando que você precisa utilizar para navegar no passado?
+
+Resposta: `git restore --source <id>`
+
+Para saber mais veja o artigo [nesse link](https://www.alura.com.br/artigos/git-os-novos-comandos-git-restore-e-git-switch)
+
+O `git switch` é um comando das versões mais recentes do Git que surgiu junto do `git restore` para dar responsabilidades mais divididas aos comandos.
+
+O `git switch` permite fazer a troca ou criação de uma branch.
+
+Exemplos de uso:
+
+- `git switch -c nova-branch`: cria uma nova branch e alterna para ela
+- `git switch -`: retorna para a branch master sem precisar passar o nome
+
+## Git add
+
+O comando `git add` permite adicionar arquivos `trackeando` eles. 
+
+Por exemplo, ao criar um arquivo chamado `contato.html` e editar o arquivo `app.js`, podemos adicionar os arquivos separadamente para realizar commits individuais identificando cada modificação.
+
+Exemplo:
+
+Passo 1: Adicionando o arquivo criado
+
+`git add contato.html`
+
+Passo 2: Criando commit com arquivo criado
+
+`git commit -m "criando arquivo contato.html"`
+
+Passo 3: Realizando o push
+
+`git push`
+
+Passo 4: Adicionando o arquivo modificado
+
+`git add app.js`
+
+Passo 5: Criando commit com arquivo modificado
+
+`git commit -m "adicionei linha teste no app.js"`
+
+Passo 6: Realizando o push
+
+`git push`
+
+Dessa forma ambos arquivos são modificados e separados em commits diferentes, facilitando a recuperação do código de forma individual.
+
+Uma alternativa para esses comandos seria realizar o `git add .`. Dessa forma todos os arquivos e pastas são adicionados no commit.
+
+Exemplo:
+
+Passo 1: Adicionando todas modificações (criação do contato.html e alteração do app.js)
+
+`git add .`
+
+Passo 2: Criando commit com modificações
+
+`git commit -m "adicionei arquivo contato.html e alterei app.js`
+
+Passo 3: Realizando o push
+
+`git push`
+
+> Precisamos ter cuidado ao usar o comando `git add .`, pois as vezes pode ser útil salvar grandes modificações de forma separada, para facilitar recuperação parcial de código.
