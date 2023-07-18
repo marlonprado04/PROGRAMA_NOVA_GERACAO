@@ -19,6 +19,8 @@ Vamos aprender tanto via web quanto via comando de terminal.
   - [Navegando no tempo](#navegando-no-tempo)
   - [Git add](#git-add)
   - [Branch](#branch)
+  - [Merge](#merge)
+  - [Parabéns](#parabéns)
 
 ## VSCode no GitHub
 
@@ -196,3 +198,33 @@ Após isso, podemos usar a branch criada para teste para adicionar arquivos ou a
 Como essas alterações foram feitas em uma `branch local`, precisamos comunicá-las para o repositório de `origin`. Para isso usamos o comando `git push origin <nome-da-branch-criada>`.
 
 Dessa forma a branch nova será criada no repositório remoto junto das alterações.
+
+## Merge
+
+O comando `git merge` serve para unificar branches. Com ele podemos passar as modificações de uma branch para outra.
+
+> Para usá-lo é necessário que a branch que receberá as modificações esteja atualizada.
+
+Os passos são:
+
+Passo 1: Entrar na branch que desejamos atualizar, por exemplo, `main`
+
+`git switch main`
+
+Passo 2: Verificar o status para garantir que não tenham `pull` ou `push` pendentes
+
+`git status`
+
+Passo 3: Realizar o merge com a branch necessária, por exemplo, `desenvolvimento`
+
+`git merge desenvolvimento`
+
+Passo 4: Realizar o `push` das atualizações
+
+`git push origin main`
+
+## Parabéns
+
+Você aprendeu o que é e como usar o GitHub de forma prática através de commits e até convidou uma pessoa para participar do seu projeto. Vimos a diferença entre Git e GitHub e aprendemos os principais comandos, como `clone`, `pull`, `commit`, `restore`, `branch` e `merge`.
+
+Caso queira reforças os conhecimentos, você pode acessar um guia prático dos comandos usados neste treinamento através [desse link](https://guilhermeonrails.github.io/manual-do-git-e-github/)
