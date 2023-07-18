@@ -4,6 +4,12 @@ const controle = document.querySelectorAll("[data-controle]");
 // Criando variável para acessar todos os campos das estatísticas
 const estatisticas = document.querySelectorAll("[data-estatistica");
 
+// Função para trocar cor do robô
+function trocaImagem(cor) {
+    document.querySelector(".robo").src = "img/robotron_" + cor + ".png";
+}
+
+
 // Mapeando todos os botões de controle via forEach e adicionando evento de verificação de clique para cada um deles
 controle.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
@@ -30,13 +36,13 @@ function manipulaDados(operacao, controle) {
 }
 
 // Declarando função para atualizar estatísticas a partir do atributo peça sendo passado
-function atualizaEstatisticas(peca){ 
+function atualizaEstatisticas(peca) {
     // Criando forEach para percorrer todos elementos de estatística
     estatisticas.forEach((elemento) => {
         // A cada elemento percorrido, atuliza o "text content" (conteúdo) com o valor do conteúdo +  o valor dentro do objeto de valores incrementais no índice certo
         // pecas[peca[elemento.dataset.estatistica]] = peças (obj) -> peça (conteúdo do data attribute sendo clicado) -> elemento.dataset.estatistica (valor das estatísticas no site para ser incrementado);
         elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
-    } )
+    })
 }
 
 // Objeto com valores a serem incrementados nas estatisticas do robo

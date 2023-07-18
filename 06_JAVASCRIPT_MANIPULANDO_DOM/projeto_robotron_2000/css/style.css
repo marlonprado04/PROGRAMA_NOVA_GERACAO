@@ -17,7 +17,8 @@ body {
     font-weight: 300;
 }
 
-body, input {
+body,
+input {
     font-family: 'Teko', sans-serif;
 }
 
@@ -55,11 +56,11 @@ main {
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    color: rgba(255,255,255,0.8)
+    color: rgba(255, 255, 255, 0.8)
 }
 
 .box {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
     height: 80%;
@@ -72,7 +73,8 @@ main {
 }
 
 .montador {
-    height: 100%;;
+    height: 100%;
+    ;
 }
 
 .montador-conteudo {
@@ -148,7 +150,17 @@ main {
     color: var(--main-branco)
 }
 
+.alterar {
+    margin: 2px;
+    width: 200px;
+}
 
+.botoes {
+    position: relative;
+    right: 5%;
+    bottom: 10%;
+    display: flex;
+}
 
 /****************************** Estatísticas *****/
 .estatisticas {
@@ -210,9 +222,10 @@ main {
 }
 
 @media screen and (max-width: 1600px) {
-    body { 
+    body {
         font-size: 14px;
     }
+
     main {
         width: 90vw;
         height: 80vh;
@@ -221,7 +234,7 @@ main {
 }
 
 @media screen and (max-width: 1200px) {
-    body { 
+    body {
         font-size: 13px;
     }
 

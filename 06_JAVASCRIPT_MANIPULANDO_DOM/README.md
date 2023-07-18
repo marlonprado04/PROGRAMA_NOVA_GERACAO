@@ -24,6 +24,7 @@ O curso é focado em FrontEnd.
   - [Interagindo com objetos](#interagindo-com-objetos)
   - [Cálculos dinâmicos](#cálculos-dinâmicos)
   - [Compartilhando com o mundo](#compartilhando-com-o-mundo)
+  - [Desafio 05 - Consolidando o seu conhecimento](#desafio-05---consolidando-o-seu-conhecimento)
 
 ## Manipular um elemento
 
@@ -414,3 +415,8 @@ const pecas = {
 
 Para publicar o projeto na internet podemos usar o site [Vercel](https://vercel.com/).
 
+O link do projeto no ar é: <https://projeto-nova-geracao.vercel.app/>
+
+## Desafio 05 - Consolidando o seu conhecimento
+
+Neste último desafio, você irá criar uma nova funcionalidade em nosso projeto Robotron 2000! Esta funcionalidade permitirá alterar a imagem do robô utilizando eventos de clique, assim, a pessoa usuária pode escolher o robô com a cor que preferir.
