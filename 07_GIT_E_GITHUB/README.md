@@ -8,7 +8,9 @@ Vamos aprender tanto via web quanto via comando de terminal.
 
 - [Git e GitHub: repositório, commit e versões](#git-e-github-repositório-commit-e-versões)
   - [Índice](#índice)
-
+  - [VSCode no GitHub](#vscode-no-github)
+  - [Adicionando um colaborador](#adicionando-um-colaborador)
+  - [Git clone e log](#git-clone-e-log)
 
 ## VSCode no GitHub
 
@@ -30,13 +32,12 @@ Para realizar um clone de um repositório basta ter o `git` instalado na máquin
 
 Para exemplo:
 
-URL do projeto: https://github.com/marlonprado04/PROJETO_NOVA_GERACAO.git
+URL do projeto: <https://github.com/marlonprado04/PROJETO_NOVA_GERACAO.git>
 
-```
+```git
 git clone https://github.com/marlonprado04/PROJETO_NOVA_GERACAO.git
 ```
 
 Para consultar todo o histórico de modificações realizadas podemos usar o comando `git log`, mas esse comando não demonstra de forma enxuta.
 
 Para visualizar todos os commits e modificações em uma só linha podemos usar o comando `git log --oneline`, dessa forma ele sai muito resumido (apenas com o hash e o titulo do commit).
-
