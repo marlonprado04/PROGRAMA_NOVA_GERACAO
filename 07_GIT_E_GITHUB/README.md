@@ -18,6 +18,7 @@ Vamos aprender tanto via web quanto via comando de terminal.
   - [Faça como eu fiz: comandos do git](#faça-como-eu-fiz-comandos-do-git)
   - [Navegando no tempo](#navegando-no-tempo)
   - [Git add](#git-add)
+  - [Branch](#branch)
 
 ## VSCode no GitHub
 
@@ -181,3 +182,17 @@ Passo 3: Realizando o push
 `git push`
 
 > Precisamos ter cuidado ao usar o comando `git add .`, pois as vezes pode ser útil salvar grandes modificações de forma separada, para facilitar recuperação parcial de código.
+
+## Branch
+
+A branch é uma ramificação de código que permite realizar alterações paralelamente ao código principal. Com branches podemos testar códigos, componentes, etc...
+
+Para criar uma nova branch e automaticamente mudarmos para ela podemos usar o comando `git checkout -b <nome-da-branch>`.
+
+Podemos trocar de branches novamente com o comando `git switch <nome-da-branch>`.
+
+Após isso, podemos usar a branch criada para teste para adicionar arquivos ou alterações nos arquivos existentes. Quando finalizado usamos `git add .` e depois `git commit -m "<titulo-do-commit>"`.
+
+Como essas alterações foram feitas em uma `branch local`, precisamos comunicá-las para o repositório de `origin`. Para isso usamos o comando `git push origin <nome-da-branch-criada>`.
+
+Dessa forma a branch nova será criada no repositório remoto junto das alterações.
