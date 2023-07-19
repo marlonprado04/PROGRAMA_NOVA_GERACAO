@@ -14,6 +14,7 @@ O HTML e CSS permanecerão os mesmos, no máximo com pequenas modificações. O 
   - [O armazenamento na WEB](#o-armazenamento-na-web)
   - [Inserindo dados no LocalStorage](#inserindo-dados-no-localstorage)
   - [Múltiplos itens no localStorage](#múltiplos-itens-no-localstorage)
+  - [Entendendo localStorage](#entendendo-localstorage)
 
 ## Apresentação
 
@@ -256,7 +257,7 @@ function criaElemento(nome, quantidade) {
 
 ## Múltiplos itens no localStorage
 
-O localStorage tem a particularidade de armazenar somente dados do tipo `string`. Dessa forma, como precisamos armazenar uma relação de itens com `nome` e `quantidade` para ser acessada depois, vamos precisar criar um objeto e converter ele em string com o método `JSON.stringfy()`.
+O localStorage tem a particularidade de armazenar somente dados do tipo `string`. Dessa forma, como precisamos armazenar uma relação de itens com `nome` e `quantidade` para ser acessada depois, vamos precisar criar um objeto e converter ele em string com o método `JSON.stringify()`.
 
 Porém, ao cadastrar um novo item, o item anterior é substituído no localStorage. Dessa forma, precisamos criar um `array` de escopo global para ser incrementado a cada vez que a função `criaElemento` for executada e adicionar esse `novo objeto de item` para o array criado.
 
@@ -329,3 +330,9 @@ function criaElemento(nome, quantidade) {
     localStorage.setItem("item", JSON.stringify(itens));
 }
 ```
+
+## Entendendo localStorage
+
+Até aqui, vimos que localStorage armazena dados do tipo texto string e, para armazenar objetos, arrays, e listas, é preciso convertê-los utilizando o método JSON.stringify(). Já quando queremos acessar algum dado, podemos utilizar o método localStorage.getItem().
+
+> Os tipos de dados armazenados no localStorage não devem ser considerados sensíveis, de acordo com a LGPD (Lei Geral de Proteção de Dados). Isso ocorre, pois ele não possui nenhuma camada de proteção, e os dados podem ser acessados facilmente por terceiros. Dados considerados sensíveis, devem ser armazenados em Cookies.
