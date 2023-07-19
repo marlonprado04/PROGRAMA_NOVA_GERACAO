@@ -7,12 +7,16 @@ form.addEventListener("submit", (evento) => {
     // Impedindo reload da página submitar
     evento.preventDefault();
 
-    // Criando variáveis para acessar valores dos inputs
-    const nome = evento.target.elements["nome"].value;
-    const quantidade = evento.target.elements["quantidade"].value;
+    // Criando variáveis para acessar campos de input
+    const nome = evento.target.elements["nome"];
+    const quantidade = evento.target.elements["quantidade"];
 
     // Chamando função para criar item na lista
-    criaElemento(nome, quantidade);
+    criaElemento(nome.value, quantidade.value);
+
+    // Limpando formulário após submit
+    nome.value = "";
+    quantidade.value = "";
 
 })
 
@@ -43,5 +47,9 @@ function criaElemento(nome, quantidade) {
 
     // Printando variável novoItem para confirmar se funcionou
     console.log(novoItem);
+
+    // Adicionando nome e quantidade no localStorage
+    localStorage.setItem("nome", nome)
+    localStorage.setItem("quantidade", quantidade);
 }
 
