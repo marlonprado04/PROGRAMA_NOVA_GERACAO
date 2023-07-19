@@ -11,6 +11,7 @@ O HTML e CSS permanecerão os mesmos, no máximo com pequenas modificações. O 
   - [Apresentação](#apresentação)
   - [Capturando os dados da tela](#capturando-os-dados-da-tela)
   - [Criando as validações](#criando-as-validações)
+  - [O armazenamento na WEB](#o-armazenamento-na-web)
 
 ## Apresentação
 
@@ -129,4 +130,33 @@ function criaElemento(nome, quantidade) {
     // Printando variável novoItem para confirmar se o innerHTML funcionou
     console.log(novoItem);
 }
+```
+
+## O armazenamento na WEB
+
+Para impedir a perda de informações após recarregar a página vamos aprender a usar o `local storage`, que é um espaço para armazenar as informações dentro do navegador do usuário.
+
+Podemos verificar o `localStorage` via console do navegador usando o comando `console.log(localStorage)`. Ao usar esse comando vai vir uma dezena de informações que são objetos.
+
+Para adicionar informações ao local storage podemos usar o comando `localStorage.setItem()`, mas por se tratar de um objeto precisamos passar a `chave` e o `valor` do item, ficado assim o código `localStorage.setItem("chave","valor")`.
+
+Podemos usar o comando `localStorage.removeItem("chave")` para removê-lo do objeto.
+
+Para fazer uma limpa geral no podemos usar o comando `localStorage.clear()`
+
+Abaixo um código de exemplo que podemos usar no console:
+
+```javascript
+// Adicionando item ao localstorage
+localStorage.setItem("curso", "Meu curso de JavaScript");
+
+// Acessando informações adicionadas anteriormente de duas formas
+localStorage.getItem("curso");
+localStorage.curso;
+
+// Removendo item cadastrado no localStorage
+localStorage.removeItem("curso");
+
+// Limpando todos os dados do localStorage
+localStorage.clear();
 ```
