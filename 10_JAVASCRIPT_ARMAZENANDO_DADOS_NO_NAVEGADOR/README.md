@@ -15,6 +15,7 @@ O HTML e CSS permanecerão os mesmos, no máximo com pequenas modificações. O 
   - [Inserindo dados no LocalStorage](#inserindo-dados-no-localstorage)
   - [Múltiplos itens no localStorage](#múltiplos-itens-no-localstorage)
   - [Entendendo localStorage](#entendendo-localstorage)
+  - [Consultando dados do LocalStorage](#consultando-dados-do-localstorage)
 
 ## Apresentação
 
@@ -336,3 +337,80 @@ function criaElemento(nome, quantidade) {
 Até aqui, vimos que localStorage armazena dados do tipo texto string e, para armazenar objetos, arrays, e listas, é preciso convertê-los utilizando o método JSON.stringify(). Já quando queremos acessar algum dado, podemos utilizar o método localStorage.getItem().
 
 > Os tipos de dados armazenados no localStorage não devem ser considerados sensíveis, de acordo com a LGPD (Lei Geral de Proteção de Dados). Isso ocorre, pois ele não possui nenhuma camada de proteção, e os dados podem ser acessados facilmente por terceiros. Dados considerados sensíveis, devem ser armazenados em Cookies.
+
+## Consultando dados do LocalStorage
+
+Para consultar os itens salvos no localStorage precisamos modificar o array onde os itens estão sendo armazenados ao dar `submit` no formulário.
+
+Na criação do array vamos converter a `string` contida nele, parseando um objeto `JSON`.
+
+Depois disso usamos o `forEach` para imprimir na tela todos os itens existentes dentro do `localStorage`.
+
+Abaixo o código ajustado:
+
+```javascript
+// Criando variáveis de acesso ao DOM
+const form = document.getElementById("novoItem");
+const lista = document.getElementById("lista");
+
+// Criando array com os itens do localStorage parseados ou vazio se o localStorage não tiver itens
+const itens = JSON.parse(localStorage.getItem("itens")) || [];
+
+// Imprimindo nome e quantidade de cada iten no localStorage
+itens.forEach((item) => {
+    console.log(item.nome, item.quantidade);
+});
+
+// Criando listener para o formulário
+form.addEventListener("submit", (evento) => {
+    // Impedindo reload da página submitar
+    evento.preventDefault();
+
+    // Criando variáveis para acessar campos de input
+    const nome = evento.target.elements["nome"];
+    const quantidade = evento.target.elements["quantidade"];
+
+    // Chamando função para criar item na lista
+    criaElemento(nome.value, quantidade.value);
+
+    // Limpando formulário após submit
+    nome.value = "";
+    quantidade.value = "";
+
+})
+
+// Criando para criar novo elemento e incluir na lista
+function criaElemento(nome, quantidade) {
+    // Exemplo de tag item: <li class="item"><strong>7</strong>Camisas</li>
+
+    // Declarando variável para criar "li"
+    const novoItem = document.createElement("li");
+    // Atribuindo à variável "li" a classe "item"
+    novoItem.classList.add("item");
+
+    // Declarando variável para criar o "strong"
+    const numeroItem = document.createElement("strong");
+    // Passando quantidade informada no formulário para variável do "strong"
+    numeroItem.innerHTML = quantidade;
+
+    // Adicionando à variável "li" a tag "strong"
+    novoItem.appendChild(numeroItem);
+    // Adicionando à variável "li" o valor do nome
+    novoItem.innerHTML += nome;
+
+    // Adicionando a tag "li" à tag "ul" (variável lista)
+    lista.appendChild(novoItem);
+
+    // Criando objeto de item para adicionar ao localStorage
+    const itemAtual = {
+        "nome": nome,
+        "quantidade": quantidade
+    }
+
+    // Adicionando objeto de itemAtual ao array de itens já cadastrados
+    itens.push(itemAtual);
+
+    // Adicionando array de objetos como string no localStorage
+    localStorage.setItem("itens", JSON.stringify(itens));
+}
+```

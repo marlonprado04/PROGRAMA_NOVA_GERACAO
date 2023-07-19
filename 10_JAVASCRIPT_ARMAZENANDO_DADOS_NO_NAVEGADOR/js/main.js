@@ -2,8 +2,13 @@
 const form = document.getElementById("novoItem");
 const lista = document.getElementById("lista");
 
-// Criando array para armazenar localStorage
-const itens = [];
+// Criando array com os itens do localStorage parseados ou vazio se o localStorage não tiver itens
+const itens = JSON.parse(localStorage.getItem("itens")) || [];
+
+// Imprimindo nome e quantidade de cada iten no localStorage
+itens.forEach((item) => {
+    console.log(item.nome, item.quantidade);
+});
 
 // Criando listener para o formulário
 form.addEventListener("submit", (evento) => {
@@ -25,9 +30,6 @@ form.addEventListener("submit", (evento) => {
 
 // Criando para criar novo elemento e incluir na lista
 function criaElemento(nome, quantidade) {
-    console.log(nome); // para testar se está imprimindo valor do nome
-    console.log(quantidade); // para testar se está imprimindo valor da quantidade
-
     // Exemplo de tag item: <li class="item"><strong>7</strong>Camisas</li>
 
     // Declarando variável para criar "li"
@@ -48,9 +50,6 @@ function criaElemento(nome, quantidade) {
     // Adicionando a tag "li" à tag "ul" (variável lista)
     lista.appendChild(novoItem);
 
-    // Printando variável novoItem para confirmar se funcionou
-    console.log(novoItem);
-
     // Criando objeto de item para adicionar ao localStorage
     const itemAtual = {
         "nome": nome,
@@ -61,6 +60,6 @@ function criaElemento(nome, quantidade) {
     itens.push(itemAtual);
 
     // Adicionando array de objetos como string no localStorage
-    localStorage.setItem("item", JSON.stringify(itens));
+    localStorage.setItem("itens", JSON.stringify(itens));
 }
 
