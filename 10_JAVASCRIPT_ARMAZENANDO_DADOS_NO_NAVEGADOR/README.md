@@ -13,6 +13,7 @@ O HTML e CSS permanecerão os mesmos, no máximo com pequenas modificações. O 
   - [Criando as validações](#criando-as-validações)
   - [O armazenamento na WEB](#o-armazenamento-na-web)
   - [Inserindo dados no LocalStorage](#inserindo-dados-no-localstorage)
+  - [Múltiplos itens no localStorage](#múltiplos-itens-no-localstorage)
 
 ## Apresentação
 
@@ -250,5 +251,81 @@ function criaElemento(nome, quantidade) {
     // Adicionando nome e quantidade no localStorage
     localStorage.setItem("nome", nome)
     localStorage.setItem("quantidade", quantidade);
+}
+```
+
+## Múltiplos itens no localStorage
+
+O localStorage tem a particularidade de armazenar somente dados do tipo `string`. Dessa forma, como precisamos armazenar uma relação de itens com `nome` e `quantidade` para ser acessada depois, vamos precisar criar um objeto e converter ele em string com o método `JSON.stringfy()`.
+
+Porém, ao cadastrar um novo item, o item anterior é substituído no localStorage. Dessa forma, precisamos criar um `array` de escopo global para ser incrementado a cada vez que a função `criaElemento` for executada e adicionar esse `novo objeto de item` para o array criado.
+
+Abaixo o código JS atualizado:
+
+```javascript
+// Criando variáveis de acesso ao DOM
+const form = document.getElementById("novoItem");
+const lista = document.getElementById("lista");
+
+// Criando array para armazenar localStorage
+const itens = [];
+
+// Criando listener para o formulário
+form.addEventListener("submit", (evento) => {
+    // Impedindo reload da página submitar
+    evento.preventDefault();
+
+    // Criando variáveis para acessar campos de input
+    const nome = evento.target.elements["nome"];
+    const quantidade = evento.target.elements["quantidade"];
+
+    // Chamando função para criar item na lista
+    criaElemento(nome.value, quantidade.value);
+
+    // Limpando formulário após submit
+    nome.value = "";
+    quantidade.value = "";
+
+})
+
+// Criando para criar novo elemento e incluir na lista
+function criaElemento(nome, quantidade) {
+    console.log(nome); // para testar se está imprimindo valor do nome
+    console.log(quantidade); // para testar se está imprimindo valor da quantidade
+
+    // Exemplo de tag item: <li class="item"><strong>7</strong>Camisas</li>
+
+    // Declarando variável para criar "li"
+    const novoItem = document.createElement("li");
+    // Atribuindo à variável "li" a classe "item"
+    novoItem.classList.add("item");
+
+    // Declarando variável para criar o "strong"
+    const numeroItem = document.createElement("strong");
+    // Passando quantidade informada no formulário para variável do "strong"
+    numeroItem.innerHTML = quantidade;
+
+    // Adicionando à variável "li" a tag "strong"
+    novoItem.appendChild(numeroItem);
+    // Adicionando à variável "li" o valor do nome
+    novoItem.innerHTML += nome;
+
+    // Adicionando a tag "li" à tag "ul" (variável lista)
+    lista.appendChild(novoItem);
+
+    // Printando variável novoItem para confirmar se funcionou
+    console.log(novoItem);
+
+    // Criando objeto de item para adicionar ao localStorage
+    const itemAtual = {
+        "nome": nome,
+        "quantidade": quantidade
+    }
+
+    // Adicionando objeto de itemAtual ao array de itens já cadastrados
+    itens.push(itemAtual);
+
+    // Adicionando array de objetos como string no localStorage
+    localStorage.setItem("item", JSON.stringify(itens));
 }
 ```

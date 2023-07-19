@@ -2,6 +2,9 @@
 const form = document.getElementById("novoItem");
 const lista = document.getElementById("lista");
 
+// Criando array para armazenar localStorage
+const itens = [];
+
 // Criando listener para o formulário
 form.addEventListener("submit", (evento) => {
     // Impedindo reload da página submitar
@@ -48,8 +51,16 @@ function criaElemento(nome, quantidade) {
     // Printando variável novoItem para confirmar se funcionou
     console.log(novoItem);
 
-    // Adicionando nome e quantidade no localStorage
-    localStorage.setItem("nome", nome)
-    localStorage.setItem("quantidade", quantidade);
+    // Criando objeto de item para adicionar ao localStorage
+    const itemAtual = {
+        "nome": nome,
+        "quantidade": quantidade
+    }
+
+    // Adicionando objeto de itemAtual ao array de itens já cadastrados
+    itens.push(itemAtual);
+
+    // Adicionando array de objetos como string no localStorage
+    localStorage.setItem("item", JSON.stringify(itens));
 }
 
