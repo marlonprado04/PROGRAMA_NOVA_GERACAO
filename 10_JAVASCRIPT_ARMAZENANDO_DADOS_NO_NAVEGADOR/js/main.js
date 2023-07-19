@@ -5,9 +5,10 @@ const lista = document.getElementById("lista");
 // Criando array com os itens do localStorage parseados ou vazio se o localStorage não tiver itens
 const itens = JSON.parse(localStorage.getItem("itens")) || [];
 
-// Imprimindo nome e quantidade de cada iten no localStorage
+// Laço para criar elemento com dados do localstorage
 itens.forEach((item) => {
-    console.log(item.nome, item.quantidade);
+    console.log(item); // Printando no console
+    criaElemento(item); // Criando elementos
 });
 
 // Criando listener para o formulário
@@ -19,8 +20,20 @@ form.addEventListener("submit", (evento) => {
     const nome = evento.target.elements["nome"];
     const quantidade = evento.target.elements["quantidade"];
 
+    // Criando objeto de item para adicionar valores ao localStorage
+    const itemAtual = {
+        "nome": nome.value,
+        "quantidade": quantidade.value
+    }
+
     // Chamando função para criar item na lista
-    criaElemento(nome.value, quantidade.value);
+    criaElemento(itemAtual);
+
+    // Adicionando objeto de itemAtual ao array de itens já cadastrados
+    itens.push(itemAtual);
+
+    // Adicionando array de objetos como string no localStorage
+    localStorage.setItem("itens", JSON.stringify(itens));
 
     // Limpando formulário após submit
     nome.value = "";
@@ -28,8 +41,8 @@ form.addEventListener("submit", (evento) => {
 
 })
 
-// Criando para criar novo elemento e incluir na lista
-function criaElemento(nome, quantidade) {
+// Criando função para criar novo elemento e incluir na lista
+function criaElemento(item) {
     // Exemplo de tag item: <li class="item"><strong>7</strong>Camisas</li>
 
     // Declarando variável para criar "li"
@@ -40,26 +53,15 @@ function criaElemento(nome, quantidade) {
     // Declarando variável para criar o "strong"
     const numeroItem = document.createElement("strong");
     // Passando quantidade informada no formulário para variável do "strong"
-    numeroItem.innerHTML = quantidade;
+    numeroItem.innerHTML = item.quantidade;
 
     // Adicionando à variável "li" a tag "strong"
     novoItem.appendChild(numeroItem);
     // Adicionando à variável "li" o valor do nome
-    novoItem.innerHTML += nome;
+    novoItem.innerHTML += item.nome;
 
     // Adicionando a tag "li" à tag "ul" (variável lista)
     lista.appendChild(novoItem);
 
-    // Criando objeto de item para adicionar ao localStorage
-    const itemAtual = {
-        "nome": nome,
-        "quantidade": quantidade
-    }
-
-    // Adicionando objeto de itemAtual ao array de itens já cadastrados
-    itens.push(itemAtual);
-
-    // Adicionando array de objetos como string no localStorage
-    localStorage.setItem("itens", JSON.stringify(itens));
 }
 
