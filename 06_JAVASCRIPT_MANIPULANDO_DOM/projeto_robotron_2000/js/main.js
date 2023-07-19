@@ -2,7 +2,7 @@
 const controle = document.querySelectorAll("[data-controle]");
 
 // Criando variável para acessar todos os campos das estatísticas
-const estatisticas = document.querySelectorAll("[data-estatistica");
+const estatisticas = document.querySelectorAll("[data-estatistica]");
 
 // Função para trocar cor do robô
 function trocaImagem(cor) {
