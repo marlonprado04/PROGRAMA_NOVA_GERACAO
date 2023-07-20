@@ -637,6 +637,8 @@ Dessa forma o __localStorage__ recebe como chave o __id__ do item já criado que
 
 Para acessar o artigo completo clicar [neste link](https://www.alura.com.br/artigos/entenda-diferenca-entre-var-let-e-const-no-javascript)
 
+Para acesso ao vídeo (em inglês) clicar [neste linl](https://www.alura.com.br/artigos/entenda-diferenca-entre-var-let-e-const-no-javascript)
+
 _var_, _let_ e _const_ são utilizadas para declararmos diferentes tipos de valores na linguagem JavaScript. Saber a utilização correta de cada uma delas é muito importante, pois __influencia na forma que criamos uma função function__.
 
 No JavaScript toda variável é __elevada/içada (hoisting)__ até o topo do seu contexto de execução antes da execução do código.
