@@ -9,6 +9,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
   - [A plataforma Java](#a-plataforma-java)
   - [Mão na massa: instalando o JDK](#mão-na-massa-instalando-o-jdk)
   - [Compile e rode seu primeiro programa Java](#compile-e-rode-seu-primeiro-programa-java)
+  - [Nosso programa rodando no Eclipse](#nosso-programa-rodando-no-eclipse)
 
 ## A plataforma Java
 
@@ -74,3 +75,13 @@ Após isso tudo podemos usar o comando `java` para executar diretamente a __clas
 Abaixo o exemplo:
 
 ![Exemplo de java sendo executado](./exemplos_imagens/exemplo_java_executado.png)
+
+## Nosso programa rodando no Eclipse
+
+Para o curso vamos usar a IDE Ecplipse. Para baixá-la basta acessar o site oficial e fazer download. No caso do Linux é necessário descompactar o arquivo e executar o __eclipse-inst__.
+
+Após instalado, podemos ir em __File -> new -> java project__. Podemos usar todas as configurações automáticas que a IDE sugerir.
+
+Após, acessamos a pasta __src__ dentro do projeto e clicamos com o botão direito para selecionar __new -> class__, como na imagem abaixo:
+
+![Exemplo de como criar uma classe no eclipse](./exemplos_imagens/eclipse_criando_classe.png)
