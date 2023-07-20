@@ -8,6 +8,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
   - [Índice](#índice)
   - [A plataforma Java](#a-plataforma-java)
   - [Mão na massa: instalando o JDK](#mão-na-massa-instalando-o-jdk)
+  - [Compile e rode seu primeiro programa Java](#compile-e-rode-seu-primeiro-programa-java)
 
 ## A plataforma Java
 
@@ -19,7 +20,7 @@ A ideia da Sun que era uma empresa focada em hardware foi criar um único códig
 
 Com o surgimento e competição de navegadores essa ideia veio à tona novamente, daí então desenvolveram a __JVM (Java Virtual Machine)__ que funciona quase como um interpretador (mas não exatamente) e realiza a tradução para o aparelho específico.
 
-![Slide apresentando bytecode e iterpretador](apresentacao_bytecode.png);
+![Slide apresentando bytecode e iterpretador](./exemplos_imagens/apresentacao_bytecode.png);
 
 ## Mão na massa: instalando o JDK
 
@@ -35,7 +36,7 @@ Caso queira, você poderá instalar uma versão mais antiga do JDK, você só te
 
 Passo 3: Terminado o processo de instalação, chegou a hora de configurar a variável de ambiente JAVA_HOME, que é utilizada para indicar o caminho de instalação do JDK. Em uma tradução literal seria o “lar do java” e ela será necessária para utilizarmos os recursos do JDK como o javac. Para isso, execute o comando `sudo update-alternatives --config` java que mostrará o caminho onde o JDK foi instalado. O resultado será parecido ou igual a esse:
 
-![Alt text](imagem_mostrando_saida_no_terminal.png)
+![Alt text](./exemplos_imagens/imagem_mostrando_saida_no_terminal.png)
 
 Agora, copie esse caminho até /bin, por exemplo: `/usr/lib/jvm/java-17-openjdk-amd64/bin` e digite no seu terminal o comando: `export JAVA_HOME=`, sendo que após o sinal de igual, sem deixar espaços, cole o caminho que você copiou da instalação do JDK. Por exemplo:
 
@@ -45,3 +46,31 @@ Pressione `enter` e pronto, seu JDK está instalado e configurado. Para testá-l
 
 `javac -version`
 `java -version`
+
+## Compile e rode seu primeiro programa Java
+
+Para realizar o primeiro código em Java podemos criar um arquivo em um editor de texto qualquer com o código abaixo:
+
+```java
+public class Programa {
+    public static void main(String[] args) {
+        System.out.println("Olá mundo!");
+    }
+}
+```
+
+Alguns detalhes sobre o código acima é que todo código Java precisa estar dentro de um bloco de código chamado __classe__ e para realizar um __System.out.println__ é necessário que esse código esteja dentro de um método, que no código acima é o `main`.
+
+Para que possamos compilar o código Java precisamos salvar o arquivo com o mesmo nome da __classe principal__ que nesse caso é Programa e esse arquivo precisa ter a extensão __.java__, como no exemplo abaixo:
+
+![Print do primeiro código Java](./exemplos_imagens/codigo_java.png)
+
+A JVM não consegue interpretar um código com extensão __.java__, então para que possamos executá-lo é necessário primeiro compilar, para isso podemos usar o comando __javac__ no arquivo dentro do terminal. Após executar esse comando, o Java irá criar um arquivo __.class__ que agora sim poderá ser interpretado pelo JVM. Abaixo o exemplo:
+
+![Exemplo de uso do javac e o resultado](./exemplos_imagens/exemplo_javac.png)
+
+Após isso tudo podemos usar o comando `java` para executar diretamente a __classe__ criada dentro do arquivo, ou seja, não passamos a extensão dele.
+
+Abaixo o exemplo:
+
+![Exemplo de java sendo executado](./exemplos_imagens/exemplo_java_executado.png)
