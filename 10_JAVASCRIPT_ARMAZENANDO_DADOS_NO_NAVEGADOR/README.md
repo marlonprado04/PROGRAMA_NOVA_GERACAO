@@ -20,6 +20,10 @@ O HTML e CSS permanecerão os mesmos, no máximo com pequenas modificações. O 
   - [Diferentes armazenadores de dados](#diferentes-armazenadores-de-dados)
   - [Modificar a quantidade de um item](#modificar-a-quantidade-de-um-item)
   - [Atualizando um item do LocalStorage](#atualizando-um-item-do-localstorage)
+  - [Diferença entre var, let e const](#diferença-entre-var-let-e-const)
+    - [var](#var)
+    - [let](#let)
+    - [const](#const)
 
 ## Apresentação
 
@@ -628,3 +632,79 @@ Para atualizar o item dentro do __localStorage__ podemos incluir dentro do __if_
 ```
 
 Dessa forma o __localStorage__ recebe como chave o __id__ do item já criado que é a própria posição dele no array.
+
+## Diferença entre var, let e const
+
+Para acessar o artigo completo clicar [neste link](https://www.alura.com.br/artigos/entenda-diferenca-entre-var-let-e-const-no-javascript)
+
+_var_, _let_ e _const_ são utilizadas para declararmos diferentes tipos de valores na linguagem JavaScript. Saber a utilização correta de cada uma delas é muito importante, pois __influencia na forma que criamos uma função function__.
+
+No JavaScript toda variável é __elevada/içada (hoisting)__ até o topo do seu contexto de execução antes da execução do código.
+
+### var
+
+Por exemplo, o código abaixo não irá apresentar erro:
+
+```javascript
+void function(){ 
+    console.log(mensagem); 
+}();
+var mensagem;
+```
+
+### let
+
+Já o código abaixo irá executar as duas primeiras operações e após retornar erro:
+
+```javascript
+var exibeMensagem = function() {
+     if(true) { 
+         var escopoFuncao = 'Caelum'; 
+         let escopoBloco = 'Alura';
+
+        console.log(escopoBloco); // Alura 
+    } 
+    console.log(escopoFuncao); // Caelum 
+    console.log(escopoBloco); // erro
+}
+```
+
+Quando tentamos acessar uma variável que foi declarada através da palavra-chave _let_ fora do seu escopo, o erro _Uncaught ReferenceError: escopoBloco is not defined_ é apresentado.
+
+### const
+
+Embora o let garanta o escopo, ainda assim, existe a possibilidade de declararmos uma variável com _let_ e ela ser _undefined_. Por exemplo:
+
+```javascript
+void function(){ 
+    let mensagem; 
+    console.log(mensagem); // Imprime undefined 
+}();
+```
+
+Supondo que queremos garantir a inicialização de uma variável coma lgum valor sem causar um _default_ com _undefined_. Como fazemos isso?
+
+Podemos usar constantes:
+
+```javascript
+
+void function(){ 
+    const mensagem = 'Alura'; 
+    console.log(mensagem); // Alura
+    mensagem = 'Caelum'; 
+}();
+```
+
+O código acima gera um _Uncaught TypeError: Assignment to constant variable_, pois o comportamento fundamental de uma constante é que uma vez atribuído um valor a ela, este não pode ser alterado.
+
+> Além disso, constantes devem ser inicializadas obrigatoriamente no momento de sua declaração.
+
+Vejamos alguns exemplos:
+
+```javascript
+// constante válida 
+const idade = 18;
+
+// constante inválida: onde está a inicialização? 
+const pi;
+```
