@@ -18,6 +18,7 @@ O HTML e CSS permanecerão os mesmos, no máximo com pequenas modificações. O 
   - [Consultando dados do LocalStorage](#consultando-dados-do-localstorage)
   - [Atualizar página ao cadastrar item](#atualizar-página-ao-cadastrar-item)
   - [Diferentes armazenadores de dados](#diferentes-armazenadores-de-dados)
+  - [Modificar a quantidade de um item](#modificar-a-quantidade-de-um-item)
 
 ## Apresentação
 
@@ -507,3 +508,110 @@ Cookies, localStorage e sessionStorage são formas de armazenar dados no navegad
 **Cookies** guardam informações de forma persistente no navegador, sendo até 4KB de armazenamento por Cookie, bem menos que localStorage. Cada cookie é como se fosse um arquivo criado que guarda as informações de acesso da pessoa usuária, por exemplo, de qual local o site foi acessado, qual e-mail foi utilizado ao realizar login no navegador, e quais produtos de um site foram clicados. Para acessá-los, muitas empresas criam pop ups para confirmar a autorização do uso dessas informações, pois são consideradas sensíveis.
 
 **sessionStorage** é similar ao localStorage, sua diferença é que os dados não são salvos de forma persistente, ou seja, ao fechar o navegador eles são perdidos. Este tipo de armazenamento é utilizado quando queremos que a pessoa usuária utilize os dados apenas enquanto estiver com o site aberto.
+
+## Modificar a quantidade de um item
+
+Para fazer com que o site consulte os itens já cadastrados e atualize apenas a `quantidade` quando um item já estiver cadastrado, precisamos criar uma consulta de se o item está cadastrado com o método `find` do array `itens` que contém os itens do `localStorage`.
+
+Após isso, criamos um `if` que verifica se o `item` existe, caso exista, atribuímos à ele o `id` do item já criado. Mas antes modificamos a função `criaElemento` para adicionar um `id` para o elemento criado, que ainda não possuía. Para atribuir um `id` à tag `strong` usamos o código `numeroItem.dataset.id = item.id`.
+
+Depois dessas etapas complementamos o `if` criado para sempre que o item existir realizar a atualização de quantidade via método `atualizaElemento`. E nesse método realizamos uma consulta via `querySelector` onde passamos a chave o `id` do item e após isso adicionamos à tag strong o novo valor de `quantidade` via `innerHTML`.
+
+Caso o `if` retorne que o elemento não existe, atribuímos à ele o `id` com o tamanho atual do `array` (dessa forma fica dinâmico), depois criamos o elemento com o método `criaElemento` e após incluímos no `localStorage` o item cadastrado.
+
+Abaixo o código atualizado:
+
+```javascript
+// Criando variáveis de acesso ao DOM
+const form = document.getElementById("novoItem");
+const lista = document.getElementById("lista");
+
+// Criando array com os itens do localStorage parseados ou vazio se o localStorage não tiver itens
+const itens = JSON.parse(localStorage.getItem("itens")) || [];
+
+// Laço para criar elemento com dados do localstorage
+itens.forEach((item) => {
+    console.log(item); // Printando no console
+    criaElemento(item); // Criando elementos
+});
+
+// Criando listener para o formulário
+form.addEventListener("submit", (evento) => {
+    // Impedindo reload da página submitar
+    evento.preventDefault();
+
+    // Criando variáveis para acessar campos de input
+    const nome = evento.target.elements["nome"];
+    const quantidade = evento.target.elements["quantidade"];
+
+    // Criando variável para consultar se item está cadastrado no localStorage
+    const existe = itens.find(elemento => elemento.nome === nome.value);
+
+    // Criando objeto de item para adicionar valores ao localStorage
+    const itemAtual = {
+        "nome": nome.value,
+        "quantidade": quantidade.value
+    }
+
+    // Criando if para verificar se item já existe e atualizá-lo ou criá-lo, de acordo
+    if (existe) {
+        // Atribuindo ao item atual o id do item existente
+        itemAtual.id = existe.id;
+
+        // Atualizando a quantidade do item existente
+        atualizaElemento(itemAtual);
+    } else {
+        // Adicionando ao item atual um "id" com tamanho do array na hora do cadastro
+        itemAtual.id = itens.length;
+
+        // Chamando função para criar item na lista
+        criaElemento(itemAtual);
+
+        // Adicionando objeto de itemAtual ao array de itens já cadastrados
+        itens.push(itemAtual);
+    }
+
+    // Adicionando array de objetos como string no localStorage
+    localStorage.setItem("itens", JSON.stringify(itens));
+
+    // Limpando formulário após submit
+    nome.value = "";
+    quantidade.value = "";
+
+})
+
+// Criando função para criar novo elemento e incluir na lista
+function criaElemento(item) {
+    // Exemplo de tag item: <li class="item"><strong>7</strong>Camisas</li>
+
+    // Declarando variável para criar "li"
+    const novoItem = document.createElement("li");
+    // Atribuindo à variável "li" a classe "item"
+    novoItem.classList.add("item");
+
+    // Declarando variável para criar o "strong"
+    const numeroItem = document.createElement("strong");
+    // Passando quantidade informada no formulário para variável do "strong"
+    numeroItem.innerHTML = item.quantidade;
+    // Adicionando "id" para a tag "strong"
+    numeroItem.dataset.id = item.id;
+
+    // Adicionando à variável "li" a tag "strong"
+    novoItem.appendChild(numeroItem);
+    // Adicionando à variável "li" o valor do nome
+    novoItem.innerHTML += item.nome;
+
+    // Adicionando a tag "li" à tag "ul" (variável lista)
+    lista.appendChild(novoItem);
+
+}
+
+// Criando função para atualizar elemento de acordo com id
+function atualizaElemento(item){
+    // Declarando variável para armazenar tag strong com mesmo id do item passado
+    const quantidade = document.querySelector("[data-id='"+item.id+"']");
+
+    // Atribuindo ao valor dentro da tag strong já criada a quantidade atual
+    quantidade.innerHTML = item.quantidade;
+}
+```

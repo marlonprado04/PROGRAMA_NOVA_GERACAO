@@ -20,17 +20,32 @@ form.addEventListener("submit", (evento) => {
     const nome = evento.target.elements["nome"];
     const quantidade = evento.target.elements["quantidade"];
 
+    // Criando variável para consultar se item está cadastrado no localStorage
+    const existe = itens.find(elemento => elemento.nome === nome.value);
+
     // Criando objeto de item para adicionar valores ao localStorage
     const itemAtual = {
         "nome": nome.value,
         "quantidade": quantidade.value
     }
 
-    // Chamando função para criar item na lista
-    criaElemento(itemAtual);
+    // Criando if para verificar se item já existe e atualizá-lo ou criá-lo, de acordo
+    if (existe) {
+        // Atribuindo ao item atual o id do item existente
+        itemAtual.id = existe.id;
 
-    // Adicionando objeto de itemAtual ao array de itens já cadastrados
-    itens.push(itemAtual);
+        // Atualizando a quantidade do item existente
+        atualizaElemento(itemAtual);
+    } else {
+        // Adicionando ao item atual um "id" com tamanho do array na hora do cadastro
+        itemAtual.id = itens.length;
+
+        // Chamando função para criar item na lista
+        criaElemento(itemAtual);
+
+        // Adicionando objeto de itemAtual ao array de itens já cadastrados
+        itens.push(itemAtual);
+    }
 
     // Adicionando array de objetos como string no localStorage
     localStorage.setItem("itens", JSON.stringify(itens));
@@ -54,6 +69,8 @@ function criaElemento(item) {
     const numeroItem = document.createElement("strong");
     // Passando quantidade informada no formulário para variável do "strong"
     numeroItem.innerHTML = item.quantidade;
+    // Adicionando "id" para a tag "strong"
+    numeroItem.dataset.id = item.id;
 
     // Adicionando à variável "li" a tag "strong"
     novoItem.appendChild(numeroItem);
@@ -65,3 +82,11 @@ function criaElemento(item) {
 
 }
 
+// Criando função para atualizar elemento de acordo com id
+function atualizaElemento(item){
+    // Declarando variável para armazenar tag strong com mesmo id do item passado
+    const quantidade = document.querySelector("[data-id='"+item.id+"']");
+
+    // Atribuindo ao valor dentro da tag strong já criada a quantidade atual
+    quantidade.innerHTML = item.quantidade;
+}
