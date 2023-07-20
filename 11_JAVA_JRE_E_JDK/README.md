@@ -10,6 +10,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
   - [Mão na massa: instalando o JDK](#mão-na-massa-instalando-o-jdk)
   - [Compile e rode seu primeiro programa Java](#compile-e-rode-seu-primeiro-programa-java)
   - [Nosso programa rodando no Eclipse](#nosso-programa-rodando-no-eclipse)
+  - [Tipo inteiro: int](#tipo-inteiro-int)
 
 ## A plataforma Java
 
@@ -85,3 +86,61 @@ Após instalado, podemos ir em __File -> new -> java project__. Podemos usar tod
 Após, acessamos a pasta __src__ dentro do projeto e clicamos com o botão direito para selecionar __new -> class__, como na imagem abaixo:
 
 ![Exemplo de como criar uma classe no eclipse](./exemplos_imagens/eclipse_criando_classe.png)
+
+## Tipo inteiro: int
+
+No Java as variáveis são fortemente tipadas, ou seja, é necessário declarar o tipo de variável ao criá-la.
+
+Abaixo um exemplo de código:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaVariaveis {
+  public static void main(String[] args) {
+    // Printando mensagem
+    System.out.println("Olá novo teste");
+    
+    // Declarando variável idade, fortemente tipada
+    int idade;
+    idade = 37;
+    
+    // Printando variável idade
+    System.out.println(idade);
+    
+    
+  }
+}
+```
+
+Outro detalhe da linguagem é a convenção na criação de __métodos e variáveis__. Ambos são criados com base na estrutura de __camelCase__ onde a primeira letra de cada palavra é maiúscula.
+
+No caso de __classes e métodos a primeira letra é sempre maiúscula__, mas no caso de __variáveis a primeira letra é minúscula__.
+
+Outro detalhe de boas práticas é sobre o nome de variáveis que em Java não costumam ser abreviados, ou seja, ao invés de uma variável _valMaxSal_ para representar o "valor máximo de salário", a variável deve ter o nome de _valorMaximoSalario_ ou algo parecido.
+
+Para concatenar elementos usamos o operador de adição.
+
+Abaixo um exemplo:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaVariaveis {
+ public static void main(String[] args) {
+  // Printando mensagem
+  System.out.println("Olá novo teste");
+
+  // Declarando variável idade, fortemente tipada
+  int idade;
+  idade = 37;
+
+  // Printando variável idade
+  System.out.println(idade);
+
+  // Concatenando string com idade
+  System.out.println("A idade é: " + idade);
+
+ }
+}
+```
