@@ -79,6 +79,9 @@ function criaElemento(item) {
     // Adicionando à variável "li" o valor do nome
     novoItem.innerHTML += item.nome;
 
+    // Adicionando à lista o botão criado pela função botaoDeleta
+    novoItem.appendChild(botaoDeleta());
+
     // Adicionando a tag "li" à tag "ul" (variável lista)
     lista.appendChild(novoItem);
 
@@ -91,4 +94,27 @@ function atualizaElemento(item){
 
     // Atribuindo ao valor dentro da tag strong já criada a quantidade atual
     quantidade.innerHTML = item.quantidade;
+}
+
+// Criando função para criar botão de deletar
+function botaoDeleta (item){
+    // Criando variável para armazenar elemento button criado
+    const elementoBotao = document.createElement("button");
+    // Adicionando ao texto do button um X 
+    elementoBotao.innerText = "X";
+
+    // Criando listener para botão que não tem um evento por ser criado dinâmicamente
+    elementoBotao.addEventListener("click", function(){ // criando function completa porque arrow function não carrega o this
+        // Chamando função para deletar a tag pai desse botão
+        deletaElemento(this.parentNode);
+    });
+    
+    // Retornando botão criado
+    return elementoBotao;
+}
+
+// Criando função para deletar tag
+function deletaElemento(tag){
+    // Deletando tag passada
+    tag.remove();
 }
