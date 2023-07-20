@@ -7,7 +7,6 @@ const itens = JSON.parse(localStorage.getItem("itens")) || [];
 
 // Laço para criar elemento com dados do localstorage
 itens.forEach((item) => {
-    console.log(item); // Printando no console
     criaElemento(item); // Criando elementos
 });
 
@@ -36,6 +35,9 @@ form.addEventListener("submit", (evento) => {
 
         // Atualizando a quantidade do item existente
         atualizaElemento(itemAtual);
+
+        // Atualizando item no localStorage ao passar posição do item com o id dele
+        itens[existe.id] =  itemAtual;
     } else {
         // Adicionando ao item atual um "id" com tamanho do array na hora do cadastro
         itemAtual.id = itens.length;

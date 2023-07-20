@@ -19,6 +19,7 @@ O HTML e CSS permanecerão os mesmos, no máximo com pequenas modificações. O 
   - [Atualizar página ao cadastrar item](#atualizar-página-ao-cadastrar-item)
   - [Diferentes armazenadores de dados](#diferentes-armazenadores-de-dados)
   - [Modificar a quantidade de um item](#modificar-a-quantidade-de-um-item)
+  - [Atualizando um item do LocalStorage](#atualizando-um-item-do-localstorage)
 
 ## Apresentação
 
@@ -615,3 +616,15 @@ function atualizaElemento(item){
     quantidade.innerHTML = item.quantidade;
 }
 ```
+
+## Atualizando um item do LocalStorage
+
+Para atualizar o item dentro do __localStorage__ podemos incluir dentro do __if__ criado o código abaixo:
+
+```javascript
+// Atualizando item no localStorage ao passar posição do item com o id dele
+    itens[existe.id] =  itemAtual;
+
+```
+
+Dessa forma o __localStorage__ recebe como chave o __id__ do item já criado que é a própria posição dele no array.
