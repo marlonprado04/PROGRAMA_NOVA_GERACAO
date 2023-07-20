@@ -36,11 +36,11 @@ form.addEventListener("submit", (evento) => {
         // Atualizando a quantidade do item existente
         atualizaElemento(itemAtual);
 
-        // Atualizando item no localStorage ao passar posição do item com o id dele
-        itens[existe.id] =  itemAtual;
+        // Atualizando item no localStorage ao passar posição do item buscando o index através do id exato na lista de elementos
+        itens[itens.findIndex(elemento => elemento.id === existe.id)] =  itemAtual;
     } else {
-        // Adicionando ao item atual um "id" com tamanho do array na hora do cadastro
-        itemAtual.id = itens.length;
+        // Adicionando ao item atual um "id" com tamanho do array na hora do cadastro, caso não exista atribuindo 0
+        itemAtual.id = itens[itens.length-1] ? itens[itens.length-1].id+1 : 0;
 
         // Chamando função para criar item na lista
         criaElemento(itemAtual);
@@ -80,7 +80,7 @@ function criaElemento(item) {
     novoItem.innerHTML += item.nome;
 
     // Adicionando à lista o botão criado pela função botaoDeleta
-    novoItem.appendChild(botaoDeleta());
+    novoItem.appendChild(botaoDeleta(item.id));
 
     // Adicionando a tag "li" à tag "ul" (variável lista)
     lista.appendChild(novoItem);
@@ -97,7 +97,7 @@ function atualizaElemento(item){
 }
 
 // Criando função para criar botão de deletar
-function botaoDeleta (item){
+function botaoDeleta (id){
     // Criando variável para armazenar elemento button criado
     const elementoBotao = document.createElement("button");
     // Adicionando ao texto do button um X 
@@ -106,7 +106,7 @@ function botaoDeleta (item){
     // Criando listener para botão que não tem um evento por ser criado dinâmicamente
     elementoBotao.addEventListener("click", function(){ // criando function completa porque arrow function não carrega o this
         // Chamando função para deletar a tag pai desse botão
-        deletaElemento(this.parentNode);
+        deletaElemento(this.parentNode, id);
     });
     
     // Retornando botão criado
@@ -114,7 +114,14 @@ function botaoDeleta (item){
 }
 
 // Criando função para deletar tag
-function deletaElemento(tag){
+function deletaElemento(tag, id){
     // Deletando tag passada
     tag.remove();
+    
+    // Removendo elemento do array de acordo com id encontrado dentro da lista de elementos
+    itens.splice(itens.findIndex(elemento => elemento.id === id), 1);
+    console.log(itens)
+
+    // Passando lista de itens atualizada para localStorage
+    localStorage.setItem("itens", JSON.stringify(itens));
 }
