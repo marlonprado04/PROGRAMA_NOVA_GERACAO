@@ -12,6 +12,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
   - [Nosso programa rodando no Eclipse](#nosso-programa-rodando-no-eclipse)
   - [Tipo inteiro: int](#tipo-inteiro-int)
   - [Tipo flutuante: double](#tipo-flutuante-double)
+  - [Conversões e outros tipos](#conversões-e-outros-tipos)
 
 ## A plataforma Java
 
@@ -200,3 +201,5 @@ public class TestaPontoFlutuante {
 }
 
 ```
+
+## Conversões e outros tipos
