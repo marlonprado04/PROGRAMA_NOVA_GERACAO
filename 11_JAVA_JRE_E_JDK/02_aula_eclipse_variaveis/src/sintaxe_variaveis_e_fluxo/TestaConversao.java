@@ -31,15 +31,19 @@ public class TestaConversao {
 	//  byte armazena menor ainda, até 127
 	byte numeroMuitoPequeno = 120;
 	
+	// float é outro ponto flutuante, mas parecido com long é
+	// necessário colocar f no fim da declaração
+	float numeroFlutuante = 3.14f; 
+	
 	// ------------------------------------
 	
-	// Doubles não costumam ser usados para cálculo matemático
+	// double não costumam ser usados para cálculo matemático
 	// abaixo um exemplo do motivo
 	
 	double valor1 = 0.1;
 	double valor2 = 0.2;
 	double valorSoma = valor1 + valor2;
-	System.out.println("Resultado da soma: " + valorSoma);
+	System.out.println("Resultado da soma: " + valorSoma); // Retorna 0.30000000000000004
     }
 
 }

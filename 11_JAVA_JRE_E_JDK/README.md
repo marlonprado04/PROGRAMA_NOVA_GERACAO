@@ -13,6 +13,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
   - [Tipo inteiro: int](#tipo-inteiro-int)
   - [Tipo flutuante: double](#tipo-flutuante-double)
   - [Conversões e outros tipos](#conversões-e-outros-tipos)
+  - [Char e String](#char-e-string)
 
 ## A plataforma Java
 
@@ -282,3 +283,6 @@ public class TestaConversao {
 
 }
 ```
+
+## Char e String
+
