@@ -15,6 +15,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
   - [Conversões e outros tipos](#conversões-e-outros-tipos)
   - [Char e String](#char-e-string)
     - [Testes com if](#testes-com-if)
+    - [Boolean condicionais](#boolean-condicionais)
 
 ## A plataforma Java
 
@@ -394,6 +395,85 @@ public class TestaCondicional {
         }
       }
 
+    }
+}
+
+```
+
+### Boolean condicionais
+
+No Java não temos um comando or que sirva como operador condicional, então para realizar um or utilizamos o __||__, conforme código abaixo:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaCondicional2 {
+    public static void main(String[] args) {
+        // Criando variavel idade
+        int idade = 20;
+        int quantidadePessoas = 3;
+
+        // Utilizando operador if com or
+        if (idade >= 18 || quantidadePessoas > 1) {
+          System.out.println("Você pode entrar!");
+          System.out.println("Seja bem vindo!");
+        } else { // utilizando else
+          System.out.println("Infelizmente você não pode entrar!");
+        }
+
+    }
+}
+
+```
+
+A mesma regra de or se espelha no comparador and. Para utilizar um comparador and usamos __&&__.
+
+Abaixo um exemplo:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaCondicional2 {
+    public static void main(String[] args) {
+      // Criando variavel idade
+      int idade = 20;
+      int quantidadePessoas = 3;
+
+      // ------------------------
+      // Utilizando operador if com and
+      if (idade >= 18 && quantidadePessoas > 1) {
+        System.out.println("Você pode entrar!");
+        System.out.println("Seja bem vindo!");
+      } else { // utilizando else
+        System.out.println("Infelizmente você não pode entrar!");
+      }
+
+    }
+}
+
+```
+
+Outro tipo padrão do Java é o boolean que armazena apenas __true__ ou __false__ dentro de suas variáveis. Ao usar uma variável do tipo boolean em um if, por exemplo, não tem necessidade de realizar uma comparação com o __==__, pois a própria variável armazena o resultando como true ou false.
+
+Abaixo um exemplo:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaCondicional2 {
+    public static void main(String[] args) {
+      // Criando variavel idade
+      int idade = 20;
+      int quantidadePessoas = 3;
+      boolean acompanhado = true;
+
+      // Utilizando if com operador boolean
+      if (idade >= 18 && acompanhado) {
+        System.out.println("Você pode entrar!");
+        System.out.println("Seja bem vindo!");
+      } else { // utilizando else
+        System.out.println("Infelizmente você não pode entrar!");
+      }
     }
 }
 
