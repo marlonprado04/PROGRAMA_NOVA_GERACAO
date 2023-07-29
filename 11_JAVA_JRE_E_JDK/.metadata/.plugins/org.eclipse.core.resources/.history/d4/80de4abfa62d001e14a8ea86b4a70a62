@@ -12,7 +12,7 @@ public class TestaCaracteres {
 	System.out.println(letra);
 	
 	// Um char pode ser representado por um código numérico
-	char valor = 66;
+	char valor = 65;
 	
 	// Printando o valor criado
 	System.out.println(valor);

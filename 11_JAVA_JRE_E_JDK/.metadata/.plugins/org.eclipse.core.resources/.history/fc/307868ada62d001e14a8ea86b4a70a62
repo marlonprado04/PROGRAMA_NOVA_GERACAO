@@ -12,19 +12,13 @@ public class TestaCaracteres {
 	System.out.println(letra);
 	
 	// Um char pode ser representado por um código numérico
-	char valor = 66;
+	char valor = 65;
 	
 	// Printando o valor criado
 	System.out.println(valor);
 	
-	// Ao tentar somar 1 ao char, o java não permite
-	// pois ele executa a operação e atribui à variável com 
-	// tipo maior
 	
-	// valor = valor +1; // O resultado é um inteiro (por ser maior) tentando caber num char, o que da erro
-	valor = (char) (valor + 1); // Estamos forçando o resultado da operação a ser um char
     
-	System.out.println(valor);
     
     }
 

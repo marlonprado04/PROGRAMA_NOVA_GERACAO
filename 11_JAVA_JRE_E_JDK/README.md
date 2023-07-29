@@ -286,3 +286,49 @@ public class TestaConversao {
 
 ## Char e String
 
+__Char__ é um tipo de variável que armazena __um unicode de 16 bits__, ou seja, equivale a mais ou menos um caractere. Chars podem ser representados por __valores numéricos__, mas não são comparaveis à inteiros. Devem sempre ser declaradas com __aspas simples__.
+
+Por exemplo, ao criar uma variável do tipo __char__ e tentar atribuir à ela o resultado de uma soma de __char__ com __int__, o Java não compila. Isso ocorre pois o resultado de uma operação assim é um __int__ (no Java o "tipo maior" sempre tem preferência) e um __char não armazena um int__, mas um __int pode armazenar um char__.
+
+Abaixo um exemplo:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaCaracteres {
+    public static void main(String[] args) {
+    // Declarando variável de caractere pequena 
+    // que armazena apenas 1 caractere de 16 bits
+        
+    // Usamos aspas simples ao criar
+    char letra = 'a';
+    
+    // Printando a letra criada
+    System.out.println(letra);
+    
+    // Um char pode ser representado por um código numérico
+    char valor = 66;
+    
+    // Printando o valor criado
+    System.out.println(valor);
+    
+    // Ao tentar somar 1 ao char, o java não permite
+    // pois ele executa a operação e atribui à variável com 
+    // tipo maior
+    
+    // valor = valor +1; // O resultado é um inteiro (por ser maior) tentando caber num char, o que da erro
+    valor = (char) (valor + 1); // Estamos forçando o resultado da operação a ser um char
+      
+    // Printando resultado da soma
+    System.out.println(valor);
+    }
+
+}
+
+```
+
+Uma __String__ é um pouco diferente dos outros tipos criados até o momento que armazenam valores, pois Strings são do tipo referência (podemos ver por ela ser declarada com a __primeira letra maiúscula__). Isso ocorre pois __Strings__ são objetos que permitem operações especiais.
+
+Strings devem obrigatoriamente ser criadas com __aspas duplas__.
+
+Abaixo exemplos (continuar a aula a partir dos 6 minutos).
