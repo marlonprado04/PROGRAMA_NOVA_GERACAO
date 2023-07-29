@@ -16,6 +16,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
   - [Char e String](#char-e-string)
     - [Testes com if](#testes-com-if)
     - [Boolean condicionais](#boolean-condicionais)
+    - [Escopo e inicialização de variável](#escopo-e-inicialização-de-variável)
 
 ## A plataforma Java
 
@@ -474,6 +475,81 @@ public class TestaCondicional2 {
       } else { // utilizando else
         System.out.println("Infelizmente você não pode entrar!");
       }
+    }
+}
+
+```
+
+### Escopo e inicialização de variável
+
+Assim como em outras linguagens o Java possui um escopo na criação de variáveis que deve ser respeitado. Por exemplo, ao declarar uma variável dentro do resultado de um if, ela existe apenas dentro do if, se tentarmos acessá-la fora deste if não conseguiremos.
+
+Abaixo um exemplo deste erro:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaEscopo {
+    public static void main(String[] args) {
+      // Criando variavel idade
+      int idade = 20;
+      int quantidadePessoas = 3;
+
+      // Utilizando operador if 
+      if (quantidadePessoas >= 2) {
+        boolean acompanhado = true;
+      } else {
+        boolean acompanhado = false;
+      }
+
+      // Printando valor da variável de acordo com operação
+      System.out.println("A variável 'acompanhado' é " + acompanhado); 
+    }
+}
+
+```
+
+Outro detalhe é que em Java as variáveis não são inicializadas com valores padrão, ou seja, ao declarar uma variável e tentar utilizá-la sem ter atribuído um valor à ela, o __Java não compila__.
+
+Abaixo um exemplo:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaEscopo {
+    public static void main(String[] args) {
+      // Criando variáveis
+      int idade = 20;
+      int quantidadePessoas = 3;
+      boolean acompanhado;
+
+      System.out.println(acompanhado);
+    }
+}
+
+```
+
+Como correção à esse código temos o abaixo:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaEscopo {
+    public static void main(String[] args) {
+      // Criando variáveis
+      int idade = 20;
+      int quantidadePessoas = 3;
+      boolean acompanhado;
+
+      // Utilizando operador if 
+      if (quantidadePessoas >= 2) {
+        acompanhado = true;
+      } else {
+        acompanhado = false;
+      }
+
+      // Printando valor da variável de acordo com operação
+      System.out.println("A variável 'acompanhado' é " + acompanhado);
     }
 }
 
