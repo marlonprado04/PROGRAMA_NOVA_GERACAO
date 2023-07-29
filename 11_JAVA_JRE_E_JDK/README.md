@@ -329,6 +329,33 @@ public class TestaCaracteres {
 
 Uma __String__ é um pouco diferente dos outros tipos criados até o momento que armazenam valores, pois Strings são do tipo referência (podemos ver por ela ser declarada com a __primeira letra maiúscula__). Isso ocorre pois __Strings__ são objetos que permitem operações especiais.
 
-Strings devem obrigatoriamente ser criadas com __aspas duplas__.
+Strings devem obrigatoriamente ser criadas com __aspas duplas__. Podemos declarar Strings vazias, o que diferencia de __char__.
 
-Abaixo exemplos (continuar a aula a partir dos 6 minutos).
+Abaixo exemplos:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaCaracteres {
+    public static void main(String[] args) {
+   
+    
+    // ------------------------
+    
+    // Strings são como objetos e são tipo referência
+    
+    String palavra = "meu exemplo de String Java";
+    
+    // Podemos declarar Strings vazias, mas char não
+    String palavraVazia = "";
+    
+    // Printando palavras criadas
+    System.out.println(palavra);
+    
+    // A concatenação de Strings no Java é com o operador +
+    System.out.println(palavra + " exemplo de concatenação");
+    
+    }
+    
+}
+```
