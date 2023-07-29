@@ -17,6 +17,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
     - [Testes com if](#testes-com-if)
     - [Boolean condicionais](#boolean-condicionais)
     - [Escopo e inicialização de variável](#escopo-e-inicialização-de-variável)
+    - [Para saber mais: o comando switch](#para-saber-mais-o-comando-switch)
 
 ## A plataforma Java
 
@@ -554,3 +555,70 @@ public class TestaEscopo {
 }
 
 ```
+
+### Para saber mais: o comando switch
+
+Para poupar código evitando criar diversos __if__ em situações onde precisamos comparar muitos valores (por exemplo, na consulta de qual mês um número corresponde) existe o comando __switch__.
+
+Abaixo o exemplo de uso:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TesteSwitch {
+    public static void main(String[] args) {
+      // Criando variavel
+      int numeroMes = 8;
+
+      // Usando switch
+
+      switch (numeroMes) {
+      case 1:
+        System.out.println("Janeiro");
+        break;
+      case 2:
+        System.out.println("Fevereiro");
+        break;
+      case 3:
+        System.out.println("Março");
+        break;
+      case 4:
+        System.out.println("Abril");
+        break;
+      case 5:
+        System.out.println("Maio");
+        break;
+      case 6:
+        System.out.println("Junho");
+        break;
+      case 7:
+        System.out.println("Julho");
+        break;
+      case 8:
+        System.out.println("Agosto");
+        break;
+      case 9:
+        System.out.println("Setembro");
+        break;
+      case 10:
+        System.out.println("Outubro");
+        break;
+      case 11:
+        System.out.println("Novembro");
+        break;
+      case 12:
+        System.out.println("Dezembro");
+        break;
+      default:
+        System.out.println("Mẽs não existente");
+      }
+    }
+}
+
+```
+
+O __break__ interrompe a função para que as demais condições não sejam testadas, no caso de o valor ter sido encontrado.
+
+O __default__ é o padrão para o caso de nenhuma condição ser atendida.
+
+Dessa forma, o __switch__ é uma ótima solução para multiplos __ifs__ encadeados.
