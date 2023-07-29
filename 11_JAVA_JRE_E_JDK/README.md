@@ -14,6 +14,7 @@ Nesse curso vamos aprender a compilar os primeiros códigos em Java, percorrendo
   - [Tipo flutuante: double](#tipo-flutuante-double)
   - [Conversões e outros tipos](#conversões-e-outros-tipos)
   - [Char e String](#char-e-string)
+    - [Testes com if](#testes-com-if)
 
 ## A plataforma Java
 
@@ -358,4 +359,42 @@ public class TestaCaracteres {
     }
     
 }
+```
+
+### Testes com if
+
+No Java como em diversas linguagens temos funções comparadoras, umad elas é o __if__.
+
+Existem alguns detalhes sobre o operador if em Java que precisam ser levadas em conta, por exemplo, é exigido que a condição __sempre esteja dentro de parenteses__.
+
+O Java permite que o __if__ não contenha "{}" no caso de a resposta ser de apenas uma linha, mas por boas práticas é bom utilizar "{}" mesmo assim.
+
+Abaixo um exemplo:
+
+```java
+package sintaxe_variaveis_e_fluxo;
+
+public class TestaCondicional {
+    public static void main(String[] args) {
+      System.out.println("Códico para testar condicionais");
+
+      // Criando variavel idade
+      int idade = 20;
+      int quantidadePessoas = 3;
+
+      // Utilizando operador if
+      if (idade >= 18) {
+        System.out.println("Você tem mais que 18 anos!");
+        System.out.println("Seja bem vindo!");
+      } else { // utilizando else
+        if (quantidadePessoas > 1) { // outro if dentro do else
+          System.out.println("Você pode entrar por estar acompanhado!");
+        } else {
+          System.out.println("Infelizmente você não pode entrar!");
+        }
+      }
+
+    }
+}
+
 ```
