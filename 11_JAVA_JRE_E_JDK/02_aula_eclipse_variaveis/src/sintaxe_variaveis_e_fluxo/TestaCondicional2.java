@@ -16,7 +16,7 @@ public class TestaCondicional2 {
 		}
 
 		// ------------------------
-		
+
 		// Utilizando operador if com and
 		if (idade >= 18 && quantidadePessoas > 1) {
 			System.out.println("Você pode entrar!");
