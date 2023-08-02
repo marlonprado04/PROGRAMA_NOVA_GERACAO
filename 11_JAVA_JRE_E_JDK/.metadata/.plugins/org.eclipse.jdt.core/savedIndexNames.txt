@@ -1,5 +1,0 @@
-INDEX VERSION 1.134+/home/marlon/Documentos/GITHUB/PROGRAMA_NOVA_GERACAO/11_JAVA_JRE_E_JDK/.metadata/.plugins/org.eclipse.jdt.core
-651727035.index
-1175494123.index
-3736901102.index
-1865797976.index
